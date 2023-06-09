@@ -28,7 +28,7 @@
             color: white;
         }
 
-        form {
+        .border-form {
             border: 1px solid black;
             padding: 10px;
         }
@@ -54,6 +54,10 @@
 
             margin-left: 40px;
         }
+
+        .form-demonstration td {
+            padding: 5px 10px;
+        }
     </style>
 </head>
 
@@ -75,7 +79,16 @@
         <li><a href="#">Headings, paragraphs</a></li>
         <li><a href="#">Grouping content</a></li>
         <li><a href="#section9">Table</a></li>
-        <li><a href="#section10">Form</a></li>
+        <li>
+            <a href="#section10">Form</a>
+            <ol type="a">
+                <li><a href="#section10a">Form elements: input, textarea và label</a></li>
+                <li><a href="#section10b">Form elements: select, datalist và option</a></li>
+                <li><a href="#section10c">Form elements: fieldset, legend</a></li>
+                <li><a href="#section10d">Form attributes</a></li>
+            </ol>
+        </li>
+
         <li><a href="#">Media</a></li>
         <li><a href="#">Symbols, emojis</a></li>
         <li><a href="#">Graphics</a></li>
@@ -135,19 +148,28 @@
             </tfoot>
         </table>
         <p class="indent">Notes:</p>
-        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng.</p>
-        <p>- Thẻ tr được dùng để xác định các hàng của bảng.</p>
-        <p>- Các thông tin trong thẻ th mặc định được in đậm và căn giữa.</p>
-        <p>- Các thông tin trong thẻ td mặc định được căn trái.</p>
-        <p>- Cho các cell trong table sát nhau: <code>border-collapse: collapse;</code></p>
+        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng. Chúng không ảnh hưởng đến cấu trúc
+            tổng thể của bảng.</p>
+        <p>- Sử dụng thẻ tr để xác định mỗi hàng của bảng
+            <code>&lt;tr&gt;&lt;/tr&gt;</code>
+        </p>
+        <p>- Thẻ th được dùng cho các cell là header của bảng. Các thông tin trong thẻ th mặc định được in đậm và căn
+            giữa.
+            <code>&lt;th&gt;Header 1&lt;/th&gt;</code>
+        </p>
+        <p>- Thẻ td chứa nội dung cho các cell bình thường của bảng. Các thông tin trong thẻ td mặc định được căn
+            trái. <code>&lt;td&gt;Data 1&lt;/td&gt;</code></p>
+        <p>- Mặc định các cell của bảng sẽ cách nhau một khoảng nhỏ. Có thể dùng
+            <code>style="border-collapse: collapse;"</code> để đưa chúng sát với nhau.
+        </p>
         <p>- Giá trị colspan là số nguyên >= 1.</p>
-        <p>- Kích thước các cột ở colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
+        <p>- Kích thước các cột bị chồng lấn khi dùng colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
     </section>
     <section id="section10">
         <h2>10. Form</h2>
         <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
         <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
-        <p class="subsection">a. input và label</p>
+        <p class="subsection" id="section10a">a. input và label</p>
         <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
             lý.</p>
         <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
@@ -155,40 +177,159 @@
         </p>
         <p>Một số loại input thường dùng:</p>
         <form>
-            <label>input type="text"</label>
-            <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
-            <br>
-            <label>input type="password"</label>
-            <input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây">
-            <br>
-            <label>input type="email"</label>
-            <input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây">
-            <br>
-            <label>input type="radio" (Chọn 1 trong các đáp án bằng cách cho các input có attr name như nhau)</label>
-            <label for="opt1">Lựa chọn 1</label>
-            <input type="radio" name="input-radio" id="opt1" value="opt1">
-            <label for="opt2">Lựa chọn 2</label>
-            <input type="radio" name="input-radio" id="opt2" value="opt2">
-            <label for="opt3">Lựa chọn 3</label>
-            <input type="radio" name="input-radio" id="opt3" value="opt3">
-            <br>
-            <label>input type="radio" (Chọn nhiều đáp án bằng cách cho các input có attr name khác nhau)</label>
-            <label for="opt1-2">Lựa chọn 1</label>
-            <input type="radio" name="input-radio-1" id="opt1-2" value="opt1-2">
-            <label for="opt2-2">Lựa chọn 2</label>
-            <input type="radio" name="input-radio-2" id="opt2-2" value="opt2-2">
-            <label for="opt3-2">Lựa chọn 3</label>
-            <input type="radio" name="input-radio-3" id="opt3-2" value="opt3-2">
-            <br>
-            <label>input type="date"</label>
-            <input type="date" name="input-date" id="input-date">
-            <br>
-            <label>input type="color"</label>
-            <input type="color" name="input-color" id="input-color">
-            <br>
-            <label>input type="file"</label>
-            <input type="file" name="input-file" id="input-file">
+            <table class="form-demonstration">
+                <tr>
+                    <td>input type="text"</td>
+                    <td><input type="text" name="input-text" placeholder="Nhập text gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="number"</td>
+                    <td><input type="number" name="input-number"></td>
+                </tr>
+                <tr>
+                    <td>input type="password"</td>
+                    <td><input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="email"</td>
+                    <td><input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="radio"</td>
+                    <td>
+                        <label for="opt1">Option 1</label>
+                        <input type="radio" name="input-radio" id="opt1" value="opt1">
+                        <br>
+                        <label for="opt2">Option 2</label>
+                        <input type="radio" name="input-radio" id="opt2" value="opt2">
+                        <br>
+                        <label for="opt3">Option 3</label>
+                        <input type="radio" name="input-radio" id="opt3" value="opt3">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="checkbox"</td>
+                    <td>
+                        <label for="opt1-2">Option 1</label>
+                        <input type="checkbox" name="input-checkbox" id="opt1-2" value="opt1-2">
+                        <br>
+                        <label for="opt2-2">Option 2</label>
+                        <input type="checkbox" name="input-checkbox" id="opt2-2" value="opt2-2">
+                        <br>
+                        <label for="opt3-2">Option 3</label>
+                        <input type="checkbox" name="input-checkbox" id="opt3-2" value="opt3-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="date"</td>
+                    <td><input type="date" name="input-date" id="input-date"></td>
+                </tr>
+                <tr>
+                    <td>input type="color"</td>
+                    <td><input type="color" name="input-color" id="input-color"></td>
+                </tr>
+                <tr>
+                    <td>input type="file"</td><br>
+                    <td><input type="file" name="input-file" id="input-file"></td>
+                </tr>
+                <tr>
+                    <td>input type="range" có các thuộc tính như <br> min, max: Quy định giá trị nhỏ/lớn nhất của
+                        thanh;
+                        <br>step: Mức tăng mỗi khi thanh được kéo; <br>value: giá trị mặc định của thanh (nếu không thêm
+                        vào, mặc định sẽ là giá trị trung tâm)
+                    </td>
+
+                    <td>0<input type="range" name="input-range" id="input-range" min="0" max="10" step="0.1">10</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&lt;textarea&gt; là thẻ dùng để tạo ra input text có nhiều dòng. Thẻ này thường được dùng cho
+                            các
+                            input
+                            dài
+                            từ người dùng như đánh giá, nhận xét, tâm sự,...</p>
+                        <p>Trong thẻ textarea, có 2 attribute thường được dùng là cols và rows để điều chỉnh kích thước
+                            chiều
+                            rộng
+                            và
+                            chiều dài cho input.</p>
+                    </td>
+                    <td><textarea cols="50" rows="10" placeholder="Để lại bình luận tại đây"></textarea></td>
+                <tr>
+                    <td>input type="submit"</td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                </tr>
+            </table>
         </form>
+
+        <p class="subsection" id="section10b">b. select, datalist và option</p>
+        <p>&lt;select&gt; là thẻ tạo ra một danh sách xổ xuống (drop-down list) cho người dùng. Các Option này được
+            đặt
+            trong
+            thẻ &lt;option&gt;.</p>
+        <p>&lt;datalist&gt; là thẻ tạo ra một danh sách các Option cho người dùng. Các Option này được đặt
+            trong
+            thẻ &lt;option&gt;. Người dùng có thể chọn 1 option bằng cách như select hoặc tìm kiếm option phù hợp bằng
+            cách nhập vào khung input.</p>
+
+        <form class="border-form">
+            <label for="colors">Thẻ select: Chọn 1 màu</label><br>
+            <select value="colors" id="colors">
+                <option value="red">Đỏ</option>
+                <option value="blue">Xanh dương</option>
+                <option value="green">Xanh lá</option>
+                <option value="yellow">Vàng</option>
+                <option value="black">Đen</option>
+            </select>
+            <br>
+            <label for="foods">Thẻ datalist: Chọn 1 món ăn</label><br>
+            <input list="foods">
+            <datalist value="foods" id="foods">
+                <option value="Phở bò tái nạm">
+                <option value="Mì vịt tiềm">
+                <option value="Bún thịt nướng">
+                <option value="Bún bò Huế">
+                <option value="Cơm tấm sườn bì chả">
+                <option value="Hủ tiếu mì thập cẩm">
+            </datalist>
+        </form>
+        <div class="subsection" id="section10c">c. fieldset, legend, textarea</div>
+        <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
+        </p>
+
+        <form class="border-form">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <label for="fname">Họ:</label><br>
+                <input type="text" id="fname" name="fname" value="Lorem"><br>
+                <label for="lname">Tên :</label><br>
+                <input type="text" id="lname" name="lname" value="Ipsum"><br>
+                <label for="gender-radio">Giới tính</label><br>
+                Nam <input type="radio" name="gender-radio" id="male" value="male">
+                Nữ <input type="radio" name="gender-radio" id="female" value="female"><br>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Thông tin liên hệ</legend>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@example.com"><br>
+                <label for="phone">Số điện thoại:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789"><br>
+                <label for="address">Địa chỉ:</label><br>
+                <textarea cols="50" rows="10" placeholder="Nhập địa chỉ của bạn"></textarea><br>
+
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+        <p class="subsection" id="section10d">d. Form attributes</p>
+        <p>action</p>
+        <p>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ là một hyperlink dẫn đến
+            một file xử lý ở phía server.</p>
+        <p>target</p>
+
     </section>
 </body>
 
