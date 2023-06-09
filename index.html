@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <title>Lab01</title>
@@ -23,148 +24,192 @@
             ev.target.appendChild(document.getElementById(data));
         }
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horus | HTML</title>
+    <style>
+        code {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th,
+        td {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
+
+        tfoot td {
+            background-color: green;
+            color: white;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        form * {
+            margin: 5px 0;
+        }
+
+        .indent~* {
+            margin-left: 20px;
+        }
+
+        *[id^="section"] {
+            margin-left: 20px;
+        }
+
+        .subsection {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .subsection~* {
+
+            margin-left: 40px;
+        }
+    </style>
 </head>
 <body>
-    <p>Drag the W3Schools image into the rectangle:</p>
-
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <br>
-    <img id="drag1" src="http://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
-    
-
-
-
-
-
-
-    <p>Click on the marker for position information.</p>
-    <div id="map"></div>
-    <script>
-      if (navigator.geolocation) {
-        var timeoutVal = 10 * 1000 * 1000;
-        navigator.geolocation.getCurrentPosition(
-          displayPosition, 
-          displayError,
-          { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
-        );
-      }
-      else {
-        alert("Geolocation is not supported by this browser");
-      }
-      function displayPosition(position) {
-        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var options = {
-          zoom: 10,
-          center: pos,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map"), options);
-        var marker = new google.maps.Marker({
-          position: pos,
-          map: map,
-          title: "User location"
-        });
-        var contentString = "<b>Timestamp:</b> " + parseTimestamp(position.timestamp) + "<br/><b>User location:</b> lat " + position.coords.latitude + ", long " + position.coords.longitude + ", accuracy " + position.coords.accuracy;
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-        });
-      }
-      function displayError(error) {
-        var errors = { 
-          1: 'Permission denied',
-          2: 'Position unavailable',
-          3: 'Request timeout'
-        };
-        alert("Error: " + errors[error.code]);
-      }
-      function parseTimestamp(timestamp) {
-        var d = new Date(timestamp);
-        var day = d.getDate();
-        var month = d.getMonth() + 1;
-        var year = d.getFullYear();
-        var hour = d.getHours();
-        var mins = d.getMinutes();
-        var secs = d.getSeconds();
-        var msec = d.getMilliseconds();
-        return day + "." + month + "." + year + " " + hour + ":" + mins + ":" + secs + "," + msec;
-      }
-    </script>
-
-
-
-
-
-
-    <img src="images01/logo.png" alt="logo">
-    <h1>About</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h1 >Intro</h1>
-    <video width="600">
-        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-	    <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-        Your browser does not support the video tag.
-    </video>
-    <h2 >Our Locations</h2>
-    <ul >
-        <li>USA
-            <ul >
-                <li><a href="http://meetup.com/girldevelopit">New York</a></li>
-                <li><a href="http://www.meetup.com/girldevelopitcbus">Columbus</a></li>
-                <li><a href="http://www.meetup.com/Girl-Develop-It-Austin">Austin</a></li>
-                <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/">Philly</a></li>
-            </ul>
+    <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
+    <h2>Mục lục</h2>
+    <ol>
+        <li><a href="#">Tổng quan về HTML</a></li>
+        <li><a href="#">Có gì mới ở HTML5</a></li>
+        <li><a href="#">XHTML vs HTML</a></li>
+        <li>
+            <a href="#section4">Thẻ html, head, meta, body, script, link</a>
+            <ol type="a">
+                <li><a href="#section4a">Thẻ &lt;html&gt;</a></li>
+            </ol>
         </li>
-        <li>World
-            <ul >
-                <li><a href="http://www.meetup.com/Girl-Develop-It-Ottawa">Ottawa</a></li>
-                <li><a href="http://www.meetup.com/girldevelopit-sydney">Sydney</a></li>
-            </ul>
-        </li>
-    </ul>
-    <h2 >Upcoming Classes</h2>
-    <table style="width:35%;border: 1px solid;" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <tr>
-          <th style="border: 1px solid;">Location</th>
-          <th style="border: 1px solid;">Topic</th>
-        </tr>
-        <tr>
-          <td style="border: 1px solid;">New York</td>
-          <td style="border: 1px solid;">JavaScript & jQuery</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid;">San Francisco</td>
-            <td style="border: 1px solid;">HTML & CSS</td>
-          </tr>
-    </table>
-    <h2 >Sign Up!</h2>
-    <form method="POST" action="comments.php" >
-        Name: <input name="name" type="text"><br><br>
-        Email: <input name="email" type="text"><br><br>
-        <label>Location: </label>
-        <select name="location" id="location" >
-            <option value="NY">New York</option>
-            <option value="SF">San Francisco</option>
-        </select>
-        <fieldset>
-        <legend>Gender: </legend>
-            <input type="radio" id="female" name="gender" value="Female" size="30">
-            <label for="female">Female</label>
-            <input type="radio" id="male" name="gender" value="Male" size="30">
-            <label for="male">Male</label>
-        </fieldset>
-        <br>
-        <label for="exp">Experience:</label><br>
+        <li><a href="#">Elements</a></li>
+        <li><a href="#">Attributes</a></li>
+        <li><a href="#">Headings, paragraphs</a></li>
+        <li><a href="#">Grouping content</a></li>
+        <li><a href="#section9">Table</a></li>
+        <li><a href="#section10">Form</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Symbols, emojis</a></li>
+        <li><a href="#">Graphics</a></li>
+        <li><a href="#">Web APIs</a></li>
+    </ol>
+    <section id="section4">
+        <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
+        <section id="section4a">
+            <p class="subsection">a. Thẻ &lt;html&gt;</p>
+            <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
+                khác (ngoại trừ !DOCTYPE).</p>
+        </section>
+    </section>
+    <section id="section9">
+        <h3>9. Table</h3>
+        <p>&lt;table&gt; là thẻ HTML dùng để tạo bảng. Thông thường 1 bảng trong HTML gồm 1 thẻ table và các thẻ như th,
+            td,
+            tr, thead, tfoot, tbody</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data 5 (Dùng thuộc tính colspan="2" để xác định độ rộng của hàng là 2 cột)</td>
+                    <td>Data 6</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Data 7 (colspan="4")</td>
+                    <td>Data 8</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Data 9 (colspan="3")</td>
+                    <td>Data 10</td>
+                </tr>
 
-        <textarea id="exp" name="exp" rows="6" cols="50">
-        </textarea>
-        <br>
-        <input type="submit" name="signup" value="Sign Up">
-        <br><br>
-        <a href="http://twitter.com/girldevelopit">Twitter</a> | <a href="http://www.facebook.com/girldevelopit">Facebook</a> | <a href="http://www.flickr.com/photos/40453677@N00/sets/72157626841092971/">Flickr</a>
-    </form>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="indent">Notes:</p>
+        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng.</p>
+        <p>- Thẻ tr được dùng để xác định các hàng của bảng.</p>
+        <p>- Các thông tin trong thẻ th mặc định được in đậm và căn giữa.</p>
+        <p>- Các thông tin trong thẻ td mặc định được căn trái.</p>
+        <p>- Cho các cell trong table sát nhau: <code>border-collapse: collapse;</code></p>
+        <p>- Giá trị colspan là số nguyên >= 1.</p>
+        <p>- Kích thước các cột ở colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
+    </section>
+    <section id="section10">
+        <h2>10. Form</h2>
+        <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
+        <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
+        <p class="subsection">a. input và label</p>
+        <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
+            lý.</p>
+        <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
+            định gắn nhãn cho element nào bằng id attribute.
+        </p>
+        <p>Một số loại input thường dùng:</p>
+        <form>
+            <label>input type="text"</label>
+            <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
+            <br>
+            <label>input type="password"</label>
+            <input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây">
+            <br>
+            <label>input type="email"</label>
+            <input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây">
+            <br>
+            <label>input type="radio" (Chọn 1 trong các đáp án bằng cách cho các input có attr name như nhau)</label>
+            <label for="opt1">Lựa chọn 1</label>
+            <input type="radio" name="input-radio" id="opt1" value="opt1">
+            <label for="opt2">Lựa chọn 2</label>
+            <input type="radio" name="input-radio" id="opt2" value="opt2">
+            <label for="opt3">Lựa chọn 3</label>
+            <input type="radio" name="input-radio" id="opt3" value="opt3">
+            <br>
+            <label>input type="radio" (Chọn nhiều đáp án bằng cách cho các input có attr name khác nhau)</label>
+            <label for="opt1-2">Lựa chọn 1</label>
+            <input type="radio" name="input-radio-1" id="opt1-2" value="opt1-2">
+            <label for="opt2-2">Lựa chọn 2</label>
+            <input type="radio" name="input-radio-2" id="opt2-2" value="opt2-2">
+            <label for="opt3-2">Lựa chọn 3</label>
+            <input type="radio" name="input-radio-3" id="opt3-2" value="opt3-2">
+            <br>
+            <label>input type="date"</label>
+            <input type="date" name="input-date" id="input-date">
+            <br>
+            <label>input type="color"</label>
+            <input type="color" name="input-color" id="input-color">
+            <br>
+            <label>input type="file"</label>
+            <input type="file" name="input-file" id="input-file">
+        </form>
+    </section>
 </body>
+
+</html>
