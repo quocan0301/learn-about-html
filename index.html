@@ -3,17 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab01</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <style>
+        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+        #map { width:100%; height:800px; }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 
 <body>
+    <p>Drag the W3Schools image into the rectangle:</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="http://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    
+
+
+
+
+
+
+    <p>Click on the marker for position information.</p>
+    <div id="map"></div>
+    <script>
+      if (navigator.geolocation) {
+        var timeoutVal = 10 * 1000 * 1000;
+        navigator.geolocation.getCurrentPosition(
+          displayPosition, 
+          displayError,
+          { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+        );
+      }
+      else {
+        alert("Geolocation is not supported by this browser");
+      }
+      function displayPosition(position) {
+        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var options = {
+          zoom: 10,
+          center: pos,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), options);
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: "User location"
+        });
+        var contentString = "<b>Timestamp:</b> " + parseTimestamp(position.timestamp) + "<br/><b>User location:</b> lat " + position.coords.latitude + ", long " + position.coords.longitude + ", accuracy " + position.coords.accuracy;
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      }
+      function displayError(error) {
+        var errors = { 
+          1: 'Permission denied',
+          2: 'Position unavailable',
+          3: 'Request timeout'
+        };
+        alert("Error: " + errors[error.code]);
+      }
+      function parseTimestamp(timestamp) {
+        var d = new Date(timestamp);
+        var day = d.getDate();
+        var month = d.getMonth() + 1;
+        var year = d.getFullYear();
+        var hour = d.getHours();
+        var mins = d.getMinutes();
+        var secs = d.getSeconds();
+        var msec = d.getMilliseconds();
+        return day + "." + month + "." + year + " " + hour + ":" + mins + ":" + secs + "," + msec;
+      }
+    </script>
+
+
+
+
+
+
     <img src="images01/logo.png" alt="logo">
     <h1>About</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <h1 >Intro</h1>
-    <video width="600" controls>
-        <source src="HTML5_Basic_Elements/5_video.html" type="video/mp4">
+    <video width="600">
+        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+	    <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video>
     <h2 >Our Locations</h2>
@@ -34,7 +128,7 @@
         </li>
     </ul>
     <h2 >Upcoming Classes</h2>
-    <table style="width:35%;border: 1px solid;">
+    <table style="width:35%;border: 1px solid;" ondrop="drop(event)" ondragover="allowDrop(event)">
         <tr>
           <th style="border: 1px solid;">Location</th>
           <th style="border: 1px solid;">Topic</th>
