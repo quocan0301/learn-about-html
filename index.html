@@ -27,6 +27,33 @@
             background-color: green;
             color: white;
         }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        form * {
+            margin: 5px 0;
+        }
+
+        .indent~* {
+            margin-left: 20px;
+        }
+
+        *[id^="section"] {
+            margin-left: 20px;
+        }
+
+        .subsection {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .subsection~* {
+
+            margin-left: 40px;
+        }
     </style>
 </head>
 
@@ -48,7 +75,7 @@
         <li><a href="#">Headings, paragraphs</a></li>
         <li><a href="#">Grouping content</a></li>
         <li><a href="#section9">Table</a></li>
-        <li><a href="#">Form</a></li>
+        <li><a href="#section10">Form</a></li>
         <li><a href="#">Media</a></li>
         <li><a href="#">Symbols, emojis</a></li>
         <li><a href="#">Graphics</a></li>
@@ -57,7 +84,7 @@
     <section id="section4">
         <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
         <section id="section4a">
-            <p>a. Thẻ &lt;html&gt;</p>
+            <p class="subsection">a. Thẻ &lt;html&gt;</p>
             <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
                 khác (ngoại trừ !DOCTYPE).</p>
         </section>
@@ -107,16 +134,62 @@
                 </tr>
             </tfoot>
         </table>
-
+        <p class="indent">Notes:</p>
+        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng.</p>
+        <p>- Thẻ tr được dùng để xác định các hàng của bảng.</p>
+        <p>- Các thông tin trong thẻ th mặc định được in đậm và căn giữa.</p>
+        <p>- Các thông tin trong thẻ td mặc định được căn trái.</p>
+        <p>- Cho các cell trong table sát nhau: <code>border-collapse: collapse;</code></p>
+        <p>- Giá trị colspan là số nguyên >= 1.</p>
+        <p>- Kích thước các cột ở colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
     </section>
-    <p>Notes:</p>
-    <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng.</p>
-    <p>- Thẻ tr được dùng để xác định các hàng của bảng.</p>
-    <p>- Các thông tin trong thẻ th mặc định được in đậm và căn giữa.</p>
-    <p>- Các thông tin trong thẻ td mặc định được căn trái.</p>
-    <p>- Cho các cell trong table sát nhau: <code>border-collapse: collapse;</code></p>
-    <p>- Giá trị colspan là số nguyên >= 1.</p>
-    <p>- Kích thước các cột ở colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
+    <section id="section10">
+        <h2>10. Form</h2>
+        <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
+        <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
+        <p class="subsection">a. input và label</p>
+        <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
+            lý.</p>
+        <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
+            định gắn nhãn cho element nào bằng id attribute.
+        </p>
+        <p>Một số loại input thường dùng:</p>
+        <form>
+            <label>input type="text"</label>
+            <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
+            <br>
+            <label>input type="password"</label>
+            <input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây">
+            <br>
+            <label>input type="email"</label>
+            <input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây">
+            <br>
+            <label>input type="radio" (Chọn 1 trong các đáp án bằng cách cho các input có attr name như nhau)</label>
+            <label for="opt1">Lựa chọn 1</label>
+            <input type="radio" name="input-radio" id="opt1" value="opt1">
+            <label for="opt2">Lựa chọn 2</label>
+            <input type="radio" name="input-radio" id="opt2" value="opt2">
+            <label for="opt3">Lựa chọn 3</label>
+            <input type="radio" name="input-radio" id="opt3" value="opt3">
+            <br>
+            <label>input type="radio" (Chọn nhiều đáp án bằng cách cho các input có attr name khác nhau)</label>
+            <label for="opt1-2">Lựa chọn 1</label>
+            <input type="radio" name="input-radio-1" id="opt1-2" value="opt1-2">
+            <label for="opt2-2">Lựa chọn 2</label>
+            <input type="radio" name="input-radio-2" id="opt2-2" value="opt2-2">
+            <label for="opt3-2">Lựa chọn 3</label>
+            <input type="radio" name="input-radio-3" id="opt3-2" value="opt3-2">
+            <br>
+            <label>input type="date"</label>
+            <input type="date" name="input-date" id="input-date">
+            <br>
+            <label>input type="color"</label>
+            <input type="color" name="input-color" id="input-color">
+            <br>
+            <label>input type="file"</label>
+            <input type="file" name="input-file" id="input-file">
+        </form>
+    </section>
 </body>
 
 </html>
