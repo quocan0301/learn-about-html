@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horus | HTML</title>
+    <style>
+        code {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th,
+        td {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
+
+        tfoot td {
+            background-color: green;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,18 +37,86 @@
         <li><a href="#">Tổng quan về HTML</a></li>
         <li><a href="#">Có gì mới ở HTML5</a></li>
         <li><a href="#">XHTML vs HTML</a></li>
-        <li><a href="#">Thẻ html, head, meta, body, script, link</a></li>
+        <li>
+            <a href="#section4">Thẻ html, head, meta, body, script, link</a>
+            <ol type="a">
+                <li><a href="#section4a">Thẻ &lt;html&gt;</a></li>
+            </ol>
+        </li>
         <li><a href="#">Elements</a></li>
         <li><a href="#">Attributes</a></li>
         <li><a href="#">Headings, paragraphs</a></li>
         <li><a href="#">Grouping content</a></li>
-        <li><a href="#">Table</a></li>
+        <li><a href="#section9">Table</a></li>
         <li><a href="#">Form</a></li>
         <li><a href="#">Media</a></li>
         <li><a href="#">Symbols, emojis</a></li>
         <li><a href="#">Graphics</a></li>
         <li><a href="#">Web APIs</a></li>
     </ol>
+    <section id="section4">
+        <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
+        <section id="section4a">
+            <p>a. Thẻ &lt;html&gt;</p>
+            <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
+                khác (ngoại trừ !DOCTYPE).</p>
+        </section>
+    </section>
+    <section id="section9">
+        <h3>9. Table</h3>
+        <p>&lt;table&gt; là thẻ HTML dùng để tạo bảng. Thông thường 1 bảng trong HTML gồm 1 thẻ table và các thẻ như th,
+            td,
+            tr, thead, tfoot, tbody</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data 5 (Dùng thuộc tính colspan="2" để xác định độ rộng của hàng là 2 cột)</td>
+                    <td>Data 6</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Data 7 (colspan="4")</td>
+                    <td>Data 8</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Data 9 (colspan="3")</td>
+                    <td>Data 10</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </section>
+    <p>Notes:</p>
+    <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng.</p>
+    <p>- Thẻ tr được dùng để xác định các hàng của bảng.</p>
+    <p>- Các thông tin trong thẻ th mặc định được in đậm và căn giữa.</p>
+    <p>- Các thông tin trong thẻ td mặc định được căn trái.</p>
+    <p>- Cho các cell trong table sát nhau: <code>border-collapse: collapse;</code></p>
+    <p>- Giá trị colspan là số nguyên >= 1.</p>
+    <p>- Kích thước các cột ở colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
 </body>
 
 </html>
