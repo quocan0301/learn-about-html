@@ -122,6 +122,104 @@
                 khác (ngoại trừ !DOCTYPE).</p>
         </section>
     </section>
+    <section id="section5">
+      <h3>5. Elements</h3>
+      <section id="section5a">
+        <p>Trong HTML, các phần tử (elements) là các thành phần cơ bản được sử dụng để xây dựng
+          và cấu trúc trang web. Các phần tử HTML được đặt trong các thẻ mở và đóng, và chứa nội dung
+          hoặc các thuộc tính để mô tả và định dạng nội dung. Các phần tử HTML có thể được lồng vào nhau
+          để tạo thành cấu trúc phức tạp và đa dạng.
+        </p>
+        <ul>
+          <li>Phần tử HTML là thông thường bắt đầu bằng &lt;tagname&gt; và kết thúc bằng &lt;/tagname&gt;</li>
+          <li>Một số phần tử không cần kết thúc bằng thẻ đóng:
+            <ul>
+              <li>&lt;img&gt;: Được sử dụng để hiển thị một hình ảnh trên trang web. ví dụ: &lt;img src=&quot;image.jpg&quot; alt=&quot;Description of image&quot;&gt;</li>
+              <li>&lt;br&gt;: Tạo một dòng mới trong văn bản hoặc giữa các phần tử.</li>
+              <li>&lt;input&gt;: Tạo một trường nhập liệu trong biểu mẫu. ví dụ: &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</li>
+              <li>&lt;hr&gt;: Tạo một đường ngang ngăn cách các phần trong trang web.</li>
+              <li>&lt;link&gt;: Liên kết với một tài nguyên bên ngoài như một tệp CSS hoặc một tệp biểu tượng. ví dụ: &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;, &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;path/to/favicon.png&quot;&gt;</li>
+              <li>&lt;meta&gt;: Chứa các thông tin meta về tài liệu như mô tả, từ khóa, và encoding. ví dụ: &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</li>
+              <li>&lt;col&gt;: Xác định thuộc tính cho một hoặc nhiều cột trong một bảng. ví dụ: &lt;col span=&quot;2&quot; style=&quot;background-color: yellow;&quot;&gt;</li>
+            </ul>
+          </li>
+          <li>Phần tử HTML có thể được lồng nhau (những phần tử có thể chứa các phần tử khác).
+            <pre>
+  &lt;!DOCTYPE&#xa0;html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+            </pre>
+          </li>
+          <li>Thẻ HTML không phân biệt chữ hoa chữ thường: &lt;P&gt; có nghĩa tương đương với &lt;p&gt;.</li>
+        </ul>
+      </section>
+    </section>
+    <section id="section6">
+      <h3>6. Attributes</h3>
+      <section id="section6a">
+        <ul>
+          <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
+          <li>Thuộc tính cung cấp thông tin bổ sung về các phần tử.</li>
+          <li>Thuộc tính luôn được chỉ định trong thẻ mở.</li>
+          <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: name=&quot;value&quot;.</li>
+        </ul>
+        <p>href: Thuộc tính href xác định URL của trang mà liên kết trỏ tới. 
+          Ví dụ: &lt;a href=&quot;https://www.google.com&quot;&gt; Google.com &lt;/a&gt; </p>
+          <a href="https://www.google.com"> Google.com </a>
+        <p>src: Thuộc tính src (source) xác định nguồn dữ liệu (URL hoặc đường dẫn tới tệp tin)
+          cho một phần tử như hình ảnh, video, âm thanh, hoặc script. Ví dụ: 
+          &lt;script src=&quot;path/to/script.js&quot;&gt;&lt;/script&gt;, &lt;img src=&quot;https://picsum.photos/200&quot; alt=&quot;Mô tả hình ảnh&quot;&gt;</p>
+        <img src="https://picsum.photos/200" alt="Mô tả hình ảnh">
+        <p>width và height: Thuộc tính width và height được sử dụng để xác định chiều rộng và chiều cao
+          của một phần tử HTML. Ví dụ: &lt;img src=&quot;https://picsum.photos/300/200&quot; alt=&quot;Mô tả hình ảnh&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;</p>
+        <img src="https://picsum.photos/300/200" alt="Mô tả hình ảnh" width="300" height="200">
+        <p>alt: Thuộc tính alt được sử dụng để cung cấp một văn bản thay thế cho một phần tử HTML như hình ảnh
+          hoặc các phần tử đa phương tiện khác khi nội dung không thể hiển thị. Ví dụ: &lt;img src=&quot;path/to/image.jpg&quot; alt=&quot;M&#xf4; t&#x1ea3; h&#xec;nh &#x1ea3;nh&quot;&gt;</p>
+        <img src="path/to/image.jpg" alt="Mô tả hình ảnh">
+        <p>style: Thuộc tính style được sử dụng để áp dụng các kiểu CSS (Cascading Style Sheets) trực tiếp cho một phần tử HTML. 
+        Ví dụ: &lt;p style=&quot;color: blue; font-size: 16px;&quot;&gt;hello&lt;/p&gt;</p>
+        <p style="color: blue; font-size: 16px;">hello</p>
+        <p>Thuộc tính "lang" trong HTML được sử dụng để xác định ngôn ngữ chính của nội dung trên một phần tử. Ví dụ: </p>
+        <pre>
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+        <p>Thuộc tính title được sử dụng để cung cấp một mô tả ngắn gọn hoặc gợi ý cho một phần tử HTML khi người 
+          dùng di chuột qua phần tử đó. Ví dụ: &lt;p title=&quot;title&quot;&gt;This is a paragraph.&lt;/p&gt;</p>
+        <p title="title">This is a paragraph.</p>
+      </section>
+    </section>
+    <section id="section7">
+      <h3>7. Headings, paragraphs</h3>
+      <section id="section7a">
+        <p class="subsection">a. Headings</p>
+        <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ 
+          quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn mang
+          ý nghĩa cấu trúc và semantik, giúp các công cụ tìm kiếm và trình duyệt hiểu và xác định văn bản quan trọng
+          và tiêu đề chính của trang</p>
+        <p>Có 6 mức độ tăng từ &lt;h6&gt; cho đến &lt;h1&gt;:</p>
+          <h1 style="font-size: 30px">Heading level 1</h1>
+          <h2>Heading level 2</h2>
+          <h3>Heading level 3</h3>
+          <h4>Heading level 4</h4>
+          <h5>Heading level 5</h5>
+          <h6>Heading level 6</h6>
+        <p class="subsection">b. Paragraph</p>
+        <p>Phần tử &lt;p&gt; trong HTML được sử dụng để định dạng đoạn văn bản. 
+          Nó được sử dụng để tạo ra một đoạn văn riêng biệt trong tài liệu HTML.</p>
+        <p>Một đoạn văn luôn bắt đầu trên một dòng mới và các trình duyệt tự động 
+          thêm một số không gian trống (margin) trước và sau một đoạn văn. Ví dụ: &lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+        <p>Trình duyệt sẽ tự động loại bỏ bất kỳ khoảng trống và dòng thừa nào khi trang web được hiển thị.</p>
+      </section>
+    </section>
     <section id="section9">
         <h3>9. Table</h3>
         <p>&lt;table&gt; là thẻ HTML dùng để tạo bảng. Thông thường 1 bảng trong HTML gồm 1 thẻ table và các thẻ như th,
