@@ -3,21 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Lab01</title>
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <style>
-        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-        #map { width:100%; height:800px; }
+        #div1 {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        #map {
+            width: 100%;
+            height: 800px;
+        }
     </style>
     <script>
         function allowDrop(ev) {
             ev.preventDefault();
         }
-        
+
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
-        
+
         function drop(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
@@ -79,8 +87,13 @@
         .form-demonstration td {
             padding: 5px 10px;
         }
+
+        .autofocus:focus {
+            border: 10px solid yellow;
+        }
     </style>
 </head>
+
 <body>
     <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
     <h2>Mục lục</h2>
@@ -189,7 +202,7 @@
         <h2>10. Form</h2>
         <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
         <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
-        <p class="subsection" id="section10a">a. input và label</p>
+        <p class="subsection" id="section10a">a. input, textarea và label</p>
         <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
             lý.</p>
         <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
@@ -276,10 +289,14 @@
                             chiều dài cho input.</p>
                     </td>
                     <td><textarea cols="50" rows="10" placeholder="Để lại bình luận tại đây"></textarea></td>
+                </tr>
                 <tr>
                     <td>input type="submit"</td>
                     <td><input type="submit" value="Submit"></td>
                 </tr>
+                <tr>
+                    <td>input type="reset"</td>
+                    <td><input type="reset" value="Reset"> </td>
                 </tr>
             </table>
         </form>
@@ -315,7 +332,7 @@
                 <option value="Hủ tiếu mì thập cẩm">
             </datalist>
         </form>
-        <div class="subsection" id="section10c">c. fieldset, legend, textarea</div>
+        <div class="subsection" id="section10c">c. fieldset, legend</div>
         <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
         </p>
 
@@ -345,11 +362,120 @@
             <input type="submit" value="Submit">
         </form>
         <p class="subsection" id="section10d">d. Form attributes</p>
-        <p>action</p>
-        <p>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ là một hyperlink dẫn đến
-            một file xử lý ở phía server.</p>
-        <p>target</p>
+        <p>Attribute của thẻ &lt;form&gt;</p>
+        <table class="form-demonstration">
+            <tr>
+                <th>Attribute</th>
+                <th>Mô tả</th>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ dẫn đến
+                    một file xử lý ở phía server.<br>
+                    <code>&lt;form action="./validate_user.php"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Sử dụng để quy định cách ta hiển thị response sau khi form được submit.<br>
+                    _blank: Response được hiển thị ở cửa sổ hoặc tab mới<br>
+                    _self: Response được hiển thị ở cửa sổ hiện tại<br>
+                    _parent: Response được hiển thị ở frame (?) cha<br>
+                    _top: Response được hiển thị trên toàn bộ màn hình cửa sổ<br>
+                    <code>&lt;form target="_blank"&gt;</code>
+                    <code>&lt;form target="_self"&gt;</code>
+                    <code>&lt;form target="_parent"&gt;</code>
+                    <code>&lt;form target="_top"&gt;</code><br>
+                    Giá trị mặc định là _self.
+                </td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>Mô tả method HTTP nào được thực hiện sau khi form được submit (get/post). Mặc định là get.<br>
+                    <code>&lt;form action="./validate_user.php" method="post"&gt;</code>
+                </td>
 
+            </tr>
+
+            <tr>
+                <td>autocomplete</td>
+                <td>
+                    Autocomplete cho phép trình duyệt tự động gợi ý thông tin đã được lưu trữ trước đó vào các trường
+                    input. Có hai giá trị on và off. Mặc định là on.<br>
+                    <code>&lt;form autocomplete="on/off"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>
+                    Khi thêm novalidate vào thẻ form, trình duyệt sẽ không kiểm tra tính đúng đắn của dữ liệu trong
+                    input khi form được submit.<br>
+                    <code>&lt;form novalidate"&gt;</code>
+                </td>
+            </tr>
+        </table>
+        <p>Attribute của các input</p>
+        <table class="form-demonstration">
+            <tr>
+                <td>value</td>
+                <td>Giá trị mặc định của input trong form<br>
+                    <code>&lt;input type="text" value="Horusoftaceae"&gt;</code>
+                    <input type="text" value="Horusoftaceae">
+                </td>
+
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>Giá trị "giữ chỗ", được hiển thị khi input trống. Thường được dùng để gợi ý, nhắc nhở người dùng
+                    nhập vào input. Giá trị này không ảnh hưởng đến giá trị input.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn"&gt;</code>
+                    <input type="text" placeholder="Nhập tên của bạn">
+                </td>
+
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Input chỉ có thể xem, highlight, copy chứ không thể sửa (read-only). Giá trị đó sẽ được submit.<br>
+                    <code>&lt;input type="text" value="Horusoftaceae" readonly&gt;</code>
+                    <input type="text" value="Horusoftaceae" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Input chỉ có thể xem, không thể highlight, copy, sửa. Giá trị đó sẽ không được submit.<br>
+                    <code>&lt;input type="text" value="Horusoftaceae" disabled&gt;</code>
+                    <input type="text" value="Horusoftaceae" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>Người dùng không được để trống input này khi submit form.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn" required&gt;</code>
+                    <form>
+                        <input type="text" placeholder="Nhập tên của bạn" required>
+                        <input type="submit" value="Nộp">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td>Thường dùng trong file input. Attribute này cho phép người dùng tải lên nhiều file trong cùng 1
+                    input.<br>
+                    <code>&lt;input type="file" multiple&gt;</code>
+                    <input input type="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>Khi trang web được load, input này sẽ tự động được focus.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn" autofocus&gt;</code>
+                    <input type="text" placeholder="Nhập tên của bạn" class="autofocus" autofocus>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="section11">
+        <h2>11. Media</h2>
     </section>
 </body>
 
