@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab01</title>
+</head>
+
+<body>
+    <img src="images01/logo.png" alt="logo">
+    <h1>About</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h1 >Intro</h1>
+    <video width="600" controls>
+        <source src="HTML5_Basic_Elements/5_video.html" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2 >Our Locations</h2>
+    <ul >
+        <li>USA
+            <ul >
+                <li><a href="http://meetup.com/girldevelopit">New York</a></li>
+                <li><a href="http://www.meetup.com/girldevelopitcbus">Columbus</a></li>
+                <li><a href="http://www.meetup.com/Girl-Develop-It-Austin">Austin</a></li>
+                <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/">Philly</a></li>
+            </ul>
+        </li>
+        <li>World
+            <ul >
+                <li><a href="http://www.meetup.com/Girl-Develop-It-Ottawa">Ottawa</a></li>
+                <li><a href="http://www.meetup.com/girldevelopit-sydney">Sydney</a></li>
+            </ul>
+        </li>
+    </ul>
+    <h2 >Upcoming Classes</h2>
+    <table style="width:35%;border: 1px solid;">
+        <tr>
+          <th style="border: 1px solid;">Location</th>
+          <th style="border: 1px solid;">Topic</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid;">New York</td>
+          <td style="border: 1px solid;">JavaScript & jQuery</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid;">San Francisco</td>
+            <td style="border: 1px solid;">HTML & CSS</td>
+          </tr>
+    </table>
+    <h2 >Sign Up!</h2>
+    <form method="POST" action="comments.php" >
+        Name: <input name="name" type="text"><br><br>
+        Email: <input name="email" type="text"><br><br>
+        <label>Location: </label>
+        <select name="location" id="location" >
+            <option value="NY">New York</option>
+            <option value="SF">San Francisco</option>
+        </select>
+        <fieldset>
+        <legend>Gender: </legend>
+            <input type="radio" id="female" name="gender" value="Female" size="30">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="Male" size="30">
+            <label for="male">Male</label>
+        </fieldset>
+        <br>
+        <label for="exp">Experience:</label><br>
+
+        <textarea id="exp" name="exp" rows="6" cols="50">
+        </textarea>
+        <br>
+        <input type="submit" name="signup" value="Sign Up">
+        <br><br>
+        <a href="http://twitter.com/girldevelopit">Twitter</a> | <a href="http://www.facebook.com/girldevelopit">Facebook</a> | <a href="http://www.flickr.com/photos/40453677@N00/sets/72157626841092971/">Flickr</a>
+    </form>
+</body>

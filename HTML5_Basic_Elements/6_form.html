@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center><h1>Basic Form elements</h1></center>
+<form action="#">
+	<h2>The &lt;select&gt; Element (Drop-Down List)</h2>
+	<select name="cars">
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	<option value="fiat">Fiat</option>
+	<option value="audi">Audi</option>
+	</select>
+
+	<h2>The &lt;textarea&gt; Element</h2>
+	<textarea name="message" rows="10" cols="30">
+	The cat was playing in the garden.
+	</textarea>
+
+	<h2>The &lt;button&gt; Element</h2>
+	<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+	<h2>The &lt;datalist&gt; Element</h2>
+	<input list="browsers">
+	<datalist id="browsers">
+	  <option value="Internet Explorer">
+	  <option value="Firefox">
+	  <option value="Chrome">
+	  <option value="Opera">
+	  <option value="Safari">
+	</datalist> 
+
+	<h2>The &lt;keygen&gt; Element</h2>
+	Username: <input type="text" name="user">
+	Encryption: <keygen name="security">
+	<input type="submit">
+
+</form>
+<h2>The &lt;output&gt; Element</h2>
+<form action="action_page.asp" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+	0
+	<input type="range" id="a" name="a" value="50">
+	100 +
+	<input type="number" id="b" name="b" value="50">
+	=
+	<output name="x"></output>
+</form>
+
+<h2>Input Types</h2>
+<h3>Type: text</h3>
+<input type="text">
+
+<h3>Type: password</h3>
+<input type="password">
+
+<h3>Type: radio</h3>
+<input type="radio" name="sex" value="male" checked>Male
+<br>
+<input type="radio" name="sex" value="female">Female
+
+<h3>Type: checkbox</h3>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike
+<br>
+<input type="checkbox" name="vehicle" value="Car">I have a car 
+
+<h3>Type: button</h3>
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+<hr />
+<h3>Type: number</h3>
+<input type="number" name="quantity" min="1" max="5">
+
+<h3>Type: color</h3>
+<input type="color" name="favcolor">
+
+<h3>Type: range</h3>.
+<input type="range" name="points" min="0" max="10">
+
+<h3>Type: email</h3>
+<input type="email" name="email">
+
+<h3>Type: url</h3>
+<input type="url" name="homepage">
+
+</body>
+</html>

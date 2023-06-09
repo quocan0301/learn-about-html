@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Title" content="A Simple HTML Example Page - all you need to know to make a basic web page." />
+	<meta http-equiv="Description" content="Examples of simple HTML markup tags with explainations" />
+	<meta name="Author" content="Bonnie Dalzell, MA" />
+	<meta name="Generator" content="Bonnie Dalzell brain ver 53.3" />
+	<meta name="Copyright" content="Copyright 2003, Bonnie Dalzell" />
+	<meta http-equiv="Keywords" content="HTML, basic HTML, webpage " />
+	<title> A Simple HTML Example Page </title>
+	<style type="text/css">
+		body {
+			background-color:#FFFFCC
+		}
+		h1 {
+			text-align:center
+		}
+		.style1 {
+			font-family:Arial, Helvetica, sans-serif;
+			font-style:italic;
+			color:#33CC33;
+			font-size:20px;
+			font-weight:bold
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Example Page for simple HTML tags.</h1>
+	<h1>Save this as a local page in HTML format and open it in a text editor (Ex: Notepad).</h1>
+
+	<h2><b>Basics</b></h2>
+	HTML pages have three parts, the <a href="#header">HEADER</a>, 
+	the <a href="#body">BODY</a> (which contains the part which is readable when displayed in your browser)
+	and the <a href="#footer">FOOTER</a>.
+
+	<p>The HTML commands to the browser are &#39;marked-up&#39; by being surrounded by the &lt; 
+		(less than) and the &gt; (greater than) characters.
+	</p>
+
+	<h2> <b><a name="header">About the Header</a></b></h2>
+	<p>
+		The header is invisible to the person looking at a page in their browser but it 
+		is needed so that the browser can successfully read the page.
+	</p>
+	
+	<p>Minimally your page should have the following invariant items in the header:</p>
+	
+	<pre>
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+	</pre>
+	
+	<p>
+	Some meta tags that need to add brief information about you page: title, keyword, description,...
+	</p>
+
+	<p> The basic form of a meta tag is:<br />
+		&lt;meta name=&quot;descriptor&quot; content=&quot;value of descriptor&quot;&gt;<br />
+	</p>
+	<pre>
+	&lt;meta http-equiv=&quot;Title&quot; content=&quot;Page title and descriptive phrase here&quot; &gt;
+	&lt;meta http-equiv=&quot;Description&quot; content=&quot;Description of the page content, no more than 25 words.&quot;&gt;
+	&lt;meta http-equiv=&quot;Keywords&quot; content=&quot;enter a list of comman separated key words here, use no more than 11 &quot;&gt;
+	&lt;title&gt; Page Title &lt;/title&gt;</pre>
+	<p> The header must be closed by a header close tag:<br />
+		&lt;/head&gt;
+	</p>
+
+	<h2><b><a name ="body">About the Body</a></b></h2>
+	<b> The body tag </b>
+
+	<p>
+		The body is delimited by a pair of body tags, &lt;body&gt; and &lt;/body&gt;.<br />
+		&lt;body bgcolor=&quot;#ffffff&quot;&gt;
+		<br />
+		bgcolor attribute is used to set the background color of your page.<br />
+		Common colors are: <br />
+		&nbsp;&nbsp; White = &quot;#ffffff&quot;<br />
+		&nbsp;&nbsp; Black = &quot;#000000&quot;<br />
+		&nbsp;&nbsp; Red = &quot;#ff0000&quot;<br />
+		&nbsp;&nbsp; Blue = &quot;#0000ff&quot;<br />
+		&nbsp;&nbsp; Green = &quot;#00ff00&quot;<br />
+		&nbsp;&nbsp; Cyan = &quot;#00ffff&quot;<br />
+		&nbsp;&nbsp; Magenta = &quot;#ff00ff&quot;<br />
+		&nbsp;&nbsp; Yellow = &quot;#ffff00&quot;<br />
+	</p>
+	
+	<h2> <b>Format text with CSS</b></h2>
+	<span class="style1">This text is formatted with font-family, font-style, color, size, font-weight attributes</span>
+	<h2> <b> Special Characters</b></h2>
+	
+	<p>
+		Some common special characters:<br />
+		&amp;lt; is the escaped representation of the &lt;<br />
+		&amp;gt; is the escaped representation of the &gt;<br />
+		&copy; is the escaped representation of the copyright symbol<br />
+		&amp;nbsp; is the space character<br />
+	</p>
+	
+	<p>
+		There is a very large set of special symbols that you can find on Google.
+	</p>
+
+	<h2><b>Thematic break in an HTML page &lt;hr /&gt;</b></h2>	
+	<hr />
+
+	<h2><b>Unorder List Example</b></h2>
+
+	<ul>
+		<li> Item 1</li>
+		<li> Item 2</li>
+		<li> Item 3</li>
+		<li> Item 4</li>
+	</ul>
+
+	<h2><b>Order List Example</b></h2>
+
+	<ol>
+		<li> Item 1</li>
+		<li> Item 2</li>
+		<li> Item 3</li>
+		<li> Item 4</li>
+	</ol>
+
+	<h2><b>Here is a multiple level UNORDERED list:</b></h2>
+	
+	<ul><li> Level one item 1</li>
+	    <li>
+	        <ul><li> Level two item 1</li>
+	            <li> Level two item 2</li>
+	            <li> Level two item 3</li>
+	            <li>
+	                <ul><li> Level three item 1</li>
+	                    <li> Level three item 2</li>
+	                    <li> Level three item 3</li>
+	                    <li> Level three item 4</li>
+	                    </ul></li>
+	            <li> Level two item 4</li>
+	            </ul></li>
+	    <li> Level one item 2</li>
+	    <li> Level one item 3</li>
+	</ul>
+
+	<h2><b>Example of table:</b></h2>
+	
+	<table border="1">
+		<tr>
+			<td>cell 1</td>
+			<td>cell 2</td>
+		</tr>
+		<tr>
+			<td>cell 3</td>
+			<td>cell 4</td>
+		</tr>
+	</table>
+
+	<p> Below is a working example of a tag that displays an image on the page.
+		<br /> It is of this form: <br /><br />
+		&lt;img src=&quot;http://nicholaskreidberg.com/wp-content/uploads/2011/02/w3cert.png&quot; height=&quot;150&quot; width=&quot;150&quot; 
+		alt=&quot;a sample picture 150 pixels high and 150 pixels wide&quot;&gt;
+	
+		<br /><br />
+		The page loads faster if you include the image height and width in pixels in the 
+		tag. The alt variable should describe the image.
+	</p>
+
+	<p>
+		<img src="https://placeholdit.imgix.net/~text?txtsize=15&txt=Sample%20Image&w=120&h=120" height="150" width="150" alt="a sample picture 150 pixels high and 150 pixels wide" />
+		<br />
+		By default browsers ignore carriage returns and multiple spaces that are typed 
+		into the text and only display formatting that is created by the HTML tags.<br />
+		
+		<pre>
+			If you want to have the browser display what you have typed
+			                      e x a c t l y
+			as you typed it you use the preformat tag pair  &lt;pre&gt; and &lt;/pre&gt;.
+		</pre>
+	</p>
+	
+	<h2>The last line in the page is the <b><a name="footer"> footer</a></b> which looks like this.</h2>
+	<p style="text-align:center">Copyright 2013 by Someone. All Rights Reserved.</p>
+	
+	<p> The body must be closed by the following tag:<br />
+		&lt;/body&gt;
+	</p>
+</body>
+</html>
