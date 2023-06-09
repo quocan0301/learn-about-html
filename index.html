@@ -2,74 +2,65 @@
 <html lang="vi">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lab01</title>
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <style>
-    #div1 {
-      width: 350px;
-      height: 70px;
-      padding: 10px;
-      border: 1px solid #aaaaaa;
-    }
+    <meta charset="UTF-8">
+    <title>Lab01</title>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <style>
+        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+        #map { width:100%; height:800px; }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horus | HTML</title>
+    <style>
+        code {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
 
-    #map {
-      width: 100%;
-      height: 800px;
-    }
-  </style>
-  <script>
-    function allowDrop(ev) {
-      ev.preventDefault();
-    }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
 
-    function drag(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-    }
+        th,
+        td {
+            background-color: #f2f2f2;
+            border: 1px solid black;
+        }
 
-    function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-    }
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horus | HTML</title>
-  <style>
-    code {
-      background-color: black;
-      color: white;
-      font-size: 16px;
-    }
+        tfoot td {
+            background-color: green;
+            color: white;
+        }
 
         .border-form {
             border: 1px solid black;
             padding: 10px;
         }
 
-    th,
-    td {
-      background-color: #f2f2f2;
-      border: 1px solid black;
-    }
-
-    tfoot td {
-      background-color: green;
-      color: white;
-    }
-
-        form {
-            border: 1px solid black;
-            padding: 10px;
+        form * {
+            margin: 5px 0;
         }
 
-    form * {
-      margin: 5px 0;
-    }
-
-    .indent~* {
-      margin-left: 20px;
-    }
+        .indent~* {
+            margin-left: 20px;
+        }
 
         *[id^="section"] {
             margin-left: 20px;
@@ -458,7 +449,6 @@
         <p>target</p>
 
     </section>
-  </section>
 </body>
 
 </html>
