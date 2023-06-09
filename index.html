@@ -42,10 +42,10 @@
       font-size: 16px;
     }
 
-    table {
-      border-collapse: collapse;
-      width: 90%;
-    }
+        .border-form {
+            border: 1px solid black;
+            padding: 10px;
+        }
 
     th,
     td {
@@ -58,10 +58,10 @@
       color: white;
     }
 
-    form {
-      border: 1px solid black;
-      padding: 10px;
-    }
+        form {
+            border: 1px solid black;
+            padding: 10px;
+        }
 
     form * {
       margin: 5px 0;
@@ -71,88 +71,294 @@
       margin-left: 20px;
     }
 
-    *[id^="section"] {
-      margin-left: 20px;
-    }
+        *[id^="section"] {
+            margin-left: 20px;
+        }
 
-    .subsection {
-      font-style: italic;
-      font-size: 20px;
-    }
+        .subsection {
+            font-style: italic;
+            font-size: 20px;
+        }
 
-    .subsection~* {
+        .subsection~* {
 
-      margin-left: 40px;
-    }
-  </style>
+            margin-left: 40px;
+        }
+
+        .form-demonstration td {
+            padding: 5px 10px;
+        }
+    </style>
 </head>
-
 <body>
-  <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
-  <h2>Mục lục</h2>
-  <ol>
-    <li><a href="#">Tổng quan về HTML</a></li>
-    <li><a href="#">Có gì mới ở HTML5</a></li>
-    <li><a href="#">XHTML vs HTML</a></li>
-    <li>
-      <a href="#section4">Thẻ html, head, meta, body, script, link</a>
-      <ol type="a">
-        <li><a href="#section4a">Thẻ &lt;html&gt;</a></li>
-      </ol>
-    </li>
-    <li><a href="#section5">Elements</a></li>
-    <li><a href="#">Attributes</a></li>
-    <li><a href="#">Headings, paragraphs</a></li>
-    <li><a href="#">Grouping content</a></li>
-    <li><a href="#section9">Table</a></li>
-    <li><a href="#section10">Form</a></li>
-    <li><a href="#">Media</a></li>
-    <li><a href="#">Symbols, emojis</a></li>
-    <li><a href="#">Graphics</a></li>
-    <li><a href="#">Web APIs</a></li>
-  </ol>
-  <section id="section4">
-    <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
-    <section id="section4a">
-      <p class="subsection">a. Thẻ &lt;html&gt;</p>
-      <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
-        khác (ngoại trừ !DOCTYPE).</p>
+    <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
+    <h2>Mục lục</h2>
+    <ol>
+        <li><a href="#">Tổng quan về HTML</a></li>
+        <li><a href="#">Có gì mới ở HTML5</a></li>
+        <li><a href="#">XHTML vs HTML</a></li>
+        <li>
+            <a href="#section4">Thẻ html, head, meta, body, script, link</a>
+            <ol type="a">
+                <li><a href="#section4a">Thẻ &lt;html&gt;</a></li>
+            </ol>
+        </li>
+        <li><a href="#">Elements</a></li>
+        <li><a href="#">Attributes</a></li>
+        <li><a href="#">Headings, paragraphs</a></li>
+        <li><a href="#">Grouping content</a></li>
+        <li><a href="#section9">Table</a></li>
+        <li>
+            <a href="#section10">Form</a>
+            <ol type="a">
+                <li><a href="#section10a">Form elements: input, textarea và label</a></li>
+                <li><a href="#section10b">Form elements: select, datalist và option</a></li>
+                <li><a href="#section10c">Form elements: fieldset, legend</a></li>
+                <li><a href="#section10d">Form attributes</a></li>
+            </ol>
+        </li>
+
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Symbols, emojis</a></li>
+        <li><a href="#">Graphics</a></li>
+        <li><a href="#">Web APIs</a></li>
+    </ol>
+    <section id="section4">
+        <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
+        <section id="section4a">
+            <p class="subsection">a. Thẻ &lt;html&gt;</p>
+            <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
+                khác (ngoại trừ !DOCTYPE).</p>
+        </section>
     </section>
-  </section>
-  <section id="section5">
-    <h3>5. Elements</h3>
-    <section id="section5a">
-      <p>Trong HTML, các phần tử (elements) là các thành phần cơ bản được sử dụng để xây dựng
-        và cấu trúc trang web. Các phần tử HTML được đặt trong các thẻ mở và đóng, và chứa nội dung
-        hoặc các thuộc tính để mô tả và định dạng nội dung. Các phần tử HTML có thể được lồng vào nhau
-        để tạo thành cấu trúc phức tạp và đa dạng.
-      </p>
-      <ul>
-        <li>Phần tử HTML là thông thường bắt đầu bằng &lt;tagname&gt; và kết thúc bằng &lt;/tagname&gt;</li>
-        <li>Một số phần tử không cần kết thúc bằng thẻ đóng:
-          <ul>
-            <li>&lt;img&gt;: Được sử dụng để hiển thị một hình ảnh trên trang web. ví dụ: &lt;img src=&quot;image.jpg&quot; alt=&quot;Description of image&quot;&gt;</li>
-            <li>&lt;br&gt;: Tạo một dòng mới trong văn bản hoặc giữa các phần tử.</li>
-            <li>&lt;input&gt;: Tạo một trường nhập liệu trong biểu mẫu. ví dụ: &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</li>
-            <li>&lt;hr&gt;: Tạo một đường ngang ngăn cách các phần trong trang web.</li>
-            <li>&lt;link&gt;: Liên kết với một tài nguyên bên ngoài như một tệp CSS hoặc một tệp biểu tượng. ví dụ: &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;, &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;path/to/favicon.png&quot;&gt;</li>
-            <li>&lt;meta&gt;: Chứa các thông tin meta về tài liệu như mô tả, từ khóa, và encoding. ví dụ: &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</li>
-            <li>&lt;col&gt;: Xác định thuộc tính cho một hoặc nhiều cột trong một bảng. ví dụ: &lt;col span=&quot;2&quot; style=&quot;background-color: yellow;&quot;&gt;</li>
-          </ul>
-        </li>
-        <li>Phần tử HTML có thể được lồng nhau (những phần tử có thể chứa các phần tử khác).
-          <pre>
-&lt;!DOCTYPE&#xa0;html&gt;
-&lt;html&gt;
-&lt;body&gt;
-  &lt;h1&gt;My First Heading&lt;/h1&gt;
-  &lt;p&gt;My first paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-          </pre>
-        </li>
-        <li>Thẻ HTML không phân biệt chữ hoa chữ thường: &lt;P&gt; có nghĩa tương đương với &lt;p&gt;.</li>
-      </ul>
+    <section id="section9">
+        <h3>9. Table</h3>
+        <p>&lt;table&gt; là thẻ HTML dùng để tạo bảng. Thông thường 1 bảng trong HTML gồm 1 thẻ table và các thẻ như th,
+            td,
+            tr, thead, tfoot, tbody</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data 5 (Dùng thuộc tính colspan="2" để xác định độ rộng của hàng là 2 cột)</td>
+                    <td>Data 6</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Data 7 (colspan="4")</td>
+                    <td>Data 8</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Data 9 (colspan="3")</td>
+                    <td>Data 10</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="indent">Notes:</p>
+        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng. Chúng không ảnh hưởng đến cấu trúc
+            tổng thể của bảng.</p>
+        <p>- Sử dụng thẻ tr để xác định mỗi hàng của bảng
+            <code>&lt;tr&gt;&lt;/tr&gt;</code>
+        </p>
+        <p>- Thẻ th được dùng cho các cell là header của bảng. Các thông tin trong thẻ th mặc định được in đậm và căn
+            giữa.
+            <code>&lt;th&gt;Header 1&lt;/th&gt;</code>
+        </p>
+        <p>- Thẻ td chứa nội dung cho các cell bình thường của bảng. Các thông tin trong thẻ td mặc định được căn
+            trái. <code>&lt;td&gt;Data 1&lt;/td&gt;</code></p>
+        <p>- Mặc định các cell của bảng sẽ cách nhau một khoảng nhỏ. Có thể dùng
+            <code>style="border-collapse: collapse;"</code> để đưa chúng sát với nhau.
+        </p>
+        <p>- Giá trị colspan là số nguyên >= 1.</p>
+        <p>- Kích thước các cột bị chồng lấn khi dùng colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
+    </section>
+    <section id="section10">
+        <h2>10. Form</h2>
+        <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
+        <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
+        <p class="subsection" id="section10a">a. input và label</p>
+        <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
+            lý.</p>
+        <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
+            định gắn nhãn cho element nào bằng id attribute.
+        </p>
+        <p>Một số loại input thường dùng:</p>
+        <form>
+            <table class="form-demonstration">
+                <tr>
+                    <td>input type="text"</td>
+                    <td><input type="text" name="input-text" placeholder="Nhập text gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="number"</td>
+                    <td><input type="number" name="input-number"></td>
+                </tr>
+                <tr>
+                    <td>input type="password"</td>
+                    <td><input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="email"</td>
+                    <td><input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="radio"</td>
+                    <td>
+                        <label for="opt1">Option 1</label>
+                        <input type="radio" name="input-radio" id="opt1" value="opt1">
+                        <br>
+                        <label for="opt2">Option 2</label>
+                        <input type="radio" name="input-radio" id="opt2" value="opt2">
+                        <br>
+                        <label for="opt3">Option 3</label>
+                        <input type="radio" name="input-radio" id="opt3" value="opt3">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="checkbox"</td>
+                    <td>
+                        <label for="opt1-2">Option 1</label>
+                        <input type="checkbox" name="input-checkbox" id="opt1-2" value="opt1-2">
+                        <br>
+                        <label for="opt2-2">Option 2</label>
+                        <input type="checkbox" name="input-checkbox" id="opt2-2" value="opt2-2">
+                        <br>
+                        <label for="opt3-2">Option 3</label>
+                        <input type="checkbox" name="input-checkbox" id="opt3-2" value="opt3-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="date"</td>
+                    <td><input type="date" name="input-date" id="input-date"></td>
+                </tr>
+                <tr>
+                    <td>input type="color"</td>
+                    <td><input type="color" name="input-color" id="input-color"></td>
+                </tr>
+                <tr>
+                    <td>input type="file"</td><br>
+                    <td><input type="file" name="input-file" id="input-file"></td>
+                </tr>
+                <tr>
+                    <td>input type="range" có các thuộc tính như <br> min, max: Quy định giá trị nhỏ/lớn nhất của
+                        thanh;
+                        <br>step: Mức tăng mỗi khi thanh được kéo; <br>value: giá trị mặc định của thanh (nếu không thêm
+                        vào, mặc định sẽ là giá trị trung tâm)
+                    </td>
+
+                    <td>0<input type="range" name="input-range" id="input-range" min="0" max="10" step="0.1">10</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&lt;textarea&gt; là thẻ dùng để tạo ra input text có nhiều dòng. Thẻ này thường được dùng cho
+                            các
+                            input
+                            dài
+                            từ người dùng như đánh giá, nhận xét, tâm sự,...</p>
+                        <p>Trong thẻ textarea, có 2 attribute thường được dùng là cols và rows để điều chỉnh kích thước
+                            chiều
+                            rộng
+                            và
+                            chiều dài cho input.</p>
+                    </td>
+                    <td><textarea cols="50" rows="10" placeholder="Để lại bình luận tại đây"></textarea></td>
+                <tr>
+                    <td>input type="submit"</td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                </tr>
+            </table>
+        </form>
+
+        <p class="subsection" id="section10b">b. select, datalist và option</p>
+        <p>&lt;select&gt; là thẻ tạo ra một danh sách xổ xuống (drop-down list) cho người dùng. Các Option này được
+            đặt
+            trong
+            thẻ &lt;option&gt;.</p>
+        <p>&lt;datalist&gt; là thẻ tạo ra một danh sách các Option cho người dùng. Các Option này được đặt
+            trong
+            thẻ &lt;option&gt;. Người dùng có thể chọn 1 option bằng cách như select hoặc tìm kiếm option phù hợp bằng
+            cách nhập vào khung input.</p>
+
+        <form class="border-form">
+            <label for="colors">Thẻ select: Chọn 1 màu</label><br>
+            <select value="colors" id="colors">
+                <option value="red">Đỏ</option>
+                <option value="blue">Xanh dương</option>
+                <option value="green">Xanh lá</option>
+                <option value="yellow">Vàng</option>
+                <option value="black">Đen</option>
+            </select>
+            <br>
+            <label for="foods">Thẻ datalist: Chọn 1 món ăn</label><br>
+            <input list="foods">
+            <datalist value="foods" id="foods">
+                <option value="Phở bò tái nạm">
+                <option value="Mì vịt tiềm">
+                <option value="Bún thịt nướng">
+                <option value="Bún bò Huế">
+                <option value="Cơm tấm sườn bì chả">
+                <option value="Hủ tiếu mì thập cẩm">
+            </datalist>
+        </form>
+        <div class="subsection" id="section10c">c. fieldset, legend, textarea</div>
+        <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
+        </p>
+
+        <form class="border-form">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <label for="fname">Họ:</label><br>
+                <input type="text" id="fname" name="fname" value="Lorem"><br>
+                <label for="lname">Tên :</label><br>
+                <input type="text" id="lname" name="lname" value="Ipsum"><br>
+                <label for="gender-radio">Giới tính</label><br>
+                Nam <input type="radio" name="gender-radio" id="male" value="male">
+                Nữ <input type="radio" name="gender-radio" id="female" value="female"><br>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Thông tin liên hệ</legend>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@example.com"><br>
+                <label for="phone">Số điện thoại:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789"><br>
+                <label for="address">Địa chỉ:</label><br>
+                <textarea cols="50" rows="10" placeholder="Nhập địa chỉ của bạn"></textarea><br>
+
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+        <p class="subsection" id="section10d">d. Form attributes</p>
+        <p>action</p>
+        <p>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ là một hyperlink dẫn đến
+            một file xử lý ở phía server.</p>
+        <p>target</p>
+
     </section>
   </section>
   <section id="section6">
