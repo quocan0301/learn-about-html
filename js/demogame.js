@@ -25,10 +25,9 @@ var myGameArea = {
     document.getElementById("demo-game").insertBefore(this.canvas, document.getElementById("demo-game").childNodes[0]);
 
     this.frameNo = 0;
-    if (this.interval) {
-      this.clearInterval(this.interval);
-    } else
+    if (!this.interval) {
       this.interval = setInterval(updateGameArea, 10);
+    }
   },
   clear: function () {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
