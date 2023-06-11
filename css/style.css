@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif, Tahoma;
+}
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+#map {
+  width: 100%;
+  height: 800px;
+}
+
+a:link,a:visited{
+  color: blue;
+}
+a:hover{
+  color:purple;
+}
+
+:not(pre) > code {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th,
+td {
+  background-color: #f2f2f2;
+  border: 1px solid black;
+}
+
+tfoot td {
+  background-color: green;
+  color: white;
+}
+
+.border-form {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+form * {
+  margin: 5px 0;
+}
+
+.indent~* {
+  margin-left: 20px;
+}
+
+*[id^="section"] {
+  margin-left: 20px;
+}
+
+.subsection {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.subsection~* {
+
+  margin-left: 40px;
+}
+
+.form-demonstration td {
+  padding: 5px 10px;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+li:last-child {
+  margin-bottom: initial;
+}
