@@ -43,7 +43,7 @@
         <li><a href="#section5">Elements</a></li>
         <li><a href="#section6">Attributes</a></li>
         <li><a href="#section7">Headings, paragraphs</a></li>
-        <li><a href="#">Grouping content</a></li>
+        <li><a href="#section8">Grouping content</a></li>
         <li><a href="#section9">Table</a></li>
         <li>
             <a href="#section10">Form</a>
@@ -72,7 +72,7 @@
         <h3>5. Elements</h3>
         <section id="section5a">
             <p>Trong HTML, các phần tử (elements) là các thành phần cơ bản được sử dụng để xây dựng
-                và cấu trúc trang web. Các phần tử HTML thường được đặt trong các thẻ mở và đóng, và chứa nội dung
+                và cấu trúc trang web. Các phần tử HTML được đặt trong các thẻ mở và đóng, và chứa nội dung
                 hoặc các thuộc tính để mô tả và định dạng nội dung. Các phần tử HTML có thể được lồng vào nhau
                 để tạo thành cấu trúc phức tạp và đa dạng.
             </p>
@@ -143,13 +143,14 @@
             <p style="color: blue; font-size: 16px;">hello</p>
             <p>Thuộc tính "lang" trong HTML được sử dụng để xác định ngôn ngữ chính của nội dung trên một phần tử. Ví
                 dụ: </p>
-            <pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-        </code></pre>
+            <pre>
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
             <p>Thuộc tính title được sử dụng để cung cấp một mô tả ngắn gọn hoặc gợi ý cho một phần tử HTML khi người
                 dùng di chuột qua phần tử đó. Ví dụ: &lt;p title=&quot;title&quot;&gt;This is a paragraph.&lt;/p&gt;</p>
             <p title="title">This is a paragraph.</p>
@@ -157,7 +158,7 @@
     </section>
     <section id="section7">
         <h3>7. Headings, paragraphs</h3>
-        <p class="subsection"></p>
+        <section id="section7a">
             <p class="subsection">a. Headings</p>
             <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ
                 quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn
@@ -183,18 +184,16 @@
     </section>
     <section id="section8">
         <h3>8. Grouping content</h3>
-            <p class="subsection"></p>
-            <p class="subsection">a. address</p>
-            <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
-             Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng 
-             như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
-            <pre>
-              <code class="language-html">
-                &lt;address&gt;      
-                UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
-                1701 Manor Road, Austin, TX 78722&lt;br&gt;
-                Tel: (512) 471-5883 | Fax: (512) 471-5908
-                &lt;/address&gt;                
+        <p class="subsection">a. address</p>
+        <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
+            Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng
+            như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
+        <pre>
+&lt;address&gt;      
+    UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
+    1701 Manor Road, Austin, TX 78722&lt;br&gt;
+    Tel: (512) 471-5883 | Fax: (512) 471-5908
+&lt;/address&gt;                
             </pre>
         <address>
             UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
@@ -222,61 +221,39 @@
             Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
         <pre>
 &lt;ul&gt;
-            </code></pre>
-            <address>      
-                UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
-                1701 Manor Road, Austin, TX 78722<br>
-                Tel: (512) 471-5883 | Fax: (512) 471-5908
-            </address>     
-            <p class="subsection">b. hr</p>
-            <p>Thẻ &lt;hr&gt; được sử dụng để tạo ra một dấu ngắn phân chia về mặt chủ đề ở mức độ đoạn văn.</p>
-            <p>phân chia ở đây</p>
-            <hr>
-            <p class="subsection">c. pre</p>
-            <p>Thẻ &lt;pre&gt; đại diện cho một khối văn bản được định dạng trước, trong đó cấu trúc
-                 được biểu thị bằng các quy ước chữ viết chứ không phải là bằng các phần tử.</p>
-            <pre><code class="language-html">&lt;pre&gt;
-    he    llo,   world!
-&lt;/pre&gt;    
-            </code></pre>
-<pre>
-    he    llo,   world!
-</pre>  
-            <p class="subsection">d. ol, ul li</p>
-            <p>Trong HTML, các thẻ &lt;ul&gt;, &lt;ol&gt;, và &lt;li&gt; được sử dụng để tạo danh sách.</p>
-            <p>&lt;ul&gt; (unordered list) được sử dụng để tạo danh sách không có thứ tự. 
-                Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
-            <pre><code class="language-html">&lt;ul&gt;
   &lt;li&gt;list 1&lt;/li&gt;
   &lt;li&gt;list 2&lt;/li&gt;
   &lt;li&gt;list 3&lt;/li&gt;
 &lt;/ul&gt;
-            </code></pre>
-            <ul>
-                <li>list 1</li>
-                <li>list 2</li>
-                <li>list 3</li>
-            </ul>
-            <p>&lt;ol&gt; (ordered list) được sử dụng để tạo danh sách có thứ tự. Tương tự như &lt;ul&gt;, mỗi phần tử
-                 trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Tuy nhiên, danh sách này sẽ có số thứ tự. Ví dụ:</p>
-            <pre><code class="language-html">&lt;ol&gt;
+            </pre>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ul>
+        <p>&lt;ol&gt; (ordered list) được sử dụng để tạo danh sách có thứ tự. Tương tự như &lt;ul&gt;, mỗi phần tử
+            trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Tuy nhiên, danh sách này sẽ có số thứ tự. Ví dụ:
+        </p>
+        <pre>
+&lt;ol&gt;
   &lt;li&gt;list 1&lt;/li&gt;
   &lt;li&gt;list 2&lt;/li&gt;
   &lt;li&gt;list 3&lt;/li&gt;
 &lt;/ol&gt;
-            </code></pre>
-            <ol>
-                <li>list 1</li>
-                <li>list 2</li>
-                <li>list 3</li>
-            </ol>
-            <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách. 
-                Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
-            <p class="subsection">e. dl dt dd</p>
-            <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
-            <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa. 
-                Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
-            <pre><code class="language-html">&lt;dl&gt;
+            </pre>
+        <ol>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ol>
+        <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách.
+            Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
+        <p class="subsection">d. dl dt dd</p>
+        <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
+        <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa.
+            Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
+        <pre>
+&lt;dl&gt;
   &lt;dt&gt;example 1&lt;/dt&gt;
   &lt;dd&gt;defi 1&lt;/dd&gt;
   
@@ -286,32 +263,33 @@
   &lt;dt&gt;example 3&lt;/dt&gt;
   &lt;dd&gt;defi 3&lt;/dd&gt;
 &lt;/dl&gt;
-            </code></pre>
-            <dl>
-                <dt>example 1</dt>
-                <dd>defi 1</dd>
-                
-                <dt>example 2</dt>
-                <dd>defi 2</dd>
+            </pre>
+        <dl>
+            <dt>example 1</dt>
+            <dd>defi 1</dd>
 
-                <dt>example 3</dt>
-                <dd>defi 3</dd>
-            </dl>
-            <p class="subsection">f. div</p>
-            <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
-                 có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
-                  lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
-            <pre><code class="language-html">&lt;div class=&quot;container_div&quot;&gt;
+            <dt>example 2</dt>
+            <dd>defi 2</dd>
+
+            <dt>example 3</dt>
+            <dd>defi 3</dd>
+        </dl>
+        <p class="subsection">d. div</p>
+        <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
+            có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
+            lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
+        <pre>
+&lt;div&gt;
     &lt;h3&gt;heading&lt;/h3&gt;
     &lt;p&gt;para 1&lt;/p&gt;
     &lt;p&gt;para 2&lt;/p&gt;
 &lt;/div&gt;
-            </code></pre>
-            <div class="container_div">
-                <h3>heading</h3>
-                <p>para 1</p>
-                <p>para 2</p>
-            </div>
+            </pre>
+        <div>
+            <h3>heading</h3>
+            <p>para 1</p>
+            <p>para 2</p>
+        </div>
     </section>
     <section id="section9">
         <h3>9. Table</h3>
@@ -906,6 +884,7 @@
     </section>
     <section id="section14">
         <h2>14. Web APIs</h2>
+        <p class="subsection">
         <p>API là viết tắt của Application Programming Interface (giao diện lập trình ứng dụng).</p>
         <p>Web API là một giao diện lập trình ứng dụng cho Web, thường được sử dụng với JavaScript.</p>
         <p>Web APIs có thể đơn giản hóa rất nhiều các chức năng phức tạp.</p>
@@ -1052,7 +1031,7 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                     button to get the current position on Google Map.</span>
                 <div id="demoGoogleMap"></div>
                 <script async
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANbnyNpAUPNgF6Q5uSchJ_hbXXdl9Kcnk&callback=initMap"></script>
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnI7wxBqGEhtiDnJlkxh5ac0eYf8_9tLY&callback=initMap"></script>
                 <script src="js/demogooglemap.js"></script>
             </li>
         </ul>
