@@ -98,14 +98,15 @@
                     </ul>
                 </li>
                 <li>Phần tử HTML có thể được lồng nhau (những phần tử có thể chứa các phần tử khác).
-                    <pre><code class="language-html">&lt;!DOCTYPE&#xa0;html&gt;
-&lt;html&gt;
-&lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+                    <pre>
+                    &lt;!DOCTYPE&#xa0;html&gt;
+                    &lt;html&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;My First Heading&lt;/h1&gt;
+                        &lt;p&gt;My first paragraph.&lt;/p&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </pre>
                 </li>
                 <li>Thẻ HTML không phân biệt chữ hoa chữ thường: &lt;P&gt; có nghĩa tương đương với &lt;p&gt;.</li>
             </ul>
@@ -118,7 +119,7 @@
                 <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
                 <li>Thuộc tính cung cấp thông tin bổ sung về các phần tử.</li>
                 <li>Thuộc tính luôn được chỉ định trong thẻ mở.</li>
-                <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: name=&quot;value&quot;.</li>
+                <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: attribute_name=&quot;value&quot;.</li>
             </ul>
             <p>href: Thuộc tính href xác định URL của trang mà liên kết trỏ tới.
                 Ví dụ: &lt;a href=&quot;https://www.google.com&quot;&gt; Google.com &lt;/a&gt; </p>
@@ -156,7 +157,7 @@
     </section>
     <section id="section7">
         <h3>7. Headings, paragraphs</h3>
-        <section id="section7a">
+        <p class="subsection"></p>
             <p class="subsection">a. Headings</p>
             <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ
                 quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn
@@ -182,15 +183,45 @@
     </section>
     <section id="section8">
         <h3>8. Grouping content</h3>
-          <p class="subsection">a. address</p>
-          <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
+            <p class="subsection"></p>
+            <p class="subsection">a. address</p>
+            <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
              Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng 
              như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
-            <pre><code class="language-html">&lt;address&gt;      
-    UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
-    1701 Manor Road, Austin, TX 78722&lt;br&gt;
-    Tel: (512) 471-5883 | Fax: (512) 471-5908
-&lt;/address&gt;                
+            <pre>
+              <code class="language-html">
+                &lt;address&gt;      
+                UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
+                1701 Manor Road, Austin, TX 78722&lt;br&gt;
+                Tel: (512) 471-5883 | Fax: (512) 471-5908
+                &lt;/address&gt;                
+            </pre>
+        <address>
+            UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
+            1701 Manor Road, Austin, TX 78722<br>
+            Tel: (512) 471-5883 | Fax: (512) 471-5908
+        </address>
+        <p class="subsection">b. hr</p>
+        <p>Thẻ &lt;hr&gt; được sử dụng để tạo ra một dấu ngắn phân chia về mặt chủ đề ở mức độ đoạn văn.</p>
+        <p>phân chia ở đây</p>
+        <hr>
+        <p class="subsection">c. pre</p>
+        <p>Thẻ &lt;pre&gt; đại diện cho một khối văn bản được định dạng trước, trong đó cấu trúc
+            được biểu thị bằng các quy ước chữ viết chứ không phải là bằng các phần tử.</p>
+        <pre>
+&lt;pre&gt;
+    he    llo,   world!
+&lt;/pre&gt;    
+            </pre>
+        <pre>
+    he    llo,   world!
+</pre>
+        <p class="subsection">d. ol, ul li</p>
+        <p>Trong HTML, các thẻ &lt;ul&gt;, &lt;ol&gt;, và &lt;li&gt; được sử dụng để tạo danh sách.</p>
+        <p>&lt;ul&gt; (unordered list) được sử dụng để tạo danh sách không có thứ tự.
+            Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
+        <pre>
+&lt;ul&gt;
             </code></pre>
             <address>      
                 UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
@@ -241,7 +272,7 @@
             </ol>
             <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách. 
                 Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
-            <p class="subsection">d. dl dt dd</p>
+            <p class="subsection">e. dl dt dd</p>
             <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
             <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa. 
                 Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
@@ -266,7 +297,7 @@
                 <dt>example 3</dt>
                 <dd>defi 3</dd>
             </dl>
-            <p class="subsection">d. div</p>
+            <p class="subsection">f. div</p>
             <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
                  có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
                   lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
@@ -317,7 +348,10 @@
                     <td colspan="3">Data 9 (colspan="3")</td>
                     <td>Data 10</td>
                 </tr>
-
+                <tr>
+                    <td colspan="3">Chiếm 3 cột trên 1 hàng</td>
+                    <td>Chiếm 2 hàng trên 1 cột</td>
+                </tr>
             </tbody>
             <tfoot>
                 <tr>
@@ -331,16 +365,18 @@
         <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng. Chúng không ảnh hưởng đến cấu trúc
             tổng thể của bảng.</p>
         <p>- Sử dụng thẻ tr để xác định mỗi hàng của bảng
-            <code>&lt;tr&gt;&lt;/tr&gt;</code>
+        <pre><code>&lt;tr&gt;&lt;/tr&gt;</code></pre>
         </p>
         <p>- Thẻ th được dùng cho các cell là header của bảng. Các thông tin trong thẻ th mặc định được in đậm và căn
             giữa.
-            <code>&lt;th&gt;Header 1&lt;/th&gt;</code>
+        <pre><code>&lt;th&gt;Header 1&lt;/th&gt;</code></pre>
         </p>
         <p>- Thẻ td chứa nội dung cho các cell bình thường của bảng. Các thông tin trong thẻ td mặc định được căn
-            trái. <code>&lt;td&gt;Data 1&lt;/td&gt;</code></p>
+            trái.
+        <pre><code>&lt;td&gt;Data 1&lt;/td&gt;</code></pre>
+        </p>
         <p>- Mặc định các cell của bảng sẽ cách nhau một khoảng nhỏ. Có thể dùng
-            <code>style="border-collapse: collapse;"</code> để đưa chúng sát với nhau.
+        <pre><code>style="border-collapse: collapse;"</code></pre> để đưa chúng sát với nhau.
         </p>
         <p>- Giá trị colspan là số nguyên >= 1.</p>
         <p>- Kích thước các cột bị chồng lấn khi dùng colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
@@ -349,20 +385,24 @@
         <h2>10. Form</h2>
         <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
         <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
-        <p class="subsection" id="section10a">a. input và label</p>
+        <p class="subsection" id="section10a">a. input, textarea và label</p>
         <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
             lý.</p>
         <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
             định gắn nhãn cho element nào bằng id attribute.
         </p>
         <p>Một số loại input thường dùng:</p>
+
         <form>
             <table class="form-demonstration">
                 <tr>
                     <td>input type="text"</td>
-                    <td><input type="text" name="input-text" placeholder="Nhập text gì đó ở đây"></td>
+                    <td>
+                        <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
+                    </td>
                 </tr>
                 <tr>
+
                     <td>input type="number"</td>
                     <td><input type="number" name="input-number"></td>
                 </tr>
@@ -410,7 +450,7 @@
                     <td><input type="color" name="input-color" id="input-color"></td>
                 </tr>
                 <tr>
-                    <td>input type="file"</td><br>
+                    <td>input type="file"</td>
                     <td><input type="file" name="input-file" id="input-file"></td>
                 </tr>
                 <tr>
@@ -456,7 +496,7 @@
 
         <form class="border-form">
             <label for="colors">Thẻ select: Chọn 1 màu</label><br>
-            <select value="colors" id="colors">
+            <select id="colors">
                 <option value="red">Đỏ</option>
                 <option value="blue">Xanh dương</option>
                 <option value="green">Xanh lá</option>
@@ -466,7 +506,7 @@
             <br>
             <label for="foods">Thẻ datalist: Chọn 1 món ăn</label><br>
             <input list="foods">
-            <datalist value="foods" id="foods">
+            <datalist id="foods">
                 <option value="Phở bò tái nạm">
                 <option value="Mì vịt tiềm">
                 <option value="Bún thịt nướng">
@@ -475,7 +515,7 @@
                 <option value="Hủ tiếu mì thập cẩm">
             </datalist>
         </form>
-        <div class="subsection" id="section10c">c. fieldset, legend, textarea</div>
+        <p class="subsection" id="section10c">c. fieldset, legend</p>
         <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
         </p>
 
@@ -505,11 +545,178 @@
             <input type="submit" value="Submit">
         </form>
         <p class="subsection" id="section10d">d. Form attributes</p>
-        <p>action</p>
-        <p>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ là một hyperlink dẫn đến
-            một file xử lý ở phía server.</p>
-        <p>target</p>
+        <p>Attribute của thẻ &lt;form&gt;</p>
+        <table class="form-demonstration">
+            <tr>
+                <th>Attribute</th>
+                <th>Mô tả</th>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ dẫn đến
+                    một file xử lý ở phía server.<br>
+                    <pre><code>&lt;form action="./validate_user.php"&gt;</code></pre>
+                </td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Sử dụng để quy định cách ta hiển thị response sau khi form được submit.<br>
+                    _blank: Response được hiển thị ở cửa sổ hoặc tab mới<br>
+                    _self: Response được hiển thị ở cửa sổ hiện tại<br>
+                    _parent: Response được hiển thị ở frame (?) cha<br>
+                    _top: Response được hiển thị trên toàn bộ màn hình cửa sổ<br>
+                    <pre><code>&lt;form target="_blank"&gt;</code></pre>
+                    <pre><code>&lt;form target="_self"&gt;</code></pre>
+                    <pre><code>&lt;form target="_parent"&gt;</code></pre>
+                    <pre><code>&lt;form target="_top"&gt;</code></pre><br>
+                    Giá trị mặc định là _self.
+                </td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>Mô tả method HTTP nào được thực hiện sau khi form được submit (get/post). Mặc định là get.<br>
+                    <pre><code>&lt;form action="./validate_user.php" method="post"&gt;</code></pre>
+                </td>
 
+            </tr>
+
+            <tr>
+                <td>autocomplete</td>
+                <td>
+                    Autocomplete cho phép trình duyệt tự động gợi ý thông tin đã được lưu trữ trước đó vào các trường
+                    input. Có hai giá trị on và off. Mặc định là on.<br>
+                    <pre><code>&lt;form autocomplete="on/off"&gt;</code></pre>
+                </td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>
+                    Khi thêm novalidate vào thẻ form, trình duyệt sẽ không kiểm tra tính đúng đắn của dữ liệu trong
+                    input khi form được submit.<br>
+                    <pre><code>&lt;form novalidate"&gt;</code></pre>
+                </td>
+            </tr>
+        </table>
+        <p>Attribute của các input</p>
+        <table class="form-demonstration">
+            <tr>
+                <td>value</td>
+                <td>Giá trị mặc định của input trong form<br>
+                    <pre><code>&lt;input type="text" value="Horusoftaceae"&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae">
+                </td>
+
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>Giá trị "giữ chỗ", được hiển thị khi input trống. Thường được dùng để gợi ý, nhắc nhở người dùng
+                    nhập vào input. Giá trị này không ảnh hưởng đến giá trị input.<br>
+                    <pre><code>&lt;input type="text" placeholder="Nhập tên của bạn"&gt;</code></pre>
+                    <input type="text" placeholder="Nhập tên của bạn">
+                </td>
+
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Input chỉ có thể xem, highlight, copy chứ không thể sửa (read-only). Giá trị đó sẽ được submit.<br>
+                    <pre><code>&lt;input type="text" value="Horusoftaceae" readonly&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Input chỉ có thể xem, không thể highlight, copy, sửa. Giá trị đó sẽ không được submit.<br>
+                    <pre><code>&lt;input type="text" value="Horusoftaceae" disabled&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>Người dùng không được để trống input này khi submit form.<br>
+                    <pre><code>&lt;input type="text" placeholder="Nhập tên của bạn" required&gt;</code></pre>
+                    <form>
+                        <input type="text" placeholder="Nhập tên của bạn" required>
+                        <input type="submit" value="Nộp">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td>Thường dùng trong file input. Attribute này cho phép người dùng tải lên nhiều file trong cùng 1
+                    input.<br>
+                    <pre><code>&lt;input type="file" multiple&gt;</code></pre>
+                    <input type="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>Khi trang web được load, input này sẽ tự động được focus.<br>
+                    <pre><code>&lt;input type="text" placeholder="Nhập tên của bạn" autofocus&gt;</code></pre>
+                    <input type="text" placeholder="Nhập tên của bạn" class="autofocus" autofocus>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="section11">
+        <h2>11. Media</h2>
+        <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh, hoạt họa (animation)</p>
+        <div class="subsection" id="section11a">a. Ảnh</div>
+        <p>Trong HTML, ta có thể sử dụng thẻ
+        <pre><code>&lt;img&gt;</code></pre> để chèn ảnh vào trang web.</p>
+        <p>Trong thẻ img, có 2 attribute cần phải có:</p>
+        <ul>
+            <li>src: Liên kết dẫn đến tệp tin ảnh.</li>
+            <li>alt: Là văn bản để hiển thị khi ảnh không được load thành công.</li>
+        </ul>
+        <table>
+            <tr>
+                <td>
+                    <figure>
+                        <figcaption>Khi ảnh được load thành công</figcaption>
+                        <img src="https://horusoftaceae.com/_next/static/images/home-slider-0-small-af1dfde7a925f974ca18f9ad54b28d4b.png"
+                            alt="Horusoftaceae">
+
+                    </figure>
+                </td>
+                <td>
+                    <figure>
+                        <figcaption>Khi ảnh load thất bại</figcaption>
+                        <img src="https://horusoftacea.com/_next/static/images/home-slider-0-small-af1dfde7a925f974ca18f9ad54b28d4b.png"
+                            alt="Horusoftaceae">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+        <div class="subsection" id="section11b">b. Video</div>
+        <p>HTML khuyến nghị sử dụng các định dạng video .mp4, .webm, .ogg</p>
+        <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .avi, .mov, .flv,...</p>
+        <p>Để chèn video vào trang web, ta sử dụng thẻ
+        <pre><code>&lt;video&gt;</code></pre>
+        </p>
+        <video width="480" height="320" controls>
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+            Your browser does not support video tag.
+        </video>
+        <div class="subsection" id="section11c">c. Audio</div>
+        <p>HTML khuyến nghị sử dụng các định dạng audio .mp3, .wav, .ogg</p>
+        <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .aac, .wma, .flac,...</p>
+        <p>Để chèn audio vào trang web, ta sử dụng thẻ
+        <pre><code>&lt;audio&gt;</code></pre>
+        </p>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.webm" type="audio/webm">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="section11d">d. Youtube video</div>
+        <p>Ta có thể nhúng 1 video từ youtube vào trang web bằng thẻ &lt;iframe&gt;</p>
+        <pre>
+            <code class="language-html">
+                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt;
+                &lt;/iframe&gt;
+            </code>
+        </pre>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
     </section>
     <section id="section13">
         <h2>13. Graphics</h2>
@@ -658,9 +865,14 @@
                 Một phần tử canvas là một khung chữ nhật trên trang HTML. Mặc định canvas không có viền bao quanh và
                 không có nội dung.
             </p>
-            <p><strong><u>Lưu ý</u>:</strong> Luôn định nghĩa <code>id</code> cho canvas, cùng chiều rộng
-                (<code>width</code>) và chiều cao (<code>height</code>)
-                để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính <code>style</code></p>
+            <p><strong><u>Lưu ý</u>:</strong> Luôn định nghĩa
+            <pre><code>id</code></pre> cho canvas, cùng chiều rộng
+            (
+            <pre><code>width</code></pre>) và chiều cao (
+            <pre><code>height</code></pre>)
+            để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính
+            <pre><code>style</code></pre>
+            </p>
             <pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;
 &lt;/canvas&gt;</code></pre>
             <p>Kết quả:</p>
@@ -713,6 +925,7 @@
         el.style.color = &quot;red&quot;;
     }
 &lt;/script&gt;</code></pre>
+                </pre>
                 Kết quả: <button onclick="demoSetRed(this)">Set color to Red</button>
                 <script>
                     function demoSetRed(el) {
@@ -733,6 +946,7 @@
         .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).value = y);
     }
 &lt;/script&gt;</code></pre>
+                </pre>
                 Kết quả: <button onclick="demoFetch()">Fetch from "demo_fetch.js"</button><br />
                 <textarea id="demo-fetch"></textarea>
                 <script>
@@ -760,6 +974,7 @@
         ctx.fillRect(10,10,150,80);
     }
 &lt;/script&gt;</code></pre>
+                </pre>
                 Kết quả: <button onclick="demoCanvasGradient()">Draw Gradient</button><br />
                 <canvas id="myCanvasGradient" width="200" height="100" style="border:1px solid black;"></canvas>
                 <script>
@@ -796,6 +1011,7 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
 "&lt;br&gt;Longitude: " + position.coords.longitude;
 }
 &lt;/script&gt;</code></pre>
+                </pre>
                 <span>Kết quả:</span> <button onclick="getLocation()">Get Location</button>
                 <p id="demo-geolocation"></p>
                 <script>
@@ -821,7 +1037,7 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                 khi tải lại trang web thì có thể lấy dữ liệu đó ra để sử dụng.
             </li>
         </ul>
-        <p class="subsection" id="section14a">b. Third Party APIs</p>
+        <p class="subsection" id="section14b">b. Third Party APIs</p>
         <p>API của bên thứ ba không được tích hợp vào trình duyệt. Để sử dụng các API
             này, bạn sẽ phải tải/link code từ Web.</p>
         <p>Ví dụ: </p>
