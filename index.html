@@ -31,9 +31,9 @@
     <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
     <h2>Mục lục</h2>
     <ol>
-        <li><a href="#">Tổng quan về HTML</a></li>
-        <li><a href="#">Có gì mới ở HTML5</a></li>
-        <li><a href="#">XHTML vs HTML</a></li>
+        <li><a href="#section1">Tổng quan về HTML</a></li>
+        <li><a href="#section2">Có gì mới ở HTML5</a></li>
+        <li><a href="#section3">XHTML vs HTML</a></li>
         <li>
             <a href="#section4">Thẻ html, head, meta, body, script, link</a>
             <ol type="a">
@@ -60,6 +60,52 @@
         <li><a href="#section13">Graphics</a></li>
         <li><a href="#section14">HTML APIs</a></li>
     </ol>
+    <section id="section1">
+        <h3>1. Tổng quan về HTML</h3>
+        <p>Hyper Text Markup Language – ngôn ngữ đánh dấu siêu văn bản, được sử dụng để tạo và định dạng nội dung trên trang web.</p>
+    </section>
+    <section id="section2">
+        <h3>2. Có gì mới trong HTML5</h3>
+        <p></p>HTML5 đã mang đến nhiều tính năng mới và cải tiến so với các phiên bản HTML trước đó. Dưới đây là một số tính năng đáng chú ý trong HTML5:</p>
+        <ol style="margin-left: 50px;">
+            <li><strong>Hỗ trợ đa phương tiện: </strong>HTML5 cung cấp các phần tử như &lt;video&gt; và &lt;audio&gt; cho phép nhúng và phát đa phương tiện trực tiếp trên trang web mà không cần sử dụng các plugin bên ngoài như Flash. Điều này giúp tăng tính tương thích và hiệu suất của các trang web đa phương tiện.</li>
+            <li><strong>Đồ họa và đồ thị: </strong>HTML5 bổ sung phần tử &lt;canvas&gt; cho phép vẽ đồ họa và tạo ra đồ thị phức tạp bằng JavaScript. Ngoài ra, HTML5 cũng hỗ trợ đồ họa vector thông qua các phần tử như &lt;svg&gt;.</li>
+            <li><strong>Web Storage: </strong>HTML5 cung cấp các API cho phép lưu trữ dữ liệu trên máy khách (client-side) như localStorage và sessionStorage. Điều này cho phép ứng dụng web lưu trữ và truy xuất dữ liệu trên máy tính của người dùng mà không cần phải gửi dữ liệu lên máy chủ.</li>
+            <li><strong>Web Workers: </strong>HTML5 giới thiệu khái niệm Web Workers, cho phép thực hiện các tác vụ phức tạp trên nền tảng web mà không làm treo giao diện người dùng. Điều này cải thiện tính năng đáp ứng và trải nghiệm người dùng của các ứng dụng web.</li>
+            <li><strong>Đa luồng và đa tiến trình: </strong>HTML5 hỗ trợ các tiến trình và luồng làm việc song song, cho phép thực hiện các tác vụ phức tạp và tương tác đa nhiệm trên trang web.</li>
+            <li><strong>Hỗ trợ định vị địa lý</strong>HTML5 cung cấp các API như Geolocation cho phép trang web truy cập vị trí địa lý của người dùng, điều này hữu ích trong các ứng dụng dựa trên vị trí như bản đồ, hướng dẫn đường, và quyền truy cập dựa trên vị trí.</li>
+            <li><strong>Các phần tử và thuộc tính mới: </strong>HTML5 đưa ra nhiều phần tử mới như &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;,... giúp cải thiện cấu trúc và semantica của trang web. Ngoài ra, nó cũng cung cấp các thuộc tính mới cho các phần tử như `placeholder`, `required`, `pattern`,... để kiểm soát dữ liệu đầu vào và tương tác với người dùng</li>
+        </ol>
+    </section>
+    <section id="section3">
+        <h3>3. XHTML và HTML</h3>
+        <p><strong>XHTML (Extensible HyperText Markup Language)</strong> và <strong>HTML (HyperText Markup Language)</strong> đều là ngôn ngữ đánh dấu để xây dựng và hiển thị các trang web trên Internet. Dưới đây là chi tiết về cả hai:</p>
+        <ol style="margin-left: 50px;">
+            <li><strong>HTML (HyperText Markup Language)</strong>
+                <ul>
+                    <li>HTML là một ngôn ngữ đánh dấu dùng để xây dựng cấu trúc và định dạng các trang web. Nó sử dụng các thẻ (tags) để xác định các phần tử và cấu trúc của trang web.</li>
+                    <li>HTML không yêu cầu việc tuân thủ nghiêm ngặt các quy tắc cú pháp. Nó cho phép sử dụng các thẻ không được đóng và thuộc tính có thể không được trích dẫn.</li>
+                    <li>HTML5 là phiên bản mới nhất của HTML và đi kèm với nhiều tính năng mới và cải tiến, bao gồm hỗ trợ video, audio, canvas, geolocation, drag and drop, local storage, và nhiều tính năng khác.</li>
+                </ul>
+            </li>
+            <li><strong>XHTML (Extensible HyperText Markup Language)</strong> 
+                <p>XHTML là một biến thể của HTML, tuân thủ nghiêm ngặt các quy tắc XML (Extensible Markup Language). Nó kết hợp cú pháp XML với các quy tắc cú pháp của HTML.</p>
+                <ul>
+                    <li>XHTML yêu cầu việc tuân thủ chặt chẽ các quy tắc cú pháp, bao gồm việc sử dụng các thẻ phải được đóng đúng cú pháp và thuộc tính phải được trích dẫn.</li>
+                    <li>XHTML đảm bảo tính nhất quán và tương thích với các công cụ xử lý XML, giúp tạo ra các trang web tương thích và dễ dàng mở rộng.</li>
+                </ul>
+            </li>
+        </ol>
+        <p><strong>So sánh giữa XHTML và HTML:</strong></p>
+        <ul style="margin-left: 50px;">
+            <li><strong>Cú pháp: </strong>XHTML yêu cầu tuân thủ chặt chẽ cú pháp XML, trong khi HTML không yêu cầu sự nghiêm ngặt này.</li>
+            <li><strong>Tính nhất quán: </strong>XHTML đảm bảo tính nhất quán trong việc đóng và mở các thẻ, định dạng thuộc tính, v.v. Trong khi HTML cho phép sử dụng các thẻ không được đóng và thuộc tính không được trích dẫn.</li>
+            <li><strong>Tương thích công cụ xử lý XML: </strong>XHTML tương thích tốt với các công cụ xử lý XML, giúp việc phân tích và xử lý dữ liệu dễ dàng hơn.</li>
+            <li><strong>Phát triển tiếp: </strong>Vì tính chặt chẽ hơn trong việc tuân thủ cú pháp, việc phát triển tiếp trên XHTML có thể khó khăn hơn so với HTML.</li>
+            <li><strong>Sự lựa chọn: </strong>Hiện nay, HTML5 được sử dụng phổ biến hơn XHTML trong việc phát triển trang web, vì HTML5 kết hợp giữa tính linh hoạt của HTML và các tính năng mạnh mẽ của XHTML.</li>
+        </ul>
+        <p>Tóm lại, HTML và XHTML đều là ngôn ngữ đánh dấu để xây dựng trang web, nhưng XHTML tuân thủ chặt chẽ cú pháp XML và đảm bảo tính nhất quán hơn. Tuy nhiên, HTML5 hiện đang được sử dụng phổ biến hơn và được coi là tiêu chuẩn phát triển trang web hiện đại.</p>
+    </section>
     <section id="section4">
         <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
         <section id="section4a">
