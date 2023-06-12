@@ -43,7 +43,7 @@
         <li><a href="#section5">Elements</a></li>
         <li><a href="#section6">Attributes</a></li>
         <li><a href="#section7">Headings, paragraphs</a></li>
-        <li><a href="#">Grouping content</a></li>
+        <li><a href="#section8">Grouping content</a></li>
         <li><a href="#section9">Table</a></li>
         <li>
             <a href="#section10">Form</a>
@@ -72,7 +72,7 @@
         <h3>5. Elements</h3>
         <section id="section5a">
             <p>Trong HTML, các phần tử (elements) là các thành phần cơ bản được sử dụng để xây dựng
-                và cấu trúc trang web. Các phần tử HTML thường được đặt trong các thẻ mở và đóng, và chứa nội dung
+                và cấu trúc trang web. Các phần tử HTML được đặt trong các thẻ mở và đóng, và chứa nội dung
                 hoặc các thuộc tính để mô tả và định dạng nội dung. Các phần tử HTML có thể được lồng vào nhau
                 để tạo thành cấu trúc phức tạp và đa dạng.
             </p>
@@ -156,28 +156,29 @@
     </section>
     <section id="section7">
         <h3>7. Headings, paragraphs</h3>
-        <p class="subsection"></p>
-        <p class="subsection">a. Headings</p>
-        <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ
-            quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn
-            mang
-            ý nghĩa cấu trúc và semantik, giúp các công cụ tìm kiếm và trình duyệt hiểu và xác định văn bản quan
-            trọng
-            và tiêu đề chính của trang</p>
-        <p>Có 6 mức độ tăng từ &lt;h6&gt; cho đến &lt;h1&gt;:</p>
-        <h1 style="font-size: 30px">Heading level 1</h1>
-        <h2>Heading level 2</h2>
-        <h3>Heading level 3</h3>
-        <h4>Heading level 4</h4>
-        <h5>Heading level 5</h5>
-        <h6>Heading level 6</h6>
-        <p class="subsection">b. Paragraph</p>
-        <p>Phần tử &lt;p&gt; trong HTML được sử dụng để định dạng đoạn văn bản.
-            Nó được sử dụng để tạo ra một đoạn văn riêng biệt trong tài liệu HTML.</p>
-        <p>Một đoạn văn luôn bắt đầu trên một dòng mới và các trình duyệt tự động
-            thêm một số không gian trống (margin) trước và sau một đoạn văn. Ví dụ: &lt;p&gt;This is a
-            paragraph.&lt;/p&gt;</p>
-        <p>Trình duyệt sẽ tự động loại bỏ bất kỳ khoảng trống và dòng thừa nào khi trang web được hiển thị.</p>
+        <section id="section7a">
+            <p class="subsection">a. Headings</p>
+            <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ
+                quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn
+                mang
+                ý nghĩa cấu trúc và semantik, giúp các công cụ tìm kiếm và trình duyệt hiểu và xác định văn bản quan
+                trọng
+                và tiêu đề chính của trang</p>
+            <p>Có 6 mức độ tăng từ &lt;h6&gt; cho đến &lt;h1&gt;:</p>
+            <h1 style="font-size: 30px">Heading level 1</h1>
+            <h2>Heading level 2</h2>
+            <h3>Heading level 3</h3>
+            <h4>Heading level 4</h4>
+            <h5>Heading level 5</h5>
+            <h6>Heading level 6</h6>
+            <p class="subsection">b. Paragraph</p>
+            <p>Phần tử &lt;p&gt; trong HTML được sử dụng để định dạng đoạn văn bản.
+                Nó được sử dụng để tạo ra một đoạn văn riêng biệt trong tài liệu HTML.</p>
+            <p>Một đoạn văn luôn bắt đầu trên một dòng mới và các trình duyệt tự động
+                thêm một số không gian trống (margin) trước và sau một đoạn văn. Ví dụ: &lt;p&gt;This is a
+                paragraph.&lt;/p&gt;</p>
+            <p>Trình duyệt sẽ tự động loại bỏ bất kỳ khoảng trống và dòng thừa nào khi trang web được hiển thị.</p>
+        </section>
     </section>
     <section id="section8">
         <h3>8. Grouping content</h3>
@@ -186,11 +187,15 @@
         <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
             Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng
             như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
-        <pre><code class="language-html">&lt;address&gt;      
-UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
-1701 Manor Road, Austin, TX 78722&lt;br&gt;
-Tel: (512) 471-5883 | Fax: (512) 471-5908
-&lt;/address&gt;</code></pre>
+        <pre>
+              <code class="language-html">
+&lt;address&gt;      
+    UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
+    1701 Manor Road, Austin, TX 78722&lt;br&gt;
+    Tel: (512) 471-5883 | Fax: (512) 471-5908
+&lt;/address&gt;       
+              </code>         
+            </pre>
         <address>
             UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
             1701 Manor Road, Austin, TX 78722<br>
@@ -859,6 +864,7 @@ Tel: (512) 471-5883 | Fax: (512) 471-5908
     </section>
     <section id="section14">
         <h2>14. Web APIs</h2>
+        <p class="subsection">
         <p>API là viết tắt của Application Programming Interface (giao diện lập trình ứng dụng).</p>
         <p>Web API là một giao diện lập trình ứng dụng cho Web, thường được sử dụng với JavaScript.</p>
         <p>Web APIs có thể đơn giản hóa rất nhiều các chức năng phức tạp.</p>
@@ -1003,7 +1009,7 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                     button to get the current position on Google Map.</span>
                 <div id="demoGoogleMap"></div>
                 <script async
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANbnyNpAUPNgF6Q5uSchJ_hbXXdl9Kcnk&callback=initMap"></script>
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnI7wxBqGEhtiDnJlkxh5ac0eYf8_9tLY&callback=initMap"></script>
                 <script src="js/demogooglemap.js"></script>
             </li>
         </ul>
