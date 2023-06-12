@@ -690,11 +690,25 @@
         <p>Ta có thể nhúng 1 video từ youtube vào trang web bằng thẻ &lt;iframe&gt;</p>
         <pre>
             <code class="language-html">
-                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt;
-                &lt;/iframe&gt;
+                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0YcfvPMft54"&gt;&lt;/iframe&gt;
             </code>
         </pre>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0YcfvPMft54"></iframe>
+    </section>
+    <section id="section12">
+        <h2>12. Symbols, emojis</h2>
+        <p>Symbol và emoji là những entity đặc biệt, là tập hợp của nhiều kí tự trong bảng UTF-8. Mã của chúng (dạng
+            thập phân hoặc thập lục phân) phải được
+            đặt giữa cặp dấu & và ;</p>
+        <pre>
+            <code class="language-html">
+                Biểu tượng &amp;Delta; và &amp;#916; là giống nhau.
+                Emoji có mã &amp;#128511; có hình bức tượng ở đảo Phục Sinh.
+            </code>
+        </pre>
+        <p>Kết quả:</p>
+        <p>Biểu tượng &Delta; và &#916; là giống nhau.</p>
+        <p>Emoji có mã &#128511; có hình bức tượng ở đảo Phục Sinh.</p>
     </section>
     <section id="section13">
         <h2>13. Graphics</h2>
@@ -844,12 +858,12 @@
                 không có nội dung.
             </p>
             <p><strong><u>Lưu ý</u>:</strong> Luôn định nghĩa
-            <pre><code>id</code></pre> cho canvas, cùng chiều rộng
-            (
-            <pre><code>width</code></pre>) và chiều cao (
-            <pre><code>height</code></pre>)
-            để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính
-            <pre><code>style</code></pre>
+                <code>id</code> cho canvas, cùng chiều rộng
+                (
+                <code>width</code>) và chiều cao (
+                <code>height</code>)
+                để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính
+                <code>style</code>
             </p>
             <pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;
 &lt;/canvas&gt;</code></pre>
