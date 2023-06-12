@@ -738,9 +738,9 @@
 &lt;textarea id=&quot;demo-fetch&quot;&gt;&lt;/textarea&gt;
 &lt;script&gt;
     function demoFetch(){
-        fetch (&quot;js/demo_fetch.js&quot;)
+        fetch(&quot;js/demo_fetch.js&quot;)
         .then(x =&gt; x.text())
-        .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).innerHTML = y);
+        .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).value = y);
     }
 &lt;/script&gt;</code></pre>
                 Kết quả: <button onclick="demoFetch()">Fetch from "demo_fetch.js"</button><br />
@@ -749,7 +749,7 @@
                     function demoFetch() {
                         fetch("js/demo_fetch.js")
                             .then(x => x.text())
-                            .then(y => document.getElementById("demo-fetch").innerHTML = y);
+                            .then(y => document.getElementById("demo-fetch").value = y);
                     }
                 </script>
             </li>
@@ -757,7 +757,7 @@
                 APIs để vẽ và thao tác đồ hoạ. API loại này phổ biến là Canvas API và WebGL API. Những API này cho phép
                 cập nhật hình ảnh trong phần tử &lt;canvas&gt; của HTML để tạo khung cảnh 2D và 3D.<br />
                 Ví dụ: Vẽ dải màu từ đỏ tới trắng
-                <pre><code>&lt;button onclick=&quot;demoCanvasGradient()&quot;&gt;Draw Gradient&lt;/button&gt;&lt;br/&gt;
+                <pre><code class="language-html">&lt;button onclick=&quot;demoCanvasGradient()&quot;&gt;Draw Gradient&lt;/button&gt;&lt;br/&gt;
 &lt;canvas id=&quot;myCanvasGradient&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
     function demoCanvasGradient() {
