@@ -3,21 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Lab01</title>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <style>
-        #div1 {
-            width: 350px;
-            height: 70px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
-        }
-
-        #map {
-            width: 100%;
-            height: 800px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horus | HTML</title>
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+    <!-- highlightjs.org -->
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/panda-syntax-light.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script>
         function allowDrop(ev) {
             ev.preventDefault();
@@ -33,62 +25,6 @@
             ev.target.appendChild(document.getElementById(data));
         }
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horus | HTML</title>
-    <style>
-        code {
-            background-color: black;
-            color: white;
-            font-size: 16px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 90%;
-        }
-
-        th,
-        td {
-            background-color: #f2f2f2;
-            border: 1px solid black;
-        }
-
-        tfoot td {
-            background-color: green;
-            color: white;
-        }
-
-        .border-form {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        form * {
-            margin: 5px 0;
-        }
-
-        .indent~* {
-            margin-left: 20px;
-        }
-
-        *[id^="section"] {
-            margin-left: 20px;
-        }
-
-        .subsection {
-            font-style: italic;
-            font-size: 20px;
-        }
-
-        .subsection~* {
-
-            margin-left: 40px;
-        }
-
-        .form-demonstration td {
-            padding: 5px 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -131,6 +67,229 @@
             <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
                 khác (ngoại trừ !DOCTYPE).</p>
         </section>
+    </section>
+    <section id="section5">
+        <h3>5. Elements</h3>
+        <section id="section5a">
+            <p>Trong HTML, các phần tử (elements) là các thành phần cơ bản được sử dụng để xây dựng
+                và cấu trúc trang web. Các phần tử HTML được đặt trong các thẻ mở và đóng, và chứa nội dung
+                hoặc các thuộc tính để mô tả và định dạng nội dung. Các phần tử HTML có thể được lồng vào nhau
+                để tạo thành cấu trúc phức tạp và đa dạng.
+            </p>
+            <ul>
+                <li>Phần tử HTML là thông thường bắt đầu bằng &lt;tagname&gt; và kết thúc bằng &lt;/tagname&gt;</li>
+                <li>Một số phần tử không cần kết thúc bằng thẻ đóng:
+                    <ul>
+                        <li>&lt;img&gt;: Được sử dụng để hiển thị một hình ảnh trên trang web. ví dụ: &lt;img
+                            src=&quot;image.jpg&quot; alt=&quot;Description of image&quot;&gt;</li>
+                        <li>&lt;br&gt;: Tạo một dòng mới trong văn bản hoặc giữa các phần tử.</li>
+                        <li>&lt;input&gt;: Tạo một trường nhập liệu trong biểu mẫu. ví dụ: &lt;input
+                            type=&quot;text&quot; name=&quot;username&quot;&gt;</li>
+                        <li>&lt;hr&gt;: Tạo một đường ngang ngăn cách các phần trong trang web.</li>
+                        <li>&lt;link&gt;: Liên kết với một tài nguyên bên ngoài như một tệp CSS hoặc một tệp biểu tượng.
+                            ví dụ: &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;, &lt;link
+                            rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;path/to/favicon.png&quot;&gt;
+                        </li>
+                        <li>&lt;meta&gt;: Chứa các thông tin meta về tài liệu như mô tả, từ khóa, và encoding. ví dụ:
+                            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                            initial-scale=1.0&quot;&gt;</li>
+                        <li>&lt;col&gt;: Xác định thuộc tính cho một hoặc nhiều cột trong một bảng. ví dụ: &lt;col
+                            span=&quot;2&quot; style=&quot;background-color: yellow;&quot;&gt;</li>
+                    </ul>
+                </li>
+                <li>Phần tử HTML có thể được lồng nhau (những phần tử có thể chứa các phần tử khác).
+                    <pre>
+  &lt;!DOCTYPE&#xa0;html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+            </pre>
+                </li>
+                <li>Thẻ HTML không phân biệt chữ hoa chữ thường: &lt;P&gt; có nghĩa tương đương với &lt;p&gt;.</li>
+            </ul>
+        </section>
+    </section>
+    <section id="section6">
+        <h3>6. Attributes</h3>
+        <section id="section6a">
+            <ul>
+                <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
+                <li>Thuộc tính cung cấp thông tin bổ sung về các phần tử.</li>
+                <li>Thuộc tính luôn được chỉ định trong thẻ mở.</li>
+                <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: name=&quot;value&quot;.</li>
+            </ul>
+            <p>href: Thuộc tính href xác định URL của trang mà liên kết trỏ tới.
+                Ví dụ: &lt;a href=&quot;https://www.google.com&quot;&gt; Google.com &lt;/a&gt; </p>
+            <a href="https://www.google.com"> Google.com </a>
+            <p>src: Thuộc tính src (source) xác định nguồn dữ liệu (URL hoặc đường dẫn tới tệp tin)
+                cho một phần tử như hình ảnh, video, âm thanh, hoặc script. Ví dụ:
+                &lt;script src=&quot;path/to/script.js&quot;&gt;&lt;/script&gt;, &lt;img
+                src=&quot;https://picsum.photos/200&quot; alt=&quot;Mô tả hình ảnh&quot;&gt;</p>
+            <img src="https://picsum.photos/200" alt="Mô tả hình ảnh">
+            <p>width và height: Thuộc tính width và height được sử dụng để xác định chiều rộng và chiều cao
+                của một phần tử HTML. Ví dụ: &lt;img src=&quot;https://picsum.photos/300/200&quot; alt=&quot;Mô tả hình
+                ảnh&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;</p>
+            <img src="https://picsum.photos/300/200" alt="Mô tả hình ảnh" width="300" height="200">
+            <p>alt: Thuộc tính alt được sử dụng để cung cấp một văn bản thay thế cho một phần tử HTML như hình ảnh
+                hoặc các phần tử đa phương tiện khác khi nội dung không thể hiển thị. Ví dụ: &lt;img
+                src=&quot;path/to/image.jpg&quot; alt=&quot;M&#xf4; t&#x1ea3; h&#xec;nh &#x1ea3;nh&quot;&gt;</p>
+            <img src="path/to/image.jpg" alt="Mô tả hình ảnh">
+            <p>style: Thuộc tính style được sử dụng để áp dụng các kiểu CSS (Cascading Style Sheets) trực tiếp cho một
+                phần tử HTML.
+                Ví dụ: &lt;p style=&quot;color: blue; font-size: 16px;&quot;&gt;hello&lt;/p&gt;</p>
+            <p style="color: blue; font-size: 16px;">hello</p>
+            <p>Thuộc tính "lang" trong HTML được sử dụng để xác định ngôn ngữ chính của nội dung trên một phần tử. Ví
+                dụ: </p>
+            <pre>
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+        </pre>
+            <p>Thuộc tính title được sử dụng để cung cấp một mô tả ngắn gọn hoặc gợi ý cho một phần tử HTML khi người
+                dùng di chuột qua phần tử đó. Ví dụ: &lt;p title=&quot;title&quot;&gt;This is a paragraph.&lt;/p&gt;</p>
+            <p title="title">This is a paragraph.</p>
+        </section>
+    </section>
+    <section id="section7">
+        <h3>7. Headings, paragraphs</h3>
+        <section id="section7a">
+            <p class="subsection">a. Headings</p>
+            <p>Trong HTML, các heading (tiêu đề) được sử dụng để đánh dấu và hiển thị các phần tử văn bản với các mức độ
+                quan trọng khác nhau. Heading trong HTML không chỉ có kích thước và kiểu định dạng khác nhau. Chúng còn
+                mang
+                ý nghĩa cấu trúc và semantik, giúp các công cụ tìm kiếm và trình duyệt hiểu và xác định văn bản quan
+                trọng
+                và tiêu đề chính của trang</p>
+            <p>Có 6 mức độ tăng từ &lt;h6&gt; cho đến &lt;h1&gt;:</p>
+            <h1 style="font-size: 30px">Heading level 1</h1>
+            <h2>Heading level 2</h2>
+            <h3>Heading level 3</h3>
+            <h4>Heading level 4</h4>
+            <h5>Heading level 5</h5>
+            <h6>Heading level 6</h6>
+            <p class="subsection">b. Paragraph</p>
+            <p>Phần tử &lt;p&gt; trong HTML được sử dụng để định dạng đoạn văn bản.
+                Nó được sử dụng để tạo ra một đoạn văn riêng biệt trong tài liệu HTML.</p>
+            <p>Một đoạn văn luôn bắt đầu trên một dòng mới và các trình duyệt tự động
+                thêm một số không gian trống (margin) trước và sau một đoạn văn. Ví dụ: &lt;p&gt;This is a
+                paragraph.&lt;/p&gt;</p>
+            <p>Trình duyệt sẽ tự động loại bỏ bất kỳ khoảng trống và dòng thừa nào khi trang web được hiển thị.</p>
+        </section>
+    </section>
+    <section id="section8">
+        <h3>8. Grouping content</h3>
+        <p class="subsection">a. address</p>
+        <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
+            Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng
+            như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
+        <pre>
+&lt;address&gt;      
+    UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
+    1701 Manor Road, Austin, TX 78722&lt;br&gt;
+    Tel: (512) 471-5883 | Fax: (512) 471-5908
+&lt;/address&gt;                
+            </pre>
+        <address>
+            UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
+            1701 Manor Road, Austin, TX 78722<br>
+            Tel: (512) 471-5883 | Fax: (512) 471-5908
+        </address>
+        <p class="subsection">b. hr</p>
+        <p>Thẻ &lt;hr&gt; được sử dụng để tạo ra một dấu ngắn phân chia về mặt chủ đề ở mức độ đoạn văn.</p>
+        <p>phân chia ở đây</p>
+        <hr>
+        <p class="subsection">c. pre</p>
+        <p>Thẻ &lt;pre&gt; đại diện cho một khối văn bản được định dạng trước, trong đó cấu trúc
+            được biểu thị bằng các quy ước chữ viết chứ không phải là bằng các phần tử.</p>
+        <pre>
+&lt;pre&gt;
+    he    llo,   world!
+&lt;/pre&gt;    
+            </pre>
+        <pre>
+    he    llo,   world!
+</pre>
+        <p class="subsection">d. ol, ul li</p>
+        <p>Trong HTML, các thẻ &lt;ul&gt;, &lt;ol&gt;, và &lt;li&gt; được sử dụng để tạo danh sách.</p>
+        <p>&lt;ul&gt; (unordered list) được sử dụng để tạo danh sách không có thứ tự.
+            Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
+        <pre>
+&lt;ul&gt;
+  &lt;li&gt;list 1&lt;/li&gt;
+  &lt;li&gt;list 2&lt;/li&gt;
+  &lt;li&gt;list 3&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ul>
+        <p>&lt;ol&gt; (ordered list) được sử dụng để tạo danh sách có thứ tự. Tương tự như &lt;ul&gt;, mỗi phần tử
+            trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Tuy nhiên, danh sách này sẽ có số thứ tự. Ví dụ:
+        </p>
+        <pre>
+&lt;ol&gt;
+  &lt;li&gt;list 1&lt;/li&gt;
+  &lt;li&gt;list 2&lt;/li&gt;
+  &lt;li&gt;list 3&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+        <ol>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ol>
+        <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách.
+            Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
+        <p class="subsection">d. dl dt dd</p>
+        <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
+        <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa.
+            Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
+        <pre>
+&lt;dl&gt;
+  &lt;dt&gt;example 1&lt;/dt&gt;
+  &lt;dd&gt;defi 1&lt;/dd&gt;
+  
+  &lt;dt&gt;example 2&lt;/dt&gt;
+  &lt;dd&gt;defi 2&lt;/dd&gt;
+
+  &lt;dt&gt;example 3&lt;/dt&gt;
+  &lt;dd&gt;defi 3&lt;/dd&gt;
+&lt;/dl&gt;
+            </pre>
+        <dl>
+            <dt>example 1</dt>
+            <dd>defi 1</dd>
+
+            <dt>example 2</dt>
+            <dd>defi 2</dd>
+
+            <dt>example 3</dt>
+            <dd>defi 3</dd>
+        </dl>
+        <p class="subsection">d. div</p>
+        <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
+            có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
+            lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
+        <pre>
+&lt;div&gt;
+    &lt;h3&gt;heading&lt;/h3&gt;
+    &lt;p&gt;para 1&lt;/p&gt;
+    &lt;p&gt;para 2&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        <div>
+            <h3>heading</h3>
+            <p>para 1</p>
+            <p>para 2</p>
+        </div>
     </section>
     <section id="section9">
         <h3>9. Table</h3>
@@ -477,32 +636,725 @@
     </section>
     <section id="section11">
         <h2>11. Media</h2>
-<<<<<<< Updated upstream
-        <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh.</p>
-=======
+        <<<<<<< Updated upstream <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh.</p>
+            =======
+            <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh, hoạt họa (animation)</p>
+            >>>>>>> Stashed changes
+            <div class="subsection" id="section11a">a. Ảnh</div>
+            <p>ABC</p>
+            <div class="subsection" id="section11b">b. Video</div>
+            <p>HTML khuyến nghị sử dụng các định dạng video .mp4, .webm, .ogg</p>
+            <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .avi, .mov, .flv,...</p>
+            <p>Để chèn video vào trang web, ta sử dụng thẻ <code>&lt;video&gt;</code></p>
+            <<<<<<< Updated upstream=======<code>
+                &lt;video width="480" height="320" controls&gt;<br>
+                &nbsp;&lt;source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                type="video/mp4"&gt;<br>
+                &nbsp;Your browser does not support video tag.<br>
+                &lt;/video&gt;<br>
+                </code>
+                >>>>>>> Stashed changes
+                <video width="480" height="320" controls>
+                    <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                        type="video/mp4">
+                    Your browser does not support video tag.
+                </video>
+
+    </section>
+    <section id="section9">
+        <h3>9. Table</h3>
+        <p>&lt;table&gt; là thẻ HTML dùng để tạo bảng. Thông thường 1 bảng trong HTML gồm 1 thẻ table và các thẻ như th,
+            td,
+            tr, thead, tfoot, tbody</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data 5 (Dùng thuộc tính colspan="2" để xác định độ rộng của hàng là 2 cột)</td>
+                    <td>Data 6</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Data 7 (colspan="4")</td>
+                    <td>Data 8</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Data 9 (colspan="3")</td>
+                    <td>Data 10</td>
+                </tr>
+
+                <td colspan="3">Chiếm 3 cột trên 1 hàng</td>
+                <td rowspan="2">Chiếm 2 hàng trên 1 cột</td>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="indent">Notes:</p>
+        <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng. Chúng không ảnh hưởng đến cấu trúc
+            tổng thể của bảng.</p>
+        <p>- Sử dụng thẻ tr để xác định mỗi hàng của bảng
+            <code>&lt;tr&gt;&lt;/tr&gt;</code>
+        </p>
+        <p>- Thẻ th được dùng cho các cell là header của bảng. Các thông tin trong thẻ th mặc định được in đậm và căn
+            giữa.
+            <code>&lt;th&gt;Header 1&lt;/th&gt;</code>
+        </p>
+        <p>- Thẻ td chứa nội dung cho các cell bình thường của bảng. Các thông tin trong thẻ td mặc định được căn
+            trái. <code>&lt;td&gt;Data 1&lt;/td&gt;</code></p>
+        <p>- Mặc định các cell của bảng sẽ cách nhau một khoảng nhỏ. Có thể dùng
+            <code>style="border-collapse: collapse;"</code> để đưa chúng sát với nhau.
+        </p>
+        <p>- Giá trị colspan là số nguyên >= 1.</p>
+        <p>- Kích thước các cột bị chồng lấn khi dùng colspan phụ thuộc vào kích thước tổng thể của bảng.</p>
+    </section>
+    <section id="section10">
+        <h2>10. Form</h2>
+        <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
+        <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
+        <p class="subsection" id="section10a">a. input, textarea và label</p>
+        <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
+            lý.</p>
+        <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
+            định gắn nhãn cho element nào bằng id attribute.
+        </p>
+        <p>Một số loại input thường dùng:</p>
+
+        <form>
+            <table class="form-demonstration">
+                <tr>
+                    <td>input type="text"</td>
+                    <td>
+                        <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>input type="number"</td>
+                    <td><input type="number" name="input-number"></td>
+                </tr>
+                <tr>
+                    <td>input type="password"</td>
+                    <td><input type="password" name="input-pass" placeholder="Nhập mật khẩu gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="email"</td>
+                    <td><input type="email" name="input-mail" placeholder="Nhập mail gì đó ở đây"></td>
+                </tr>
+                <tr>
+                    <td>input type="radio"</td>
+                    <td>
+                        <label for="opt1">Option 1</label>
+                        <input type="radio" name="input-radio" id="opt1" value="opt1">
+                        <br>
+                        <label for="opt2">Option 2</label>
+                        <input type="radio" name="input-radio" id="opt2" value="opt2">
+                        <br>
+                        <label for="opt3">Option 3</label>
+                        <input type="radio" name="input-radio" id="opt3" value="opt3">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="checkbox"</td>
+                    <td>
+                        <label for="opt1-2">Option 1</label>
+                        <input type="checkbox" name="input-checkbox" id="opt1-2" value="opt1-2">
+                        <br>
+                        <label for="opt2-2">Option 2</label>
+                        <input type="checkbox" name="input-checkbox" id="opt2-2" value="opt2-2">
+                        <br>
+                        <label for="opt3-2">Option 3</label>
+                        <input type="checkbox" name="input-checkbox" id="opt3-2" value="opt3-2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>input type="date"</td>
+                    <td><input type="date" name="input-date" id="input-date"></td>
+                </tr>
+                <tr>
+                    <td>input type="color"</td>
+                    <td><input type="color" name="input-color" id="input-color"></td>
+                </tr>
+                <tr>
+                    <td>input type="file"</td><br>
+                    <td><input type="file" name="input-file" id="input-file"></td>
+                </tr>
+                <tr>
+                    <td>input type="range" có các thuộc tính như <br> min, max: Quy định giá trị nhỏ/lớn nhất của
+                        thanh;
+                        <br>step: Mức tăng mỗi khi thanh được kéo; <br>value: giá trị mặc định của thanh (nếu không thêm
+                        vào, mặc định sẽ là giá trị trung tâm)
+                    </td>
+
+                    <td>0<input type="range" name="input-range" id="input-range" min="0" max="10" step="0.1">10</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>&lt;textarea&gt; là thẻ dùng để tạo ra input text có nhiều dòng. Thẻ này thường được dùng cho
+                            các
+                            input
+                            dài
+                            từ người dùng như đánh giá, nhận xét, tâm sự,...</p>
+                        <p>Trong thẻ textarea, có 2 attribute thường được dùng là cols và rows để điều chỉnh kích thước
+                            chiều
+                            rộng
+                            và
+                            chiều dài cho input.</p>
+                    </td>
+                    <td><textarea cols="50" rows="10" placeholder="Để lại bình luận tại đây"></textarea></td>
+                </tr>
+                <tr>
+                    <td>input type="submit"</td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                </tr>
+            </table>
+        </form>
+
+        <p class="subsection" id="section10b">b. select, datalist và option</p>
+        <p>&lt;select&gt; là thẻ tạo ra một danh sách xổ xuống (drop-down list) cho người dùng. Các Option này được
+            đặt
+            trong
+            thẻ &lt;option&gt;.</p>
+        <p>&lt;datalist&gt; là thẻ tạo ra một danh sách các Option cho người dùng. Các Option này được đặt
+            trong
+            thẻ &lt;option&gt;. Người dùng có thể chọn 1 option bằng cách như select hoặc tìm kiếm option phù hợp bằng
+            cách nhập vào khung input.</p>
+
+        <form class="border-form">
+            <label for="colors">Thẻ select: Chọn 1 màu</label><br>
+            <select value="colors" id="colors">
+                <option value="red">Đỏ</option>
+                <option value="blue">Xanh dương</option>
+                <option value="green">Xanh lá</option>
+                <option value="yellow">Vàng</option>
+                <option value="black">Đen</option>
+            </select>
+            <br>
+            <label for="foods">Thẻ datalist: Chọn 1 món ăn</label><br>
+            <input list="foods">
+            <datalist value="foods" id="foods">
+                <option value="Phở bò tái nạm">
+                <option value="Mì vịt tiềm">
+                <option value="Bún thịt nướng">
+                <option value="Bún bò Huế">
+                <option value="Cơm tấm sườn bì chả">
+                <option value="Hủ tiếu mì thập cẩm">
+            </datalist>
+        </form>
+        <div class="subsection" id="section10c">c. fieldset, legend</div>
+        <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
+        </p>
+
+        <form class="border-form">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+                <label for="fname">Họ:</label><br>
+                <input type="text" id="fname" name="fname" value="Lorem"><br>
+                <label for="lname">Tên :</label><br>
+                <input type="text" id="lname" name="lname" value="Ipsum"><br>
+                <label for="gender-radio">Giới tính</label><br>
+                Nam <input type="radio" name="gender-radio" id="male" value="male">
+                Nữ <input type="radio" name="gender-radio" id="female" value="female"><br>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Thông tin liên hệ</legend>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@example.com"><br>
+                <label for="phone">Số điện thoại:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="0123456789"><br>
+                <label for="address">Địa chỉ:</label><br>
+                <textarea cols="50" rows="10" placeholder="Nhập địa chỉ của bạn"></textarea><br>
+
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+        <p class="subsection" id="section10d">d. Form attributes</p>
+        <p>Attribute của thẻ &lt;form&gt;</p>
+        <table class="form-demonstration">
+            <tr>
+                <th>Attribute</th>
+                <th>Mô tả</th>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ dẫn đến
+                    một file xử lý ở phía server.<br>
+                    <code>&lt;form action="./validate_user.php"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Sử dụng để quy định cách ta hiển thị response sau khi form được submit.<br>
+                    _blank: Response được hiển thị ở cửa sổ hoặc tab mới<br>
+                    _self: Response được hiển thị ở cửa sổ hiện tại<br>
+                    _parent: Response được hiển thị ở frame (?) cha<br>
+                    _top: Response được hiển thị trên toàn bộ màn hình cửa sổ<br>
+                    <code>&lt;form target="_blank"&gt;</code>
+                    <code>&lt;form target="_self"&gt;</code>
+                    <code>&lt;form target="_parent"&gt;</code>
+                    <code>&lt;form target="_top"&gt;</code><br>
+                    Giá trị mặc định là _self.
+                </td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>Mô tả method HTTP nào được thực hiện sau khi form được submit (get/post). Mặc định là get.<br>
+                    <code>&lt;form action="./validate_user.php" method="post"&gt;</code>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>autocomplete</td>
+                <td>
+                    Autocomplete cho phép trình duyệt tự động gợi ý thông tin đã được lưu trữ trước đó vào các trường
+                    input. Có hai giá trị on và off. Mặc định là on.<br>
+                    <code>&lt;form autocomplete="on/off"&gt;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>
+                    Khi thêm novalidate vào thẻ form, trình duyệt sẽ không kiểm tra tính đúng đắn của dữ liệu trong
+                    input khi form được submit.<br>
+                    <code>&lt;form novalidate"&gt;</code>
+                </td>
+            </tr>
+        </table>
+        <p>Attribute của các input</p>
+        <table class="form-demonstration">
+            <tr>
+                <td>value</td>
+                <td>Giá trị mặc định của input trong form<br>
+                    <code>&lt;input type="text" value="Horusoftaceae"&gt;</code>
+                    <input type="text" value="Horusoftaceae">
+                </td>
+
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>Giá trị "giữ chỗ", được hiển thị khi input trống. Thường được dùng để gợi ý, nhắc nhở người dùng
+                    nhập vào input. Giá trị này không ảnh hưởng đến giá trị input.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn"&gt;</code>
+                    <input type="text" placeholder="Nhập tên của bạn">
+                </td>
+
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Input chỉ có thể xem, highlight, copy chứ không thể sửa (read-only). Giá trị đó sẽ được submit.<br>
+                    <code>&lt;input type="text" value="Horusoftaceae" readonly&gt;</code>
+                    <input type="text" value="Horusoftaceae" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Input chỉ có thể xem, không thể highlight, copy, sửa. Giá trị đó sẽ không được submit.<br>
+                    <code>&lt;input type="text" value="Horusoftaceae" disabled&gt;</code>
+                    <input type="text" value="Horusoftaceae" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>Người dùng không được để trống input này khi submit form.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn" required&gt;</code>
+                    <form>
+                        <input type="text" placeholder="Nhập tên của bạn" required>
+                        <input type="submit" value="Nộp">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td>Thường dùng trong file input. Attribute này cho phép người dùng tải lên nhiều file trong cùng 1
+                    input.<br>
+                    <code>&lt;input type="file" multiple&gt;</code>
+                    <input input type="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>Khi trang web được load, input này sẽ tự động được focus.<br>
+                    <code>&lt;input type="text" placeholder="Nhập tên của bạn" autofocus&gt;</code>
+                    <input type="text" placeholder="Nhập tên của bạn" class="autofocus" autofocus>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="section11">
+        <h2>11. Media</h2>
         <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh, hoạt họa (animation)</p>
->>>>>>> Stashed changes
         <div class="subsection" id="section11a">a. Ảnh</div>
         <p>ABC</p>
         <div class="subsection" id="section11b">b. Video</div>
         <p>HTML khuyến nghị sử dụng các định dạng video .mp4, .webm, .ogg</p>
         <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .avi, .mov, .flv,...</p>
         <p>Để chèn video vào trang web, ta sử dụng thẻ <code>&lt;video&gt;</code></p>
-<<<<<<< Updated upstream
-=======
-        <code>
-            &lt;video width="480" height="320" controls&gt;<br>
-            &nbsp;&lt;source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4"&gt;<br>
-            &nbsp;Your browser does not support video tag.<br>
-            &lt;/video&gt;<br>
-        </code>
->>>>>>> Stashed changes
         <video width="480" height="320" controls>
             <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
             Your browser does not support video tag.
         </video>
 
     </section>
+    <section id="section13">
+        <h2>13. Graphics</h2>
+        <div>
+            <p>
+                Graphics (đồ họa) trong HTML là những biểu diễn trực quan được sử dụng để thể hiện bất kỳ ý tưởng
+                hoặc trí tưởng tượng nào đó nhằm nâng cao trải nghiệm tổng thể của trang web cho người dùng.
+            </p>
+            <p>
+                Với HTML5, có thể “vẽ” đồ họa bằng cách sử dụng các phần tử HTML thay vì phụ thuộc vào hình ảnh hoặc các
+                thành phần của bên thứ ba như Flash.
+            </p>
+            <p>
+                Có hai loại phần tử đồ họa sau: <i>svg</i> và <i>canvas</i>
+            </p>
+        </div>
+        <div>
+            <div class="subsection" id="section13a">a. SVG</div>
+            <p>
+                SVG (Scalable Vector Graphics): Là một định dạng hình ảnh (tương tự như JPG, PNG,... mà chúng ta vẫn
+                thường dùng) sử dụng cấu trúc XML để hiển thị hình ảnh dưới dạng vector.
+            </p>
+            <p>
+                Vì là hình ảnh dạng vector nên chúng ta có thể hiển thị, co giãn (scale) thoải mái mà không làm giảm
+                chất lượng hình ảnh.
+            </p>
+            <p>Ví dụ một file circle.svg (hình tròn màu vàng có viền màu xanh lục) có nội dung như sau:</p>
+            <pre><code class="language-html">&lt;svg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt;
+    &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+            <p>
+                Thay vì nhúng file ảnh này vào trang web bằng thẻ &lt;img&gt; như các định dạng ảnh thông thường
+                khác (JPG, PNG,…), ta có thể đưa trực tiếp thẻ &lt;svg&gt; vào HTML để cho ra kết quả như bên dưới:
+            </p>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+            <p>
+                Bên trong thẻ &lt;svg&gt; có thể dùng các phương thức để vẽ ra các đường (&lt;path&gt;), khung
+                (&lt;rect&gt;), hình tròn (&lt;circle&gt;), chữ (&lt;text&gt;), định nghĩa một dải màu để sau đó sử
+                dụng
+                (&lt;defs&gt;, &lt;linearGradient&gt;),… và có thể nhúng cả hình ảnh (&lt;image&gt;).
+            </p>
+            <p>Ví dụ: Vẽ logo bằng &lt;svg&gt; sử dụng &lt;path&gt;</p>
+            <pre><code class="language-html">&lt;svg width=&quot;325&quot; height=&quot;24&quot; viewBox=&quot;0 0 325 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;path d=&quot;M48.2217 23.0737C48.8055 23.0737 49.3131 22.8834 49.7447 22.5026C50.1762 22.0965 50.4046 21.6142 50.43 21.0558V12.7554H37.1021V21.0558C37.1275 21.6142 37.3559 22.0965 37.7874 22.5026C38.2189 22.8834 38.7266 23.0737 39.3104 23.0737H39.7673V23.4545H32V23.0737H32.4569C33.0661 23.0737 33.5738 22.8707 33.9799 22.4645C34.4114 22.0584 34.6399 21.5761 34.6653 21.0177V3.0462C34.6399 2.48776 34.4114 2.00548 33.9799 1.59934C33.5484 1.1932 33.0407 0.990137 32.4569 0.990137H32V0.609384H39.7673V0.990137H39.3104C38.7266 0.990137 38.2189 1.1932 37.7874 1.59934C37.3559 1.98009 37.1275 2.44969 37.1021 3.00812V11.6131H50.43V3.0462C50.43 2.48776 50.265 2.05624 49.935 1.75164C49.402 1.24397 48.8309 0.990137 48.2217 0.990137H47.7648V0.609384H55.5321V0.990137H55.0752C54.4914 0.990137 53.9837 1.18051 53.5522 1.56126C53.1207 1.94202 52.8922 2.41161 52.8668 2.97004V21.0558C52.8922 21.6142 53.0572 22.033 53.3618 22.3122C53.9202 22.8199 54.4914 23.0737 55.0752 23.0737H55.5321V23.4545H47.7648V23.0737H48.2217Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M92.1304 1.78972H90.1124V21.0177C90.1378 21.8046 90.4931 22.4011 91.1785 22.8072C91.5085 22.9849 91.8765 23.0737 92.2827 23.0737H92.7776L92.8157 23.4545H85.0103V23.0737H85.5434C86.1272 23.0737 86.6222 22.8834 87.0283 22.5026C87.4598 22.0965 87.6756 21.6142 87.6756 21.0558V2.97004C87.6756 2.41161 87.4598 1.94202 87.0283 1.56126C86.6222 1.18051 86.1272 0.990137 85.5434 0.990137H85.0103V0.609384H94.5672C96.9532 0.609384 98.8316 1.15513 100.202 2.24662C101.598 3.33811 102.296 4.77227 102.296 6.54912C102.296 8.32596 101.738 9.81089 100.621 11.0039C99.5043 12.1969 98.0828 12.8823 96.3567 13.06C97.169 13.4153 98.1463 14.4053 99.2885 16.0298C99.2631 16.0298 99.6946 16.5883 100.583 17.7051C101.497 18.822 102.22 19.6977 102.753 20.3323C103.312 20.9415 103.769 21.4111 104.124 21.7411C105.063 22.6295 106.142 23.0737 107.36 23.0737V23.4545H106.18C104.175 23.4545 102.601 23.0611 101.459 22.2742C100.596 21.6903 99.8089 20.9669 99.0981 20.1039C98.9458 19.9008 98.2986 19.0124 97.1563 17.4386C96.0394 15.8395 95.4429 14.9891 95.3668 14.8876C93.9961 13.1869 92.7142 12.3365 91.5212 12.3365V11.9558C94.491 11.9558 96.2806 11.8035 96.8898 11.4989C97.7274 11.0674 98.2986 10.6105 98.6032 10.1282C99.2377 9.11284 99.555 7.99597 99.555 6.77757C99.555 5.22918 99.0981 4.03615 98.1843 3.1985C97.2705 2.36084 96.0394 1.90394 94.491 1.82779C93.8057 1.80241 93.0188 1.78972 92.1304 1.78972Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M129.841 0.990137H129.27C128.584 0.990137 128.064 1.25666 127.709 1.78972C127.556 2.01817 127.468 2.28469 127.442 2.58929V15.4206C127.442 18.0605 126.592 20.1546 124.891 21.703C123.216 23.226 120.906 23.9876 117.961 23.9876C115.017 23.9876 112.694 23.226 110.994 21.703C109.293 20.18 108.443 18.0986 108.443 15.4587V2.62737C108.443 2.17047 108.265 1.78972 107.91 1.48511C107.554 1.15513 107.123 0.990137 106.615 0.990137H106.044V0.609384H113.278V0.990137H112.707C112.199 0.990137 111.768 1.15513 111.412 1.48511C111.057 1.78972 110.879 2.17047 110.879 2.62737V15.0018C110.879 17.464 111.501 19.4058 112.745 20.8273C114.014 22.2488 115.791 22.9595 118.076 22.9595C120.386 22.9595 122.226 22.2869 123.597 20.9415C124.993 19.5962 125.691 17.7559 125.691 15.4206V2.62737C125.665 2.14508 125.475 1.75164 125.12 1.44704C124.79 1.14244 124.371 0.990137 123.863 0.990137H123.292V0.609384H129.841V0.990137Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M131.409 20.3323C131.409 18.6824 131.777 17.2736 132.514 16.106H132.818C132.793 16.2837 132.78 16.4487 132.78 16.601C132.78 18.1494 133.145 19.5074 134.237 20.675C135.354 21.8426 137.083 22.4265 139.063 22.4265C140.484 22.4265 141.575 22.0965 142.337 21.4365C143.124 20.7765 143.517 20.0404 143.517 19.2281C143.517 17.0528 141.677 15.8339 140.662 15.174L136.481 12.5039C134.197 11.0824 131.866 8.5 131.866 5.90184C131.866 4 132.717 2.69083 133.96 1.67549C135.204 0.634767 136.664 0.114406 138.339 0.114406C140.04 0.114406 141.829 0.228632 143.708 0.457083L145.684 0.361082L145.231 5.48301H144.888C144.888 4.28998 144.469 3.17035 143.632 2.48499C142.957 1.93323 141.711 1.62424 140.271 1.62424C138.925 1.62424 137.946 1.92932 137.159 2.51314C136.372 3.07158 135.978 3.82039 135.978 4.75958C135.978 7.7295 140.781 9.5508 143.158 11C145.239 12.2692 147.512 14.4713 147.629 16.601C147.76 18.958 146.792 20.7765 145.116 22.0457C143.467 23.3149 141.322 23.9495 138.682 23.9495C137.057 23.9495 135.623 23.7591 134.379 23.3783C133.135 22.9976 132.222 22.5153 131.638 21.9315C131.486 21.4746 131.409 20.9415 131.409 20.3323Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M192.776 6.13029V5.74954C192.776 4.65805 192.471 3.79501 191.862 3.16042C191.253 2.50045 190.39 2.15778 189.273 2.13239H183.5V11.3847H188.169C189.362 11.3593 190.212 10.8643 190.72 9.89973C190.948 9.44283 191.063 8.93516 191.063 8.37672V8.1102H191.481V16.1821H191.063V15.9156C191.063 14.7226 190.618 13.8595 189.73 13.3265C189.298 13.0473 188.791 12.9077 188.207 12.9077H183.5V21.0558C183.525 21.6396 183.728 22.1219 184.109 22.5026C184.515 22.8834 185.01 23.0737 185.594 23.0737H186.051V23.4545H176.478V23.0737H176.935C177.519 23.0737 178.001 22.8834 178.382 22.5026C178.788 22.1219 179.004 21.6523 179.029 21.0938V2.97004C179.029 2.41161 178.826 1.94202 178.42 1.56126C178.014 1.18051 177.519 0.990137 176.935 0.990137H176.478V0.609384H189.197C190.898 0.609384 192.23 0.419009 193.195 0.0382578V6.13029H192.776Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M215.907 6.01606V5.67339C215.907 4.5819 215.603 3.71886 214.993 3.08427C214.384 2.44969 213.534 2.1197 212.442 2.09432H208.269V21.0938C208.294 21.6523 208.51 22.1219 208.916 22.5026C209.322 22.8834 209.804 23.0737 210.363 23.0737H210.782V23.4545H201.275V23.0737H201.656C202.24 23.0737 202.735 22.8834 203.141 22.5026C203.547 22.1219 203.75 21.6396 203.75 21.0558V2.09432H199.57C198.453 2.1197 197.59 2.44969 196.981 3.08427C196.371 3.71886 196.067 4.5819 196.067 5.67339V6.01606H195.686V0.000180162C196.041 0.127099 196.625 0.254016 197.438 0.380934C198.275 0.507851 199.024 0.57131 199.684 0.57131H212.29C213.407 0.57131 214.321 0.495159 215.032 0.342857C215.768 0.165174 216.187 0.0509479 216.288 0.000180162V6.01606H215.907Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M240.261 23.0737H240.566V23.4545H232.761V23.0737H233.065C233.548 23.0737 233.916 22.9088 234.169 22.5788C234.423 22.2488 234.55 21.9442 234.55 21.665C234.55 21.3604 234.499 21.0685 234.398 20.7892L232.304 15.7252H222.671L220.577 20.675C220.45 21.005 220.386 21.3223 220.386 21.6269C220.386 21.9061 220.513 22.2234 220.767 22.5788C221.021 22.9088 221.402 23.0737 221.909 23.0737H222.214V23.4545H214.941V23.0737H215.246C215.779 23.0737 216.312 22.8961 216.845 22.5407C217.404 22.1599 217.861 21.6015 218.216 20.8654C223.775 8.98592 226.669 2.76698 226.897 2.20854C227.329 1.14244 227.557 0.4317 227.582 0.0763314H227.925L237.33 20.8654C238.066 22.3376 239.043 23.0737 240.261 23.0737ZM223.166 14.583H231.847L227.582 4.15038L223.166 14.583Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M265.527 23.0737C266.136 23.0737 266.643 22.8834 267.05 22.5026C267.481 22.0965 267.71 21.6142 267.735 21.0558V2.97004C267.735 2.41161 267.519 1.94202 267.088 1.56126C266.656 1.18051 266.136 0.990137 265.527 0.990137H264.993V0.609384H276.111C277.152 0.609384 278.066 0.533234 278.853 0.380934C279.64 0.228632 280.147 0.101714 280.376 0.000180162V4.34075L279.957 4.30268V3.73155C279.957 3.1985 279.779 2.74159 279.424 2.36084C279.069 1.98009 278.612 1.78972 278.053 1.78972H270.134V11.4608H276.645C277.152 11.4608 277.533 11.3085 277.787 11.0039C278.066 10.6993 278.206 10.3186 278.206 9.86166V9.36668H278.624V14.6972H278.206V14.2022C278.206 13.4915 277.939 13.0092 277.406 12.7554C277.203 12.6792 276.987 12.6285 276.759 12.6031H270.134V22.2742H276.111C277.279 22.2742 278.256 22.0711 279.043 21.665C279.855 21.2588 280.465 20.7765 280.871 20.2181C281.302 19.6597 281.734 18.9235 282.165 18.0097H282.546L280.452 23.4545H264.993V23.0737H265.527Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M306.617 23.0737H306.58V23.4545H299.116V23.0737H299.421C299.903 23.0737 300.271 22.9088 300.525 22.5788C300.779 22.2488 300.906 21.9442 300.906 21.665C300.906 21.3604 300.855 21.0685 300.754 20.7892L298.66 15.7252H289.026L286.932 20.675C286.805 21.005 286.742 21.3223 286.742 21.6269C286.742 21.9061 286.869 22.2234 287.123 22.5788C287.377 22.9088 287.757 23.0737 288.265 23.0737H288.57V23.4545H281.297V23.0737H281.602C282.135 23.0737 282.668 22.8961 283.201 22.5407C283.759 22.1599 284.216 21.6015 284.572 20.8654C290.131 8.98592 293.024 2.76698 293.253 2.20854C293.684 1.14244 293.913 0.4317 293.938 0.0763314H294.281L303.685 20.8654C304.422 22.3376 305.399 23.0737 306.617 23.0737ZM289.521 14.583H298.203L293.938 4.15038L289.521 14.583Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M307.787 23.0736C308.397 23.0736 308.904 22.8832 309.31 22.5024C309.742 22.0963 309.97 21.614 309.996 21.0556V2.96986C309.996 2.41143 309.78 1.94184 309.348 1.56108C308.917 1.18033 308.397 0.989956 307.787 0.989956H307.254V0.609204H318.372C319.413 0.609204 320.327 0.533054 321.114 0.380753C321.901 0.228452 322.408 0.101534 322.637 0V4.34057L322.218 4.3025V3.73137C322.218 3.19832 322.04 2.74141 321.685 2.36066C321.329 1.97991 320.873 1.78954 320.314 1.78954H312.395V11.4606H318.905C319.413 11.4606 319.794 11.3083 320.048 11.0037C320.327 10.6991 320.466 10.3184 320.466 9.86147V9.3665H320.885V14.697H320.466V14.202C320.466 13.4913 320.2 13.009 319.667 12.7552C319.464 12.679 319.248 12.6283 319.02 12.6029H312.395V22.274H318.372C319.54 22.274 320.517 22.0709 321.304 21.6648C322.116 21.2586 322.726 20.7764 323.132 20.2179C323.563 19.6595 323.995 18.9234 324.426 18.0096H324.807L322.713 23.4543L306.58 23.4545V23.0737L307.787 23.0736Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M70.2556 24.0002C76.8332 24.0002 82.1654 18.668 82.1654 12.0904C82.1654 5.51282 76.8332 0.180631 70.2556 0.180631C63.6781 0.180631 58.3459 5.51282 58.3459 12.0904C58.3459 18.668 63.6781 24.0002 70.2556 24.0002ZM70.2556 22.9175C75.438 22.9175 79.6391 18.07 79.6391 12.0904C79.6391 6.11078 75.438 1.26334 70.2556 1.26334C65.0733 1.26334 60.8722 6.11078 60.8722 12.0904C60.8722 18.07 65.0733 22.9175 70.2556 22.9175Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M262.075 18.9475C259.729 22.1054 256.232 24.0002 251.97 24.0002C245.392 24.0002 240.06 18.668 240.06 12.0904C240.06 5.51282 245.392 0.180631 251.97 0.180631C255.336 0.180631 258.466 1.17311 260.632 3.2483L261.444 7.75958H261.076C259.729 3.69943 256.003 1.44379 251.97 1.44379C246.538 1.44379 242.586 6.11078 242.586 12.0904C242.586 18.07 246.917 22.9175 251.97 22.9175C256.843 22.9175 261.437 19.6871 262.075 13.8949H262.436L262.075 18.9475Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M162.647 24.0002C169.224 24.0002 174.556 18.668 174.556 12.0904C174.556 5.51282 169.224 0.180631 162.647 0.180631C156.069 0.180631 150.737 5.51282 150.737 12.0904C150.737 18.668 156.069 24.0002 162.647 24.0002ZM162.647 22.5566C167.032 22.5566 169.586 17.8707 169.586 12.0904C169.586 6.3101 167.032 1.62424 162.647 1.62424C158.262 1.62424 155.5 6.3101 155.5 12.0904C155.5 17.8707 158.262 22.5566 162.647 22.5566Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M20.4367 6.66667C22.4046 6.66667 24 5.07131 24 3.10335L24 1.35652e-07L20.8966 0C18.9287 -8.60226e-08 17.3333 1.59535 17.3333 3.56332L17.3333 6.66667H20.4367Z&quot; fill=&quot;#94D36A&quot; /&gt;
+    &lt;path d=&quot;M20.4367 6.66667C22.4046 6.66667 24 5.07131 24 3.10335L24 0L17.3333 6.66667H20.4367Z&quot; fill=&quot;#81B351&quot; /&gt;
+    &lt;path d=&quot;M11.77 1.35652e-07C13.738 2.21674e-07 15.3334 1.59535 15.3334 3.56332V6.66667L12.23 6.66667C10.262 6.66667 8.66669 5.07131 8.66669 3.10335L8.66669 0L11.77 1.35652e-07Z&quot; fill=&quot;#F7D053&quot; /&gt;
+    &lt;path d=&quot;M20.4367 8.6665C22.4046 8.6665 24 10.2619 24 12.2298V15.3332L20.8966 15.3332C18.9287 15.3332 17.3333 13.7378 17.3333 11.7699L17.3333 8.6665L20.4367 8.6665Z&quot; fill=&quot;#EE8B38&quot; /&gt;
+    &lt;path d=&quot;M3.33333 15.3333C5.17428 15.3333 6.66667 13.841 6.66667 12C6.66667 10.1591 5.17428 8.66667 3.33333 8.66667C1.49238 8.66667 1.15337e-07 10.1591 1.95807e-07 12C2.76278e-07 13.841 1.49239 15.3333 3.33333 15.3333Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M12 24C13.841 24 15.3333 22.5076 15.3333 20.6667C15.3333 18.8257 13.841 17.3333 12 17.3333C10.1591 17.3333 8.66667 18.8257 8.66667 20.6667C8.66667 22.5076 10.1591 24 12 24Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M5.40905 6.66667C6.10362 6.66667 6.66669 6.1036 6.66669 5.40903V1.25764C6.66669 0.563066 6.10363 2.11824e-07 5.40905 1.81463e-07L1.25767 0C0.563089 -3.03609e-08 2.29968e-05 0.563065 2.29664e-05 1.25764L2.27849e-05 5.40902C2.27546e-05 6.1036 0.563088 6.66667 1.25766 6.66667H5.40905Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M24 22.6667V18.6667C24 17.9303 23.4031 17.3333 22.6667 17.3333H20.3333C17.5719 17.3333 15.3333 15.0948 15.3333 12.3333V10C15.3333 9.26362 14.7364 8.66667 14 8.66667H10C9.26362 8.66667 8.66667 9.26362 8.66667 10V12.3333C8.66667 15.0948 6.42809 17.3333 3.66667 17.3333H1.33333C0.596953 17.3333 2.07034e-07 17.9303 1.74846e-07 18.6667L0 22.6667C-3.21882e-08 23.403 0.596953 24 1.33333 24H5.33333C6.06971 24 6.66667 23.403 6.66667 22.6667V20.6667C6.66667 17.7211 9.05448 15.3333 12 15.3333C14.9455 15.3333 17.3333 17.7211 17.3333 20.6667V22.6667C17.3333 23.403 17.9303 24 18.6667 24H22.6667C23.403 24 24 23.403 24 22.6667Z&quot; fill=&quot;black&quot; /&gt;
+    &lt;path d=&quot;M6.69693 3.72052H3.40611V6.68227C6.31407 6.68227 8.67144 9.03964 8.67144 11.9476L11.6332 11.9476V8.65677C11.6332 8.65677 11.6332 8.65677 11.6332 8.65677C8.90698 8.65677 6.69693 6.44674 6.69693 3.72052C6.69693 3.72052 6.69693 3.72053 6.69693 3.72052Z&quot; fill=&quot;black&quot; /&gt;
+&lt;/svg&gt;</code></pre>
+            <p>Kết quả:</p>
+            <svg width="325" height="24" viewBox="0 0 325 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M48.2217 23.0737C48.8055 23.0737 49.3131 22.8834 49.7447 22.5026C50.1762 22.0965 50.4046 21.6142 50.43 21.0558V12.7554H37.1021V21.0558C37.1275 21.6142 37.3559 22.0965 37.7874 22.5026C38.2189 22.8834 38.7266 23.0737 39.3104 23.0737H39.7673V23.4545H32V23.0737H32.4569C33.0661 23.0737 33.5738 22.8707 33.9799 22.4645C34.4114 22.0584 34.6399 21.5761 34.6653 21.0177V3.0462C34.6399 2.48776 34.4114 2.00548 33.9799 1.59934C33.5484 1.1932 33.0407 0.990137 32.4569 0.990137H32V0.609384H39.7673V0.990137H39.3104C38.7266 0.990137 38.2189 1.1932 37.7874 1.59934C37.3559 1.98009 37.1275 2.44969 37.1021 3.00812V11.6131H50.43V3.0462C50.43 2.48776 50.265 2.05624 49.935 1.75164C49.402 1.24397 48.8309 0.990137 48.2217 0.990137H47.7648V0.609384H55.5321V0.990137H55.0752C54.4914 0.990137 53.9837 1.18051 53.5522 1.56126C53.1207 1.94202 52.8922 2.41161 52.8668 2.97004V21.0558C52.8922 21.6142 53.0572 22.033 53.3618 22.3122C53.9202 22.8199 54.4914 23.0737 55.0752 23.0737H55.5321V23.4545H47.7648V23.0737H48.2217Z"
+                    fill="black" />
+                <path
+                    d="M92.1304 1.78972H90.1124V21.0177C90.1378 21.8046 90.4931 22.4011 91.1785 22.8072C91.5085 22.9849 91.8765 23.0737 92.2827 23.0737H92.7776L92.8157 23.4545H85.0103V23.0737H85.5434C86.1272 23.0737 86.6222 22.8834 87.0283 22.5026C87.4598 22.0965 87.6756 21.6142 87.6756 21.0558V2.97004C87.6756 2.41161 87.4598 1.94202 87.0283 1.56126C86.6222 1.18051 86.1272 0.990137 85.5434 0.990137H85.0103V0.609384H94.5672C96.9532 0.609384 98.8316 1.15513 100.202 2.24662C101.598 3.33811 102.296 4.77227 102.296 6.54912C102.296 8.32596 101.738 9.81089 100.621 11.0039C99.5043 12.1969 98.0828 12.8823 96.3567 13.06C97.169 13.4153 98.1463 14.4053 99.2885 16.0298C99.2631 16.0298 99.6946 16.5883 100.583 17.7051C101.497 18.822 102.22 19.6977 102.753 20.3323C103.312 20.9415 103.769 21.4111 104.124 21.7411C105.063 22.6295 106.142 23.0737 107.36 23.0737V23.4545H106.18C104.175 23.4545 102.601 23.0611 101.459 22.2742C100.596 21.6903 99.8089 20.9669 99.0981 20.1039C98.9458 19.9008 98.2986 19.0124 97.1563 17.4386C96.0394 15.8395 95.4429 14.9891 95.3668 14.8876C93.9961 13.1869 92.7142 12.3365 91.5212 12.3365V11.9558C94.491 11.9558 96.2806 11.8035 96.8898 11.4989C97.7274 11.0674 98.2986 10.6105 98.6032 10.1282C99.2377 9.11284 99.555 7.99597 99.555 6.77757C99.555 5.22918 99.0981 4.03615 98.1843 3.1985C97.2705 2.36084 96.0394 1.90394 94.491 1.82779C93.8057 1.80241 93.0188 1.78972 92.1304 1.78972Z"
+                    fill="black" />
+                <path
+                    d="M129.841 0.990137H129.27C128.584 0.990137 128.064 1.25666 127.709 1.78972C127.556 2.01817 127.468 2.28469 127.442 2.58929V15.4206C127.442 18.0605 126.592 20.1546 124.891 21.703C123.216 23.226 120.906 23.9876 117.961 23.9876C115.017 23.9876 112.694 23.226 110.994 21.703C109.293 20.18 108.443 18.0986 108.443 15.4587V2.62737C108.443 2.17047 108.265 1.78972 107.91 1.48511C107.554 1.15513 107.123 0.990137 106.615 0.990137H106.044V0.609384H113.278V0.990137H112.707C112.199 0.990137 111.768 1.15513 111.412 1.48511C111.057 1.78972 110.879 2.17047 110.879 2.62737V15.0018C110.879 17.464 111.501 19.4058 112.745 20.8273C114.014 22.2488 115.791 22.9595 118.076 22.9595C120.386 22.9595 122.226 22.2869 123.597 20.9415C124.993 19.5962 125.691 17.7559 125.691 15.4206V2.62737C125.665 2.14508 125.475 1.75164 125.12 1.44704C124.79 1.14244 124.371 0.990137 123.863 0.990137H123.292V0.609384H129.841V0.990137Z"
+                    fill="black" />
+                <path
+                    d="M131.409 20.3323C131.409 18.6824 131.777 17.2736 132.514 16.106H132.818C132.793 16.2837 132.78 16.4487 132.78 16.601C132.78 18.1494 133.145 19.5074 134.237 20.675C135.354 21.8426 137.083 22.4265 139.063 22.4265C140.484 22.4265 141.575 22.0965 142.337 21.4365C143.124 20.7765 143.517 20.0404 143.517 19.2281C143.517 17.0528 141.677 15.8339 140.662 15.174L136.481 12.5039C134.197 11.0824 131.866 8.5 131.866 5.90184C131.866 4 132.717 2.69083 133.96 1.67549C135.204 0.634767 136.664 0.114406 138.339 0.114406C140.04 0.114406 141.829 0.228632 143.708 0.457083L145.684 0.361082L145.231 5.48301H144.888C144.888 4.28998 144.469 3.17035 143.632 2.48499C142.957 1.93323 141.711 1.62424 140.271 1.62424C138.925 1.62424 137.946 1.92932 137.159 2.51314C136.372 3.07158 135.978 3.82039 135.978 4.75958C135.978 7.7295 140.781 9.5508 143.158 11C145.239 12.2692 147.512 14.4713 147.629 16.601C147.76 18.958 146.792 20.7765 145.116 22.0457C143.467 23.3149 141.322 23.9495 138.682 23.9495C137.057 23.9495 135.623 23.7591 134.379 23.3783C133.135 22.9976 132.222 22.5153 131.638 21.9315C131.486 21.4746 131.409 20.9415 131.409 20.3323Z"
+                    fill="black" />
+                <path
+                    d="M192.776 6.13029V5.74954C192.776 4.65805 192.471 3.79501 191.862 3.16042C191.253 2.50045 190.39 2.15778 189.273 2.13239H183.5V11.3847H188.169C189.362 11.3593 190.212 10.8643 190.72 9.89973C190.948 9.44283 191.063 8.93516 191.063 8.37672V8.1102H191.481V16.1821H191.063V15.9156C191.063 14.7226 190.618 13.8595 189.73 13.3265C189.298 13.0473 188.791 12.9077 188.207 12.9077H183.5V21.0558C183.525 21.6396 183.728 22.1219 184.109 22.5026C184.515 22.8834 185.01 23.0737 185.594 23.0737H186.051V23.4545H176.478V23.0737H176.935C177.519 23.0737 178.001 22.8834 178.382 22.5026C178.788 22.1219 179.004 21.6523 179.029 21.0938V2.97004C179.029 2.41161 178.826 1.94202 178.42 1.56126C178.014 1.18051 177.519 0.990137 176.935 0.990137H176.478V0.609384H189.197C190.898 0.609384 192.23 0.419009 193.195 0.0382578V6.13029H192.776Z"
+                    fill="black" />
+                <path
+                    d="M215.907 6.01606V5.67339C215.907 4.5819 215.603 3.71886 214.993 3.08427C214.384 2.44969 213.534 2.1197 212.442 2.09432H208.269V21.0938C208.294 21.6523 208.51 22.1219 208.916 22.5026C209.322 22.8834 209.804 23.0737 210.363 23.0737H210.782V23.4545H201.275V23.0737H201.656C202.24 23.0737 202.735 22.8834 203.141 22.5026C203.547 22.1219 203.75 21.6396 203.75 21.0558V2.09432H199.57C198.453 2.1197 197.59 2.44969 196.981 3.08427C196.371 3.71886 196.067 4.5819 196.067 5.67339V6.01606H195.686V0.000180162C196.041 0.127099 196.625 0.254016 197.438 0.380934C198.275 0.507851 199.024 0.57131 199.684 0.57131H212.29C213.407 0.57131 214.321 0.495159 215.032 0.342857C215.768 0.165174 216.187 0.0509479 216.288 0.000180162V6.01606H215.907Z"
+                    fill="black" />
+                <path
+                    d="M240.261 23.0737H240.566V23.4545H232.761V23.0737H233.065C233.548 23.0737 233.916 22.9088 234.169 22.5788C234.423 22.2488 234.55 21.9442 234.55 21.665C234.55 21.3604 234.499 21.0685 234.398 20.7892L232.304 15.7252H222.671L220.577 20.675C220.45 21.005 220.386 21.3223 220.386 21.6269C220.386 21.9061 220.513 22.2234 220.767 22.5788C221.021 22.9088 221.402 23.0737 221.909 23.0737H222.214V23.4545H214.941V23.0737H215.246C215.779 23.0737 216.312 22.8961 216.845 22.5407C217.404 22.1599 217.861 21.6015 218.216 20.8654C223.775 8.98592 226.669 2.76698 226.897 2.20854C227.329 1.14244 227.557 0.4317 227.582 0.0763314H227.925L237.33 20.8654C238.066 22.3376 239.043 23.0737 240.261 23.0737ZM223.166 14.583H231.847L227.582 4.15038L223.166 14.583Z"
+                    fill="black" />
+                <path
+                    d="M265.527 23.0737C266.136 23.0737 266.643 22.8834 267.05 22.5026C267.481 22.0965 267.71 21.6142 267.735 21.0558V2.97004C267.735 2.41161 267.519 1.94202 267.088 1.56126C266.656 1.18051 266.136 0.990137 265.527 0.990137H264.993V0.609384H276.111C277.152 0.609384 278.066 0.533234 278.853 0.380934C279.64 0.228632 280.147 0.101714 280.376 0.000180162V4.34075L279.957 4.30268V3.73155C279.957 3.1985 279.779 2.74159 279.424 2.36084C279.069 1.98009 278.612 1.78972 278.053 1.78972H270.134V11.4608H276.645C277.152 11.4608 277.533 11.3085 277.787 11.0039C278.066 10.6993 278.206 10.3186 278.206 9.86166V9.36668H278.624V14.6972H278.206V14.2022C278.206 13.4915 277.939 13.0092 277.406 12.7554C277.203 12.6792 276.987 12.6285 276.759 12.6031H270.134V22.2742H276.111C277.279 22.2742 278.256 22.0711 279.043 21.665C279.855 21.2588 280.465 20.7765 280.871 20.2181C281.302 19.6597 281.734 18.9235 282.165 18.0097H282.546L280.452 23.4545H264.993V23.0737H265.527Z"
+                    fill="black" />
+                <path
+                    d="M306.617 23.0737H306.58V23.4545H299.116V23.0737H299.421C299.903 23.0737 300.271 22.9088 300.525 22.5788C300.779 22.2488 300.906 21.9442 300.906 21.665C300.906 21.3604 300.855 21.0685 300.754 20.7892L298.66 15.7252H289.026L286.932 20.675C286.805 21.005 286.742 21.3223 286.742 21.6269C286.742 21.9061 286.869 22.2234 287.123 22.5788C287.377 22.9088 287.757 23.0737 288.265 23.0737H288.57V23.4545H281.297V23.0737H281.602C282.135 23.0737 282.668 22.8961 283.201 22.5407C283.759 22.1599 284.216 21.6015 284.572 20.8654C290.131 8.98592 293.024 2.76698 293.253 2.20854C293.684 1.14244 293.913 0.4317 293.938 0.0763314H294.281L303.685 20.8654C304.422 22.3376 305.399 23.0737 306.617 23.0737ZM289.521 14.583H298.203L293.938 4.15038L289.521 14.583Z"
+                    fill="black" />
+                <path
+                    d="M307.787 23.0736C308.397 23.0736 308.904 22.8832 309.31 22.5024C309.742 22.0963 309.97 21.614 309.996 21.0556V2.96986C309.996 2.41143 309.78 1.94184 309.348 1.56108C308.917 1.18033 308.397 0.989956 307.787 0.989956H307.254V0.609204H318.372C319.413 0.609204 320.327 0.533054 321.114 0.380753C321.901 0.228452 322.408 0.101534 322.637 0V4.34057L322.218 4.3025V3.73137C322.218 3.19832 322.04 2.74141 321.685 2.36066C321.329 1.97991 320.873 1.78954 320.314 1.78954H312.395V11.4606H318.905C319.413 11.4606 319.794 11.3083 320.048 11.0037C320.327 10.6991 320.466 10.3184 320.466 9.86147V9.3665H320.885V14.697H320.466V14.202C320.466 13.4913 320.2 13.009 319.667 12.7552C319.464 12.679 319.248 12.6283 319.02 12.6029H312.395V22.274H318.372C319.54 22.274 320.517 22.0709 321.304 21.6648C322.116 21.2586 322.726 20.7764 323.132 20.2179C323.563 19.6595 323.995 18.9234 324.426 18.0096H324.807L322.713 23.4543L306.58 23.4545V23.0737L307.787 23.0736Z"
+                    fill="black" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M70.2556 24.0002C76.8332 24.0002 82.1654 18.668 82.1654 12.0904C82.1654 5.51282 76.8332 0.180631 70.2556 0.180631C63.6781 0.180631 58.3459 5.51282 58.3459 12.0904C58.3459 18.668 63.6781 24.0002 70.2556 24.0002ZM70.2556 22.9175C75.438 22.9175 79.6391 18.07 79.6391 12.0904C79.6391 6.11078 75.438 1.26334 70.2556 1.26334C65.0733 1.26334 60.8722 6.11078 60.8722 12.0904C60.8722 18.07 65.0733 22.9175 70.2556 22.9175Z"
+                    fill="black" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M262.075 18.9475C259.729 22.1054 256.232 24.0002 251.97 24.0002C245.392 24.0002 240.06 18.668 240.06 12.0904C240.06 5.51282 245.392 0.180631 251.97 0.180631C255.336 0.180631 258.466 1.17311 260.632 3.2483L261.444 7.75958H261.076C259.729 3.69943 256.003 1.44379 251.97 1.44379C246.538 1.44379 242.586 6.11078 242.586 12.0904C242.586 18.07 246.917 22.9175 251.97 22.9175C256.843 22.9175 261.437 19.6871 262.075 13.8949H262.436L262.075 18.9475Z"
+                    fill="black" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M162.647 24.0002C169.224 24.0002 174.556 18.668 174.556 12.0904C174.556 5.51282 169.224 0.180631 162.647 0.180631C156.069 0.180631 150.737 5.51282 150.737 12.0904C150.737 18.668 156.069 24.0002 162.647 24.0002ZM162.647 22.5566C167.032 22.5566 169.586 17.8707 169.586 12.0904C169.586 6.3101 167.032 1.62424 162.647 1.62424C158.262 1.62424 155.5 6.3101 155.5 12.0904C155.5 17.8707 158.262 22.5566 162.647 22.5566Z"
+                    fill="black" />
+                <path
+                    d="M20.4367 6.66667C22.4046 6.66667 24 5.07131 24 3.10335L24 1.35652e-07L20.8966 0C18.9287 -8.60226e-08 17.3333 1.59535 17.3333 3.56332L17.3333 6.66667H20.4367Z"
+                    fill="#94D36A" />
+                <path d="M20.4367 6.66667C22.4046 6.66667 24 5.07131 24 3.10335L24 0L17.3333 6.66667H20.4367Z"
+                    fill="#81B351" />
+                <path
+                    d="M11.77 1.35652e-07C13.738 2.21674e-07 15.3334 1.59535 15.3334 3.56332V6.66667L12.23 6.66667C10.262 6.66667 8.66669 5.07131 8.66669 3.10335L8.66669 0L11.77 1.35652e-07Z"
+                    fill="#F7D053" />
+                <path
+                    d="M20.4367 8.6665C22.4046 8.6665 24 10.2619 24 12.2298V15.3332L20.8966 15.3332C18.9287 15.3332 17.3333 13.7378 17.3333 11.7699L17.3333 8.6665L20.4367 8.6665Z"
+                    fill="#EE8B38" />
+                <path
+                    d="M3.33333 15.3333C5.17428 15.3333 6.66667 13.841 6.66667 12C6.66667 10.1591 5.17428 8.66667 3.33333 8.66667C1.49238 8.66667 1.15337e-07 10.1591 1.95807e-07 12C2.76278e-07 13.841 1.49239 15.3333 3.33333 15.3333Z"
+                    fill="black" />
+                <path
+                    d="M12 24C13.841 24 15.3333 22.5076 15.3333 20.6667C15.3333 18.8257 13.841 17.3333 12 17.3333C10.1591 17.3333 8.66667 18.8257 8.66667 20.6667C8.66667 22.5076 10.1591 24 12 24Z"
+                    fill="black" />
+                <path
+                    d="M5.40905 6.66667C6.10362 6.66667 6.66669 6.1036 6.66669 5.40903V1.25764C6.66669 0.563066 6.10363 2.11824e-07 5.40905 1.81463e-07L1.25767 0C0.563089 -3.03609e-08 2.29968e-05 0.563065 2.29664e-05 1.25764L2.27849e-05 5.40902C2.27546e-05 6.1036 0.563088 6.66667 1.25766 6.66667H5.40905Z"
+                    fill="black" />
+                <path
+                    d="M24 22.6667V18.6667C24 17.9303 23.4031 17.3333 22.6667 17.3333H20.3333C17.5719 17.3333 15.3333 15.0948 15.3333 12.3333V10C15.3333 9.26362 14.7364 8.66667 14 8.66667H10C9.26362 8.66667 8.66667 9.26362 8.66667 10V12.3333C8.66667 15.0948 6.42809 17.3333 3.66667 17.3333H1.33333C0.596953 17.3333 2.07034e-07 17.9303 1.74846e-07 18.6667L0 22.6667C-3.21882e-08 23.403 0.596953 24 1.33333 24H5.33333C6.06971 24 6.66667 23.403 6.66667 22.6667V20.6667C6.66667 17.7211 9.05448 15.3333 12 15.3333C14.9455 15.3333 17.3333 17.7211 17.3333 20.6667V22.6667C17.3333 23.403 17.9303 24 18.6667 24H22.6667C23.403 24 24 23.403 24 22.6667Z"
+                    fill="black" />
+                <path
+                    d="M6.69693 3.72052H3.40611V6.68227C6.31407 6.68227 8.67144 9.03964 8.67144 11.9476L11.6332 11.9476V8.65677C11.6332 8.65677 11.6332 8.65677 11.6332 8.65677C8.90698 8.65677 6.69693 6.44674 6.69693 3.72052C6.69693 3.72052 6.69693 3.72053 6.69693 3.72052Z"
+                    fill="black" />
+            </svg>
+        </div>
+        <div>
+            <p class="subsection" id="section13b">b. Canvas</p>
+            <p>Là phần tử HTML dùng để vẽ đồ họa trên trang web.</p>
+            <p>
+                Bản thân phần tử &lt;canvas&gt; chỉ là phần tử chứa nội dung đồ họa, giống như việc khai báo một tấm
+                bảng trắng, muốn vẽ lên đó cần phải sử dụng JavaScript.
+            </p>
+            <p>
+                Một phần tử canvas là một khung chữ nhật trên trang HTML. Mặc định canvas không có viền bao quanh và
+                không có nội dung.
+            </p>
+            <p><strong><u>Lưu ý</u>:</strong> Luôn định nghĩa <code>id</code> cho canvas, cùng chiều rộng
+                (<code>width</code>) và chiều cao (<code>height</code>)
+                để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính <code>style</code></p>
+            <pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;
+&lt;/canvas&gt;</code></pre>
+            <p>Kết quả:</p>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+            </canvas>
+            <p><u>Thêm JavaScript để vẽ lên canvas</u></p>
+            <p>Ví dụ: Vẽ hình tròn</p>
+            <pre><code class="language-html">&lt;canvas id=&quot;myCircleCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+    var c = document.getElementById(&quot;myCircleCanvas&quot;);
+    var ctx = c.getContext(&quot;2d&quot;);
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+&lt;/script&gt;</code></pre>
+            <p>Kết quả:</p>
+            <canvas id="myCircleCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+            <script>
+                var c = document.getElementById("myCircleCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+                ctx.stroke();
+            </script>
+            <p>Không chỉ vẽ ảnh tĩnh, canvas còn vẽ được hỉnh ảnh động, và có thể kết hợp với các sự kiện tương tác với
+                người dùng (như nhấp chuột, kéo thả,...) để tạo ra game ngay trên trình duyệt.</p>
+            <button id="startgame" onclick=startGame()>Demo Game</button>
+            <div id="demo-game"></div>
+            <script src="js/demogame.js"></script>
+        </div>
+    </section>
+    <section id="section14">
+        <h2>14. Web APIs</h2>
+        <p class="subsection">
+        <p>API là viết tắt của Application Programming Interface (giao diện lập trình ứng dụng).</p>
+        <p>Web API là một giao diện lập trình ứng dụng cho Web, thường được sử dụng với JavaScript.</p>
+        <p>Web APIs có thể đơn giản hóa rất nhiều các chức năng phức tạp.</p>
+        <p>Web APIs có thể cung cấp cú pháp đơn giản cho những code phức tạp.</p>
+        </p>
+        <p class="subsection" id="section14a">a. Browser APIs</p>
+        <p>Là các APIs được tích hợp sẵn trong trình duyệt. Nó có thể mở rộng chức năng của trình duyệt web.</p>
+        <p>Một số Browser APIs thông dụng:</p>
+        <ul>
+            <li>
+                APIs để thao tác với các nội dung được tải vào trình duyệt. Ví dụ cụ thể nhất là DOM (Document Object
+                Model - Mô hình đối tượng tài liệu) API, là các APIs dùng để thao tác với trang HTML (như lấy phần tử có
+                id cụ thể, sau đó thay đổi màu sắc, thêm hoặc xoá nội dung,...).<br />
+                Ví dụ: Đổi chữ thành màu đỏ
+                <pre><code class="language-html">&lt;button onclick=&quot;demoSetRed(this)&quot;&gt;Set color to Red&lt;/button&gt;
+&lt;script&gt;
+    function demoSetRed(el) {
+        el.style.color = &quot;red&quot;;
+    }
+&lt;/script&gt;</code></pre>
+                Kết quả: <button onclick="demoSetRed(this)">Set color to Red</button>
+                <script>
+                    function demoSetRed(el) {
+                        el.style.color = "red";
+                    }
+                </script>
+            </li>
+            <li>
+                APIs tìm nạp dữ liệu từ server để cập nhật những mục nhỏ của trang web. API chủ yếu được dùng cho mục
+                đích này là Fetch API hoặc XMLHttpRequest API (XHR).<br />
+                Ví dụ: Lấy nội dung từ file <a href="js/demo_fetch.js" target="_blank">demo_fetch.js</a> trên server
+                <pre><code class="language-html">&lt;button onclick=&quot;demoFetch()&quot;&gt;Fetch from &quot;demo_fetch.js&quot;&lt;/button&gt;&lt;br/&gt;
+&lt;textarea id=&quot;demo-fetch&quot;&gt;&lt;/textarea&gt;
+&lt;script&gt;
+    function demoFetch(){
+        fetch(&quot;js/demo_fetch.js&quot;)
+        .then(x =&gt; x.text())
+        .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).value = y);
+    }
+&lt;/script&gt;</code></pre>
+                Kết quả: <button onclick="demoFetch()">Fetch from "demo_fetch.js"</button><br />
+                <textarea id="demo-fetch"></textarea>
+                <script>
+                    function demoFetch() {
+                        fetch("js/demo_fetch.js")
+                            .then(x => x.text())
+                            .then(y => document.getElementById("demo-fetch").value = y);
+                    }
+                </script>
+            </li>
+            <li>
+                APIs để vẽ và thao tác đồ hoạ. API loại này phổ biến là Canvas API và WebGL API. Những API này cho phép
+                cập nhật hình ảnh trong phần tử &lt;canvas&gt; của HTML để tạo khung cảnh 2D và 3D.<br />
+                Ví dụ: Vẽ dải màu từ đỏ tới trắng
+                <pre><code class="language-html">&lt;button onclick=&quot;demoCanvasGradient()&quot;&gt;Draw Gradient&lt;/button&gt;&lt;br/&gt;
+&lt;canvas id=&quot;myCanvasGradient&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+    function demoCanvasGradient() {
+        var c = document.getElementById(&quot;myCanvasGradient&quot;);
+        var ctx = c.getContext(&quot;2d&quot;);
+        var grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,&quot;red&quot;);
+        grd.addColorStop(1,&quot;white&quot;);
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
+    }
+&lt;/script&gt;</code></pre>
+                Kết quả: <button onclick="demoCanvasGradient()">Draw Gradient</button><br />
+                <canvas id="myCanvasGradient" width="200" height="100" style="border:1px solid black;"></canvas>
+                <script>
+                    function demoCanvasGradient() {
+                        var c = document.getElementById("myCanvasGradient");
+                        var ctx = c.getContext("2d");
+                        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                        grd.addColorStop(0, "red");
+                        grd.addColorStop(1, "white");
+                        ctx.fillStyle = grd;
+                        ctx.fillRect(10, 10, 150, 80);
+                    }
+                </script>
+            </li>
+            <li>
+                APIs liên quan tới âm thanh và video, ví dụ Web Audio API có các APIs có thể tạo ra các nốt nhạc hoặc
+                diễn hoạt sóng nhạc
+            </li>
+            <li>
+                Device APIs, là các APIs cho phép tương tác với phần cứng của thiết bị.<br />
+                Ví dụ: Geolocation API truy cập thiết bị GPS của máy tính để lấy vị trí hiện tại (vĩ độ và kinh độ):
+                <pre><code class="language-html">&lt;button onclick=&quot;getLocation()&quot;&gt;Get Location&lt;/button&gt;
+&lt;p id=&quot;demo-geolocation&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+const myElement = document.getElementById("demo-geolocation");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        myElement.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+myElement.innerHTML = "Latitude: " + position.coords.latitude +
+"&lt;br&gt;Longitude: " + position.coords.longitude;
+}
+&lt;/script&gt;</code></pre>
+                <span>Kết quả:</span> <button onclick="getLocation()">Get Location</button>
+                <p id="demo-geolocation"></p>
+                <script>
+                    const x = document.getElementById("demo-geolocation");
+
+                    function getLocation() {
+                        try {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } catch {
+                            x.innerHTML = err;
+                        }
+                    }
+
+                    function showPosition(position) {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                            "<br>Longitude: " + position.coords.longitude;
+                    }
+                </script>
+            </li>
+            <li>
+                APIs lưu trữ ở phía máy khách, ví dụ như Web Storage API, là API cho phép lưu trữ dữ liệu ở máy khách,
+                khi tải lại trang web thì có thể lấy dữ liệu đó ra để sử dụng.
+            </li>
+        </ul>
+        <p class="subsection" id="section14a">b. Third Party APIs</p>
+        <p>API của bên thứ ba không được tích hợp vào trình duyệt. Để sử dụng các API
+            này, bạn sẽ phải tải/link code từ Web.</p>
+        <p>Ví dụ: </p>
+        <ul>
+            <li>YouTube API - Cho phép bạn hiển thị video trên một trang web.</li>
+            <li>Twitter API - Cho phép bạn hiển thị Tweet trên một trang web.</li>
+            <li>Facebook API - Cho phép bạn hiển thị thông tin Facebook trên một trang web.</li>
+            <li>
+                Google Maps API - Cho phép bạn hiển thị bản đồ của Google trên một trang web.<br />
+                Ví dụ: Kết hợp Geolocation API và Google Maps API để hiện vị trí hiện tại trên bản đồ<br />
+                <button onclick="getLocationGoogle()">Get Position</button> <span id="demoGoogleMapText">Click the
+                    button to get the current position on Google Map.</span>
+                <div id="demoGoogleMap"></div>
+                <script async
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnI7wxBqGEhtiDnJlkxh5ac0eYf8_9tLY&callback=initMap"></script>
+                <script src="js/demogooglemap.js"></script>
+            </li>
+        </ul>
+
+    </section>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 </html>
