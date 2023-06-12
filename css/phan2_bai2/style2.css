@@ -1,0 +1,44 @@
+* {
+    font-family: sans-serif;
+}
+.item1{
+    color: red;
+}
+.item2{
+    color: blue;
+}
+table, th, td{
+    border: 1px solid rgb(217, 217, 217);
+    border-collapse: collapse;
+    text-align: center;
+    width: 200px;
+}
+h2 {
+    color: brown;
+    font-family: serif;
+}
+.twitt{
+    color: #027e73;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px gray;
+}
+h1{
+    color: brown;
+    text-shadow: 4px 4px blue;
+    font-family: serif;
+}
+.first{
+    font-size: 35px;
+    font-weight: bold;
+}
+.bu{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.bi{
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+}
