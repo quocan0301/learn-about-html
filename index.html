@@ -31,19 +31,16 @@
     <h1 style="text-align: center;">Tìm hiểu về HTML</h1>
     <h2>Mục lục</h2>
     <ol>
-        <li><a href="#">Tổng quan về HTML</a></li>
-        <li><a href="#">Có gì mới ở HTML5</a></li>
-        <li><a href="#">XHTML vs HTML</a></li>
+        <li><a href="#section1">Tổng quan về HTML</a></li>
+        <li><a href="#section2">Có gì mới ở HTML5</a></li>
+        <li><a href="#section3">XHTML vs HTML</a></li>
         <li>
             <a href="#section4">Thẻ html, head, meta, body, script, link</a>
-            <ol type="a">
-                <li><a href="#section4a">Thẻ &lt;html&gt;</a></li>
-            </ol>
         </li>
         <li><a href="#section5">Elements</a></li>
         <li><a href="#section6">Attributes</a></li>
         <li><a href="#section7">Headings, paragraphs</a></li>
-        <li><a href="#">Grouping content</a></li>
+        <li><a href="#section8">Grouping content</a></li>
         <li><a href="#section9">Table</a></li>
         <li>
             <a href="#section10">Form</a>
@@ -60,12 +57,80 @@
         <li><a href="#section13">Graphics</a></li>
         <li><a href="#section14">HTML APIs</a></li>
     </ol>
+    <section id="section1">
+        <h3>1. Tổng quan về HTML</h3>
+        <p>Hyper Text Markup Language – ngôn ngữ đánh dấu siêu văn bản, được sử dụng để tạo và định dạng nội dung trên trang web.</p>
+    </section>
+    <section id="section2">
+        <h3>2. Có gì mới trong HTML5</h3>
+        <p></p>HTML5 đã mang đến nhiều tính năng mới và cải tiến so với các phiên bản HTML trước đó. Dưới đây là một số tính năng đáng chú ý trong HTML5:</p>
+        <ol style="margin-left: 50px;">
+            <li><strong>Hỗ trợ đa phương tiện: </strong>HTML5 cung cấp các phần tử như &lt;video&gt; và &lt;audio&gt; cho phép nhúng và phát đa phương tiện trực tiếp trên trang web mà không cần sử dụng các plugin bên ngoài như Flash. Điều này giúp tăng tính tương thích và hiệu suất của các trang web đa phương tiện.</li>
+            <li><strong>Đồ họa và đồ thị: </strong>HTML5 bổ sung phần tử &lt;canvas&gt; cho phép vẽ đồ họa và tạo ra đồ thị phức tạp bằng JavaScript. Ngoài ra, HTML5 cũng hỗ trợ đồ họa vector thông qua các phần tử như &lt;svg&gt;.</li>
+            <li><strong>Web Storage: </strong>HTML5 cung cấp các API cho phép lưu trữ dữ liệu trên máy khách (client-side) như localStorage và sessionStorage. Điều này cho phép ứng dụng web lưu trữ và truy xuất dữ liệu trên máy tính của người dùng mà không cần phải gửi dữ liệu lên máy chủ.</li>
+            <li><strong>Web Workers: </strong>HTML5 giới thiệu khái niệm Web Workers, cho phép thực hiện các tác vụ phức tạp trên nền tảng web mà không làm treo giao diện người dùng. Điều này cải thiện tính năng đáp ứng và trải nghiệm người dùng của các ứng dụng web.</li>
+            <li><strong>Đa luồng và đa tiến trình: </strong>HTML5 hỗ trợ các tiến trình và luồng làm việc song song, cho phép thực hiện các tác vụ phức tạp và tương tác đa nhiệm trên trang web.</li>
+            <li><strong>Hỗ trợ định vị địa lý</strong>HTML5 cung cấp các API như Geolocation cho phép trang web truy cập vị trí địa lý của người dùng, điều này hữu ích trong các ứng dụng dựa trên vị trí như bản đồ, hướng dẫn đường, và quyền truy cập dựa trên vị trí.</li>
+            <li><strong>Các phần tử và thuộc tính mới: </strong>HTML5 đưa ra nhiều phần tử mới như &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;,... giúp cải thiện cấu trúc và semantica của trang web. Ngoài ra, nó cũng cung cấp các thuộc tính mới cho các phần tử như `placeholder`, `required`, `pattern`,... để kiểm soát dữ liệu đầu vào và tương tác với người dùng</li>
+        </ol>
+    </section>
+    <section id="section3">
+        <h3>3. XHTML và HTML</h3>
+        <p><strong>XHTML (Extensible HyperText Markup Language)</strong> và <strong>HTML (HyperText Markup Language)</strong> đều là ngôn ngữ đánh dấu để xây dựng và hiển thị các trang web trên Internet. Dưới đây là chi tiết về cả hai:</p>
+        <ol style="margin-left: 50px;">
+            <li><strong>HTML (HyperText Markup Language)</strong>
+                <ul>
+                    <li>HTML là một ngôn ngữ đánh dấu dùng để xây dựng cấu trúc và định dạng các trang web. Nó sử dụng các thẻ (tags) để xác định các phần tử và cấu trúc của trang web.</li>
+                    <li>HTML không yêu cầu việc tuân thủ nghiêm ngặt các quy tắc cú pháp. Nó cho phép sử dụng các thẻ không được đóng và thuộc tính có thể không được trích dẫn.</li>
+                    <li>HTML5 là phiên bản mới nhất của HTML và đi kèm với nhiều tính năng mới và cải tiến, bao gồm hỗ trợ video, audio, canvas, geolocation, drag and drop, local storage, và nhiều tính năng khác.</li>
+                </ul>
+            </li>
+            <li><strong>XHTML (Extensible HyperText Markup Language)</strong> 
+                <p>XHTML là một biến thể của HTML, tuân thủ nghiêm ngặt các quy tắc XML (Extensible Markup Language). Nó kết hợp cú pháp XML với các quy tắc cú pháp của HTML.</p>
+                <ul>
+                    <li>XHTML yêu cầu việc tuân thủ chặt chẽ các quy tắc cú pháp, bao gồm việc sử dụng các thẻ phải được đóng đúng cú pháp và thuộc tính phải được trích dẫn.</li>
+                    <li>XHTML đảm bảo tính nhất quán và tương thích với các công cụ xử lý XML, giúp tạo ra các trang web tương thích và dễ dàng mở rộng.</li>
+                </ul>
+            </li>
+        </ol>
+        <p><strong>So sánh giữa XHTML và HTML:</strong></p>
+        <ul style="margin-left: 50px;">
+            <li><strong>Cú pháp: </strong>XHTML yêu cầu tuân thủ chặt chẽ cú pháp XML, trong khi HTML không yêu cầu sự nghiêm ngặt này.</li>
+            <li><strong>Tính nhất quán: </strong>XHTML đảm bảo tính nhất quán trong việc đóng và mở các thẻ, định dạng thuộc tính, v.v. Trong khi HTML cho phép sử dụng các thẻ không được đóng và thuộc tính không được trích dẫn.</li>
+            <li><strong>Tương thích công cụ xử lý XML: </strong>XHTML tương thích tốt với các công cụ xử lý XML, giúp việc phân tích và xử lý dữ liệu dễ dàng hơn.</li>
+            <li><strong>Phát triển tiếp: </strong>Vì tính chặt chẽ hơn trong việc tuân thủ cú pháp, việc phát triển tiếp trên XHTML có thể khó khăn hơn so với HTML.</li>
+            <li><strong>Sự lựa chọn: </strong>Hiện nay, HTML5 được sử dụng phổ biến hơn XHTML trong việc phát triển trang web, vì HTML5 kết hợp giữa tính linh hoạt của HTML và các tính năng mạnh mẽ của XHTML.</li>
+        </ul>
+        <p>Tóm lại, HTML và XHTML đều là ngôn ngữ đánh dấu để xây dựng trang web, nhưng XHTML tuân thủ chặt chẽ cú pháp XML và đảm bảo tính nhất quán hơn. Tuy nhiên, HTML5 hiện đang được sử dụng phổ biến hơn và được coi là tiêu chuẩn phát triển trang web hiện đại.</p>
+    </section>
     <section id="section4">
         <h3>4. Thẻ html, head, data, meta, body, script, link</h3>
         <section id="section4a">
             <p class="subsection">a. Thẻ &lt;html&gt;</p>
             <p>Thẻ &lt;html&gt; là thẻ đánh dấu phần mở đầu của một trang HTML. Thẻ này là thẻ chứa tất cả phần tử HTML
                 khác (ngoại trừ !DOCTYPE).</p>
+        </section>
+        <section id="section4b">
+            <p class="subsection">b. Thẻ &lt;head&gt;</p>
+            <p>Thẻ &lt;head&gt; xác định thông tin đầu trang của tài liệu HTML. Không hiển thị trực tiếp trên trình duyệt, chứa các thông tin quan trọng như tiêu đề liên kết CSS, thẻ meta, …</p>
+        </section>
+        <section id="section4c">
+            <p class="subsection">c. Thẻ &lt;meta&gt;</p>
+            <p>Thẻ &lt;meta&gt; dùng để cung cấp các thông tin bổ sung về tài liệu HTML. Một số thuộc tính phổ biến trong HTML: </p>
+            <ol>
+                <li><strong>charset: </strong>xác định mã kí tự được sử dụng trong HTML. Thường là ‘UTF-8’, một phần của tiêu chuẩn Unicode, một chuẩn mã hóa ký tự được sử dụng trong việc biểu diễn các ký tự và biểu tượng từ nhiều ngôn ngữ khác nhau.</li>
+                <li><strong>name và content: </strong>được sử dụng cùng nhau để cung cấp thêm các thông tin về trang web. Ví dụ name = description dùng để cung cấp các thông tin về trang web. name = keywords dùng để xác định các từ khóa liên quan.</li>
+                <li><strong>viewport: </strong>xác định cách hiển thị trên các thiết bị di động, cho phép kiểm soát tỉ lệ, thu phóng và hiển thị trên màn hình.</li>
+                <li><strong>http-equiv: </strong>dùng để cung cấp các chỉ thị cho trình duyệt và máy chủ web.</li>
+            </ol>
+        </section>
+        <section id="section4d">
+            <p class="subsection">d. Thẻ &lt;body&gt;</p>
+            <p>Thẻ &lt;body&gt; Chứa toàn bộ nội dung hiển thị trực tiếp trên trình duyệt bao gồm: văn bản, hình ảnh, video, âm thanh, các nút, … </p>
+        </section>
+        <section id="section4e">
+            <p class="subsection">e. Thẻ &lt;script&gt;</p>
+            <p>Thẻ &lt;script&gt; >: nhúng mã JS vào tài liệu HTML. Có thể được đặt trong phần <head> hoặc phần <body> của tài liệu HTML. </p>
         </section>
     </section>
     <section id="section5">
@@ -98,15 +163,15 @@
                     </ul>
                 </li>
                 <li>Phần tử HTML có thể được lồng nhau (những phần tử có thể chứa các phần tử khác).
-                    <pre>
-  &lt;!DOCTYPE&#xa0;html&gt;
-  &lt;html&gt;
-  &lt;body&gt;
+                    <pre><code class="language-html">
+&lt;!DOCTYPE&#xa0;html&gt;
+&lt;html&gt;
+&lt;body&gt;
     &lt;h1&gt;My First Heading&lt;/h1&gt;
     &lt;p&gt;My first paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-  &lt;/html&gt;
-            </pre>
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
                 </li>
                 <li>Thẻ HTML không phân biệt chữ hoa chữ thường: &lt;P&gt; có nghĩa tương đương với &lt;p&gt;.</li>
             </ul>
@@ -119,7 +184,7 @@
                 <li>Tất cả các phần tử HTML đều có thể có thuộc tính.</li>
                 <li>Thuộc tính cung cấp thông tin bổ sung về các phần tử.</li>
                 <li>Thuộc tính luôn được chỉ định trong thẻ mở.</li>
-                <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: name=&quot;value&quot;.</li>
+                <li>Thuộc tính thường được đặt dưới dạng cặp tên/giá trị như: attribute_name=&quot;value&quot;.</li>
             </ul>
             <p>href: Thuộc tính href xác định URL của trang mà liên kết trỏ tới.
                 Ví dụ: &lt;a href=&quot;https://www.google.com&quot;&gt; Google.com &lt;/a&gt; </p>
@@ -143,14 +208,12 @@
             <p style="color: blue; font-size: 16px;">hello</p>
             <p>Thuộc tính "lang" trong HTML được sử dụng để xác định ngôn ngữ chính của nội dung trên một phần tử. Ví
                 dụ: </p>
-            <pre>
-    &lt;html lang=&quot;en&quot;&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Hello, world!&lt;/h1&gt;
-      &lt;p&gt;This is a paragraph.&lt;/p&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-        </pre>
+            <pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
             <p>Thuộc tính title được sử dụng để cung cấp một mô tả ngắn gọn hoặc gợi ý cho một phần tử HTML khi người
                 dùng di chuột qua phần tử đó. Ví dụ: &lt;p title=&quot;title&quot;&gt;This is a paragraph.&lt;/p&gt;</p>
             <p title="title">This is a paragraph.</p>
@@ -184,75 +247,71 @@
     </section>
     <section id="section8">
         <h3>8. Grouping content</h3>
-          <p class="subsection">a. address</p>
-          <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
-             Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng 
-             như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
-            <pre>
+        <p class="subsection"></p>
+        <p class="subsection">a. address</p>
+        <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
+            Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng
+            như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
+        <pre>
+              <code class="language-html">
 &lt;address&gt;      
     UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
     1701 Manor Road, Austin, TX 78722&lt;br&gt;
     Tel: (512) 471-5883 | Fax: (512) 471-5908
 &lt;/address&gt;                
             </pre>
-            <address>      
-                UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
-                1701 Manor Road, Austin, TX 78722<br>
-                Tel: (512) 471-5883 | Fax: (512) 471-5908
-            </address>     
-            <p class="subsection">b. hr</p>
-            <p>Thẻ &lt;hr&gt; được sử dụng để tạo ra một dấu ngắn phân chia về mặt chủ đề ở mức độ đoạn văn.</p>
-            <p>phân chia ở đây</p>
-            <hr>
-            <p class="subsection">c. pre</p>
-            <p>Thẻ &lt;pre&gt; đại diện cho một khối văn bản được định dạng trước, trong đó cấu trúc
-                 được biểu thị bằng các quy ước chữ viết chứ không phải là bằng các phần tử.</p>
-            <pre>
-&lt;pre&gt;
+        <address>
+            UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
+            1701 Manor Road, Austin, TX 78722<br>
+            Tel: (512) 471-5883 | Fax: (512) 471-5908
+        </address>
+        <p class="subsection">b. hr</p>
+        <p>Thẻ &lt;hr&gt; được sử dụng để tạo ra một dấu ngắn phân chia về mặt chủ đề ở mức độ đoạn văn.</p>
+        <p>phân chia ở đây</p>
+        <hr>
+        <p class="subsection">c. pre</p>
+        <p>Thẻ &lt;pre&gt; đại diện cho một khối văn bản được định dạng trước, trong đó cấu trúc
+            được biểu thị bằng các quy ước chữ viết chứ không phải là bằng các phần tử.</p>
+        <pre><code class="language-html">&lt;pre&gt;
     he    llo,   world!
-&lt;/pre&gt;    
-            </pre>
-<pre>
+&lt;/pre&gt;</code></pre>
+        <pre>
     he    llo,   world!
-</pre>  
-            <p class="subsection">d. ol, ul li</p>
-            <p>Trong HTML, các thẻ &lt;ul&gt;, &lt;ol&gt;, và &lt;li&gt; được sử dụng để tạo danh sách.</p>
-            <p>&lt;ul&gt; (unordered list) được sử dụng để tạo danh sách không có thứ tự. 
-                Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
-            <pre>
-&lt;ul&gt;
+</pre>
+        <p class="subsection">d. ol, ul li</p>
+        <p>Trong HTML, các thẻ &lt;ul&gt;, &lt;ol&gt;, và &lt;li&gt; được sử dụng để tạo danh sách.</p>
+        <p>&lt;ul&gt; (unordered list) được sử dụng để tạo danh sách không có thứ tự.
+            Mỗi phần tử trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Ví dụ:</p>
+        <pre><code class="language-html">&lt;ul&gt;
   &lt;li&gt;list 1&lt;/li&gt;
   &lt;li&gt;list 2&lt;/li&gt;
   &lt;li&gt;list 3&lt;/li&gt;
-&lt;/ul&gt;
-            </pre>
-            <ul>
-                <li>list 1</li>
-                <li>list 2</li>
-                <li>list 3</li>
-            </ul>
-            <p>&lt;ol&gt; (ordered list) được sử dụng để tạo danh sách có thứ tự. Tương tự như &lt;ul&gt;, mỗi phần tử
-                 trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Tuy nhiên, danh sách này sẽ có số thứ tự. Ví dụ:</p>
-            <pre>
-&lt;ol&gt;
+&lt;/ul&gt;</code></pre>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ul>
+        <p>&lt;ol&gt; (ordered list) được sử dụng để tạo danh sách có thứ tự. Tương tự như &lt;ul&gt;, mỗi phần tử
+            trong danh sách được định nghĩa bằng cặp thẻ &lt;li&gt;. Tuy nhiên, danh sách này sẽ có số thứ tự. Ví dụ:
+        </p>
+        <pre><code class="language-html">&lt;ol&gt;
   &lt;li&gt;list 1&lt;/li&gt;
   &lt;li&gt;list 2&lt;/li&gt;
   &lt;li&gt;list 3&lt;/li&gt;
-&lt;/ol&gt;
-            </pre>
-            <ol>
-                <li>list 1</li>
-                <li>list 2</li>
-                <li>list 3</li>
-            </ol>
-            <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách. 
-                Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
-            <p class="subsection">d. dl dt dd</p>
-            <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
-            <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa. 
-                Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
-            <pre>
-&lt;dl&gt;
+&lt;/ol&gt;</code></pre>
+        <ol>
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ol>
+        <p>&lt;li&gt; (list item) được sử dụng để định nghĩa một phần tử trong danh sách.
+            Đây là phần tử con của &lt;ul&gt; hoặc &lt;ol&gt;.</p>
+        <p class="subsection">e. dl dt dd</p>
+        <p>Trong HTML, các thẻ &lt;dl&gt;, &lt;dt&gt;, và &lt;dd&gt; được sử dụng để tạo danh sách định nghĩa.</p>
+        <p>&lt;dl&gt; (definition list) được sử dụng để tạo một danh sách định nghĩa.
+            Mỗi cặp &lt;dt&gt; và &lt;dd&gt; tạo thành một mục trong danh sách định nghĩa. Ví dụ:</p>
+        <pre><code class="language-html">&lt;dl&gt;
   &lt;dt&gt;example 1&lt;/dt&gt;
   &lt;dd&gt;defi 1&lt;/dd&gt;
   
@@ -261,34 +320,31 @@
 
   &lt;dt&gt;example 3&lt;/dt&gt;
   &lt;dd&gt;defi 3&lt;/dd&gt;
-&lt;/dl&gt;
-            </pre>
-            <dl>
-                <dt>example 1</dt>
-                <dd>defi 1</dd>
-                
-                <dt>example 2</dt>
-                <dd>defi 2</dd>
+&lt;/dl&gt;</code></pre>
+        <dl>
+            <dt>example 1</dt>
+            <dd>defi 1</dd>
 
-                <dt>example 3</dt>
-                <dd>defi 3</dd>
-            </dl>
-            <p class="subsection">d. div</p>
-            <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
-                 có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
-                  lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
-            <pre>
-&lt;div&gt;
+            <dt>example 2</dt>
+            <dd>defi 2</dd>
+
+            <dt>example 3</dt>
+            <dd>defi 3</dd>
+        </dl>
+        <p class="subsection">f. div</p>
+        <p>Thẻ &lt;div&gt; không mang ý nghĩa ngữ nghĩa đặc biệt mà chỉ là một phần tử khối không
+            có ý nghĩa đặc thù. Nó thường được sử dụng để phân chia và nhóm các phần tử HTML
+            lại với nhau để thực hiện kiểm soát bố cục (layout) và xử lý CSS. Ví dụ sử dụng thẻ &lt;div&gt;:</p>
+        <pre><code class="language-html">&lt;div class=&quot;container_div&quot;&gt;
     &lt;h3&gt;heading&lt;/h3&gt;
     &lt;p&gt;para 1&lt;/p&gt;
     &lt;p&gt;para 2&lt;/p&gt;
-&lt;/div&gt;
-            </pre>
-            <div>
-                <h3>heading</h3>
-                <p>para 1</p>
-                <p>para 2</p>
-            </div>
+&lt;/div&gt;</code></pre>
+        <div class="container_div">
+            <h3>heading</h3>
+            <p>para 1</p>
+            <p>para 2</p>
+        </div>
     </section>
     <section id="section9">
         <h3>9. Table</h3>
@@ -325,7 +381,10 @@
                     <td colspan="3">Data 9 (colspan="3")</td>
                     <td>Data 10</td>
                 </tr>
-
+                <tr>
+                    <td colspan="3">Chiếm 3 cột trên 1 hàng</td>
+                    <td>Chiếm 2 hàng trên 1 cột</td>
+                </tr>
             </tbody>
             <tfoot>
                 <tr>
@@ -339,14 +398,16 @@
         <p>- Các thẻ thead, tbody và tfoot được dùng để phân nhóm các hàng của bảng. Chúng không ảnh hưởng đến cấu trúc
             tổng thể của bảng.</p>
         <p>- Sử dụng thẻ tr để xác định mỗi hàng của bảng
-            <code>&lt;tr&gt;&lt;/tr&gt;</code>
         </p>
+        <pre><code class="language-html">&lt;tr&gt;&lt;/tr&gt;</code></pre>
         <p>- Thẻ th được dùng cho các cell là header của bảng. Các thông tin trong thẻ th mặc định được in đậm và căn
             giữa.
-            <code>&lt;th&gt;Header 1&lt;/th&gt;</code>
         </p>
+        <pre><code class="language-html">&lt;th&gt;Header 1&lt;/th&gt;</code></pre>
         <p>- Thẻ td chứa nội dung cho các cell bình thường của bảng. Các thông tin trong thẻ td mặc định được căn
-            trái. <code>&lt;td&gt;Data 1&lt;/td&gt;</code></p>
+            trái.
+        </p>
+        <pre><code class="language-html">&lt;td&gt;Data 1&lt;/td&gt;</code></pre>
         <p>- Mặc định các cell của bảng sẽ cách nhau một khoảng nhỏ. Có thể dùng
             <code>style="border-collapse: collapse;"</code> để đưa chúng sát với nhau.
         </p>
@@ -357,20 +418,24 @@
         <h2>10. Form</h2>
         <p>&lt;form&gt; là thẻ dùng để tạo form để nhận input từ người dùng.</p>
         <p>Form có một số element phổ biến như input, label, fieldset, textarea, select, option, button</p>
-        <p class="subsection" id="section10a">a. input và label</p>
+        <p class="subsection" id="section10a">a. input, textarea và label</p>
         <p>&lt;input&gt; là thẻ nhận dữ liệu từ người dùng được nhập nào. Các thông tin này sau đó sẽ được submit để xử
             lý.</p>
         <p>&lt;label&gt; là thẻ để gắn nhãn cho các element, giúp người dùng phân biệt chúng khi điền form. Label xác
             định gắn nhãn cho element nào bằng id attribute.
         </p>
         <p>Một số loại input thường dùng:</p>
+
         <form>
             <table class="form-demonstration">
                 <tr>
                     <td>input type="text"</td>
-                    <td><input type="text" name="input-text" placeholder="Nhập text gì đó ở đây"></td>
+                    <td>
+                        <input type="text" name="input-text" placeholder="Nhập text gì đó ở đây">
+                    </td>
                 </tr>
                 <tr>
+
                     <td>input type="number"</td>
                     <td><input type="number" name="input-number"></td>
                 </tr>
@@ -418,7 +483,7 @@
                     <td><input type="color" name="input-color" id="input-color"></td>
                 </tr>
                 <tr>
-                    <td>input type="file"</td><br>
+                    <td>input type="file"</td>
                     <td><input type="file" name="input-file" id="input-file"></td>
                 </tr>
                 <tr>
@@ -464,7 +529,7 @@
 
         <form class="border-form">
             <label for="colors">Thẻ select: Chọn 1 màu</label><br>
-            <select value="colors" id="colors">
+            <select id="colors">
                 <option value="red">Đỏ</option>
                 <option value="blue">Xanh dương</option>
                 <option value="green">Xanh lá</option>
@@ -474,7 +539,7 @@
             <br>
             <label for="foods">Thẻ datalist: Chọn 1 món ăn</label><br>
             <input list="foods">
-            <datalist value="foods" id="foods">
+            <datalist id="foods">
                 <option value="Phở bò tái nạm">
                 <option value="Mì vịt tiềm">
                 <option value="Bún thịt nướng">
@@ -483,7 +548,7 @@
                 <option value="Hủ tiếu mì thập cẩm">
             </datalist>
         </form>
-        <div class="subsection" id="section10c">c. fieldset, legend, textarea</div>
+        <p class="subsection" id="section10c">c. fieldset, legend</p>
         <p>&lt;fieldset&gt; là thẻ để nhóm các element trong form. Thẻ &lt;legend&gt; dùng để đặt tiêu đề cho nhóm này.
         </p>
 
@@ -513,11 +578,189 @@
             <input type="submit" value="Submit">
         </form>
         <p class="subsection" id="section10d">d. Form attributes</p>
-        <p>action</p>
-        <p>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ là một hyperlink dẫn đến
-            một file xử lý ở phía server.</p>
-        <p>target</p>
+        <p>Attribute của thẻ &lt;form&gt;</p>
+        <table class="form-demonstration">
+            <tr>
+                <th>Attribute</th>
+                <th>Mô tả</th>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>Mô tả hành động ta sẽ thực hiện sau khi form được submit. Thông thường, action sẽ dẫn đến
+                    một file xử lý ở phía server.<br>
+                    <pre><code class="language-html">&lt;form action="./validate_user.php"&gt;</code></pre>
+                </td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Sử dụng để quy định cách ta hiển thị response sau khi form được submit.<br>
+                    _blank: Response được hiển thị ở cửa sổ hoặc tab mới<br>
+                    _self: Response được hiển thị ở cửa sổ hiện tại<br>
+                    _parent: Response được hiển thị ở frame (?) cha<br>
+                    _top: Response được hiển thị trên toàn bộ màn hình cửa sổ<br>
+                    <pre><code class="language-html">&lt;form target="_blank"&gt;</code></pre>
+                    <pre><code class="language-html">&lt;form target="_self"&gt;</code></pre>
+                    <pre><code class="language-html">&lt;form target="_parent"&gt;</code></pre>
+                    <pre><code class="language-html">&lt;form target="_top"&gt;</code></pre><br>
+                    Giá trị mặc định là _self.
+                </td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>Mô tả method HTTP nào được thực hiện sau khi form được submit (get/post). Mặc định là get.<br>
+                    <pre><code class="language-html">&lt;form action="./validate_user.php" method="post"&gt;</code></pre>
+                </td>
 
+            </tr>
+
+            <tr>
+                <td>autocomplete</td>
+                <td>
+                    Autocomplete cho phép trình duyệt tự động gợi ý thông tin đã được lưu trữ trước đó vào các trường
+                    input. Có hai giá trị on và off. Mặc định là on.<br>
+                    <pre><code class="language-html">&lt;form autocomplete="on/off"&gt;</code></pre>
+                </td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>
+                    Khi thêm novalidate vào thẻ form, trình duyệt sẽ không kiểm tra tính đúng đắn của dữ liệu trong
+                    input khi form được submit.<br>
+                    <pre><code class="language-html">&lt;form novalidate"&gt;</code></pre>
+                </td>
+            </tr>
+        </table>
+        <p>Attribute của các input</p>
+        <table class="form-demonstration">
+            <tr>
+                <td>value</td>
+                <td>Giá trị mặc định của input trong form<br>
+                    <pre><code class="language-html">&lt;input type="text" value="Horusoftaceae"&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae">
+                </td>
+
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>Giá trị "giữ chỗ", được hiển thị khi input trống. Thường được dùng để gợi ý, nhắc nhở người dùng
+                    nhập vào input. Giá trị này không ảnh hưởng đến giá trị input.<br>
+                    <pre><code class="language-html">&lt;input type="text" placeholder="Nhập tên của bạn"&gt;</code></pre>
+                    <input type="text" placeholder="Nhập tên của bạn">
+                </td>
+
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Input chỉ có thể xem, highlight, copy chứ không thể sửa (read-only). Giá trị đó sẽ được submit.<br>
+                    <pre><code class="language-html">&lt;input type="text" value="Horusoftaceae" readonly&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Input chỉ có thể xem, không thể highlight, copy, sửa. Giá trị đó sẽ không được submit.<br>
+                    <pre><code class="language-html">&lt;input type="text" value="Horusoftaceae" disabled&gt;</code></pre>
+                    <input type="text" value="Horusoftaceae" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>Người dùng không được để trống input này khi submit form.<br>
+                    <pre><code class="language-html">&lt;input type="text" placeholder="Nhập tên của bạn" required&gt;</code></pre>
+                    <form>
+                        <input type="text" placeholder="Nhập tên của bạn" required>
+                        <input type="submit" value="Nộp">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td>Thường dùng trong file input. Attribute này cho phép người dùng tải lên nhiều file trong cùng 1
+                    input.<br>
+                    <pre><code class="language-html">&lt;input type="file" multiple&gt;</code></pre>
+                    <input type="file" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>Khi trang web được load, input này sẽ tự động được focus.<br>
+                    <pre><code class="language-html">&lt;input type="text" placeholder="Nhập tên của bạn" autofocus&gt;</code></pre>
+                    <input type="text" placeholder="Nhập tên của bạn" class="autofocus" autofocus>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="section11">
+        <h2>11. Media</h2>
+        <p>Trong HTML có hỗ trợ các loại media như: video, ảnh, âm thanh, hoạt họa (animation)</p>
+        <div class="subsection" id="section11a">a. Ảnh</div>
+        <p>Trong HTML, ta có thể sử dụng thẻ <code>&lt;img&gt;</code> để chèn ảnh vào trang web.</p>
+        <p>Trong thẻ img, có 2 attribute cần phải có:</p>
+        <ul>
+            <li>src: Liên kết dẫn đến tệp tin ảnh.</li>
+            <li>alt: Là văn bản để hiển thị khi ảnh không được load thành công.</li>
+        </ul>
+        <table>
+            <tr>
+                <td>
+                    <figure>
+                        <figcaption>Khi ảnh được load thành công</figcaption>
+                        <img src="https://horusoftaceae.com/_next/static/images/home-slider-0-small-af1dfde7a925f974ca18f9ad54b28d4b.png"
+                            alt="Horusoftaceae">
+
+                    </figure>
+                </td>
+                <td>
+                    <figure>
+                        <figcaption>Khi ảnh load thất bại</figcaption>
+                        <img src="https://horusoftacea.com/_next/static/images/home-slider-0-small-af1dfde7a925f974ca18f9ad54b28d4b.png"
+                            alt="Horusoftaceae">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+        <div class="subsection" id="section11b">b. Video</div>
+        <p>HTML khuyến nghị sử dụng các định dạng video .mp4, .webm, .ogg</p>
+        <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .avi, .mov, .flv,...</p>
+        <p>Để chèn video vào trang web, ta sử dụng thẻ <code>&lt;video&gt;</code>
+        </p>
+        <video width="480" height="320" controls>
+            <source src="kiwi.mp4" type="video/mp4">
+            Your browser does not support video tag.
+        </video>
+        <div class="subsection" id="section11c">c. Audio</div>
+        <p>HTML khuyến nghị sử dụng các định dạng audio .mp3, .wav, .ogg</p>
+        <p>Ngoài ra có nhiều định dạng khác cũng có thể sử dụng được như .aac, .wma, .flac,...</p>
+        <p>Để chèn audio vào trang web, ta sử dụng thẻ <code>&lt;audio&gt;</code>
+        </p>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.webm" type="audio/webm">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="section11d">d. Youtube video</div>
+        <p>Ta có thể nhúng 1 video từ youtube vào trang web bằng thẻ &lt;iframe&gt;</p>
+        <pre>
+            <code class="language-html">
+                &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/0YcfvPMft54"&gt;&lt;/iframe&gt;
+            </code>
+        </pre>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0YcfvPMft54"></iframe>
+    </section>
+    <section id="section12">
+        <h2>12. Symbols, emojis</h2>
+        <p>Symbol và emoji là những entity đặc biệt, là tập hợp của nhiều kí tự trong bảng UTF-8. Mã của chúng (dạng
+            thập phân hoặc thập lục phân) phải được
+            đặt giữa cặp dấu & và ;</p>
+        <pre>
+            <code class="language-html">
+                Biểu tượng &amp;Delta; và &amp;#916; là giống nhau.
+                Emoji có mã &amp;#128511; có hình bức tượng ở đảo Phục Sinh.
+            </code>
+        </pre>
+        <p>Kết quả:</p>
+        <p>Biểu tượng &Delta; và &#916; là giống nhau.</p>
+        <p>Emoji có mã &#128511; có hình bức tượng ở đảo Phục Sinh.</p>
     </section>
     <section id="section13">
         <h2>13. Graphics</h2>
@@ -668,7 +911,8 @@
             </p>
             <p><strong><u>Lưu ý</u>:</strong> Luôn định nghĩa <code>id</code> cho canvas, cùng chiều rộng
                 (<code>width</code>) và chiều cao (<code>height</code>)
-                để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính <code>style</code></p>
+                để xác định kích thước của canvas. Để thêm viền bao quanh thì sử dụng thuộc tính <code>style</code>
+            </p>
             <pre><code class="language-html">&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;
 &lt;/canvas&gt;</code></pre>
             <p>Kết quả:</p>
@@ -707,7 +951,6 @@
         <p>Web API là một giao diện lập trình ứng dụng cho Web, thường được sử dụng với JavaScript.</p>
         <p>Web APIs có thể đơn giản hóa rất nhiều các chức năng phức tạp.</p>
         <p>Web APIs có thể cung cấp cú pháp đơn giản cho những code phức tạp.</p>
-        </p>
         <p class="subsection" id="section14a">a. Browser APIs</p>
         <p>Là các APIs được tích hợp sẵn trong trình duyệt. Nó có thể mở rộng chức năng của trình duyệt web.</p>
         <p>Một số Browser APIs thông dụng:</p>
@@ -723,7 +966,7 @@
         el.style.color = &quot;red&quot;;
     }
 &lt;/script&gt;</code></pre>
-                Kết quả: <button onclick="demoSetRed(this)">Set color to Red</button>
+                <span>Kết quả:</span> <button onclick="demoSetRed(this)">Set color to Red</button>
                 <script>
                     function demoSetRed(el) {
                         el.style.color = "red";
@@ -738,18 +981,18 @@
 &lt;textarea id=&quot;demo-fetch&quot;&gt;&lt;/textarea&gt;
 &lt;script&gt;
     function demoFetch(){
-        fetch (&quot;js/demo_fetch.js&quot;)
+        fetch(&quot;js/demo_fetch.js&quot;)
         .then(x =&gt; x.text())
-        .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).innerHTML = y);
+        .then(y =&gt; document.getElementById(&quot;demo-fetch&quot;).value = y);
     }
 &lt;/script&gt;</code></pre>
-                Kết quả: <button onclick="demoFetch()">Fetch from "demo_fetch.js"</button><br />
+                <span>Kết quả:</span> <button onclick="demoFetch()">Fetch from "demo_fetch.js"</button><br />
                 <textarea id="demo-fetch"></textarea>
                 <script>
                     function demoFetch() {
                         fetch("js/demo_fetch.js")
                             .then(x => x.text())
-                            .then(y => document.getElementById("demo-fetch").innerHTML = y);
+                            .then(y => document.getElementById("demo-fetch").value = y);
                     }
                 </script>
             </li>
@@ -757,7 +1000,7 @@
                 APIs để vẽ và thao tác đồ hoạ. API loại này phổ biến là Canvas API và WebGL API. Những API này cho phép
                 cập nhật hình ảnh trong phần tử &lt;canvas&gt; của HTML để tạo khung cảnh 2D và 3D.<br />
                 Ví dụ: Vẽ dải màu từ đỏ tới trắng
-                <pre><code>&lt;button onclick=&quot;demoCanvasGradient()&quot;&gt;Draw Gradient&lt;/button&gt;&lt;br/&gt;
+                <pre><code class="language-html">&lt;button onclick=&quot;demoCanvasGradient()&quot;&gt;Draw Gradient&lt;/button&gt;&lt;br/&gt;
 &lt;canvas id=&quot;myCanvasGradient&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid black;&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
     function demoCanvasGradient() {
@@ -770,7 +1013,7 @@
         ctx.fillRect(10,10,150,80);
     }
 &lt;/script&gt;</code></pre>
-                Kết quả: <button onclick="demoCanvasGradient()">Draw Gradient</button><br />
+                <span>Kết quả:</span> <button onclick="demoCanvasGradient()">Draw Gradient</button><br />
                 <canvas id="myCanvasGradient" width="200" height="100" style="border:1px solid black;"></canvas>
                 <script>
                     function demoCanvasGradient() {
@@ -785,7 +1028,8 @@
                 </script>
             </li>
             <li>
-                APIs liên quan tới âm thanh và video, ví dụ Web Audio API có các APIs có thể tạo ra các nốt nhạc hoặc diễn hoạt sóng nhạc
+                APIs liên quan tới âm thanh và video, ví dụ Web Audio API có các APIs có thể tạo ra các nốt nhạc hoặc
+                diễn hoạt sóng nhạc.
             </li>
             <li>
                 Device APIs, là các APIs cho phép tương tác với phần cứng của thiết bị.<br />
@@ -824,13 +1068,15 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                             "<br>Longitude: " + position.coords.longitude;
                     }
                 </script>
+                <p><strong><u>Lưu ý</u>:</strong> Hầu hết APIs loại này sẽ yêu cầu trình duyệt cấp quyền truy cập thì
+                    mới sử dụng được.</p>
             </li>
             <li>
                 APIs lưu trữ ở phía máy khách, ví dụ như Web Storage API, là API cho phép lưu trữ dữ liệu ở máy khách,
                 khi tải lại trang web thì có thể lấy dữ liệu đó ra để sử dụng.
             </li>
         </ul>
-        <p class="subsection" id="section14a">b. Third Party APIs</p>
+        <p class="subsection" id="section14b">b. Third Party APIs</p>
         <p>API của bên thứ ba không được tích hợp vào trình duyệt. Để sử dụng các API
             này, bạn sẽ phải tải/link code từ Web.</p>
         <p>Ví dụ: </p>
@@ -849,7 +1095,6 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                 <script src="js/demogooglemap.js"></script>
             </li>
         </ul>
-
     </section>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
