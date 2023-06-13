@@ -184,19 +184,16 @@
     </section>
     <section id="section8">
         <h3>8. Grouping content</h3>
-            <p class="subsection"></p>
-            <p class="subsection">a. address</p>
-            <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
-             Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng 
-             như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
-            <pre>
-              <code class="language-html">
+        <p class="subsection">a. address</p>
+        <p>Thẻ &lt;address&gt; đại diện cho thông tin liên hệ của một người, một nhóm người hoặc tổ chức.
+            Nó nên bao gồm thông tin về địa chỉ vật lý và/hoặc thông tin liên lạc kỹ thuật số cũng
+            như cung cấp phương pháp để xác định người hoặc tổ chức mà thông tin liên hệ áp dụng. Ví dụ:</p>
+        <pre>
 &lt;address&gt;      
     UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br&gt;
     1701 Manor Road, Austin, TX 78722&lt;br&gt;
     Tel: (512) 471-5883 | Fax: (512) 471-5908
-&lt;/address&gt;       
-              </code>         
+&lt;/address&gt;                
             </pre>
         <address>
             UNIVERSITY INTERSCHOLASTIC LEAGUE<br>
@@ -675,7 +672,7 @@
         <pre><code>&lt;video&gt;</code></pre>
         </p>
         <video width="480" height="320" controls>
-            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+            <source src="kiwi.mp4" type="video/mp4">
             Your browser does not support video tag.
         </video>
         <div class="subsection" id="section11c">c. Audio</div>
@@ -739,14 +736,14 @@
                 chất lượng hình ảnh.
             </p>
             <p>Ví dụ một file circle.svg (hình tròn màu vàng có viền màu xanh lục) có nội dung như sau:</p>
-            <pre><code class="language-html">&lt;svg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+            <pre><code class="language-html">&lt;svg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; &gt;
     &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;40&quot; stroke=&quot;green&quot; stroke-width=&quot;4&quot; fill=&quot;yellow&quot; /&gt;
 &lt;/svg&gt;</code></pre>
             <p>
                 Thay vì nhúng file ảnh này vào trang web bằng thẻ &lt;img&gt; như các định dạng ảnh thông thường
                 khác (JPG, PNG,…), ta có thể đưa trực tiếp thẻ &lt;svg&gt; vào HTML để cho ra kết quả như bên dưới:
             </p>
-            <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
             </svg>
             <p>
@@ -986,7 +983,8 @@
                 </script>
             </li>
             <li>
-                APIs liên quan tới âm thanh và video, ví dụ Web Audio API có các APIs có thể tạo ra các nốt nhạc hoặc diễn hoạt sóng nhạc.
+                APIs liên quan tới âm thanh và video, ví dụ Web Audio API có các APIs có thể tạo ra các nốt nhạc hoặc
+                diễn hoạt sóng nhạc
             </li>
             <li>
                 Device APIs, là các APIs cho phép tương tác với phần cứng của thiết bị.<br />
@@ -1026,7 +1024,6 @@ myElement.innerHTML = "Latitude: " + position.coords.latitude +
                             "<br>Longitude: " + position.coords.longitude;
                     }
                 </script>
-                <p><strong><u>Lưu ý</u>:</strong> Hầu hết APIs loại này sẽ yêu cầu trình duyệt cấp quyền truy cập thì mới sử dụng được.</p>
             </li>
             <li>
                 APIs lưu trữ ở phía máy khách, ví dụ như Web Storage API, là API cho phép lưu trữ dữ liệu ở máy khách,
